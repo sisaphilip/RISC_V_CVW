@@ -1,0 +1,17 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date              : Sat Mar  1 21:31:38 2025
+| Host              : thinkpad-p1-gen-5 running 64-bit Ubuntu 24.10
+| Command           : report_bus_skew -warn_on_violation -file wallypipelinedsoc_bus_skew_routed.rpt -pb wallypipelinedsoc_bus_skew_routed.pb -rpx wallypipelinedsoc_bus_skew_routed.rpx
+| Design            : wallypipelinedsoc
+| Device            : xck26-sfvc784
+| Speed File        : -2LV  PRODUCTION 1.30 05-15-2022
+| Design State      : Routed
+| Temperature Grade : C
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Bus Skew Report
+
+No bus skew constraints
+

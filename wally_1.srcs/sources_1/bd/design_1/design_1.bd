@@ -1,0 +1,178 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x59300FBF5E0ED29F",
+      "device": "xck26-sfvc784-2LV-c",
+      "gen_directory": "../../../../wally_1.gen/sources_1/bd/design_1",
+      "name": "design_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Singular",
+      "tool_version": "2024.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "blk_mem_gen_0": ""
+    },
+    "interface_ports": {
+      "BRAM_PORTA_0": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:bram:1.0",
+        "vlnv": "xilinx.com:interface:bram_rtl:1.0",
+        "parameters": {
+          "MASTER_TYPE": {
+            "value": "OTHER",
+            "value_src": "default"
+          },
+          "MEM_ECC": {
+            "value": "NONE",
+            "value_src": "default"
+          },
+          "MEM_SIZE": {
+            "value": "8192",
+            "value_src": "default"
+          },
+          "MEM_WIDTH": {
+            "value": "32",
+            "value_src": "default"
+          },
+          "READ_LATENCY": {
+            "value": "1",
+            "value_src": "default"
+          }
+        }
+      }
+    },
+    "ports": {
+      "dina_0": {
+        "direction": "I",
+        "left": "63",
+        "right": "0"
+      },
+      "douta_0": {
+        "direction": "O",
+        "left": "63",
+        "right": "0"
+      },
+      "wea_0": {
+        "direction": "I",
+        "left": "7",
+        "right": "0"
+      },
+      "ena_0": {
+        "direction": "I"
+      },
+      "clka_0": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_clka_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "addra_0": {
+        "direction": "I",
+        "left": "12",
+        "right": "0"
+      }
+    },
+    "components": {
+      "blk_mem_gen_0": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "ip_revision": "9",
+        "xci_name": "design_1_blk_mem_gen_0_0",
+        "xci_path": "ip/design_1_blk_mem_gen_0_0/design_1_blk_mem_gen_0_0.xci",
+        "inst_hier_path": "blk_mem_gen_0",
+        "parameters": {
+          "Enable_32bit_Address": {
+            "value": "true"
+          },
+          "PRIM_type_to_Implement": {
+            "value": "BRAM"
+          },
+          "Read_Width_A": {
+            "value": "64"
+          },
+          "Register_PortA_Output_of_Memory_Core": {
+            "value": "true"
+          },
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "true"
+          },
+          "Use_RSTA_Pin": {
+            "value": "false"
+          },
+          "Write_Width_A": {
+            "value": "64"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      }
+    },
+    "interface_nets": {
+      "BRAM_PORTA_0_1": {
+        "interface_ports": [
+          "BRAM_PORTA_0",
+          "blk_mem_gen_0/BRAM_PORTA"
+        ]
+      }
+    },
+    "nets": {
+      "addra_0_1": {
+        "ports": [
+          "addra_0",
+          "blk_mem_gen_0/addra"
+        ]
+      },
+      "blk_mem_gen_0_douta": {
+        "ports": [
+          "blk_mem_gen_0/douta",
+          "douta_0"
+        ]
+      },
+      "clka_0_1": {
+        "ports": [
+          "clka_0",
+          "blk_mem_gen_0/clka"
+        ]
+      },
+      "dina_0_1": {
+        "ports": [
+          "dina_0",
+          "blk_mem_gen_0/dina"
+        ]
+      },
+      "ena_0_1": {
+        "ports": [
+          "ena_0",
+          "blk_mem_gen_0/ena"
+        ]
+      },
+      "wea_0_1": {
+        "ports": [
+          "wea_0",
+          "blk_mem_gen_0/wea"
+        ]
+      }
+    }
+  }
+}
