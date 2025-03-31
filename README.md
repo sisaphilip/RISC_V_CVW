@@ -7,7 +7,7 @@ A 64-bit Risc v cpu implementation of [https://github.com/openhwgroup/cvw](https
  * Assigned parameters.
  * Added 2 RAM IPs from Vivado.
  * Disabled FPU features.
- * Fixed all Vivado bugs
+ * Added constraint file. 
  
 ## What is pending
 
