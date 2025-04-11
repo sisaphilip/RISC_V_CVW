@@ -1,23 +1,14 @@
 
-# kjsjkd
 
+#CLOCKING
+create_clock -name clk_out3 -period 2 [get_ports {clk}]
+set_property PACKAGE_PIN D4 [get_ports {clk}]
+set_property IOSTANDARD LVCMOS18 [get_ports {clk}]
+
+set_property PACKAGE_PIN H7 [get_ports {reset_ext}]
+set_property IOSTANDARD LVCMOS18 [get_ports {reset_ext}]
 
 #WALLY PINS
-
-#set_property PACKAGE_PIN J11 [get_ports {GPIO_tri_o[0]}]
-#set_property PACKAGE_PIN J10 [get_ports {GPIO_tri_o[1]}]
-#set_property PACKAGE_PIN J11 [get_ports {GPIO_tri_o[0]}]
-#set_property PACKAGE_PIN J10 [get_ports {GPIO_tri_o[1]}]
-#set_property PACKAGE_PIN J11 [get_ports {GPIO_tri_o[0]}]
-#set_property PACKAGE_PIN J10 [get_ports {GPIO_tri_o[1]}]
-#set_property PACKAGE_PIN J11 [get_ports {GPIO_tri_o[0]}]
-#set_property PACKAGE_PIN J10 [get_ports {GPIO_tri_o[1]}]
-#set_property PACKAGE_PIN J11 [get_ports {GPIO_tri_o[0]}]
-#set_property PACKAGE_PIN J10 [get_ports {GPIO_tri_o[1]}]
-#set_property PACKAGE_PIN J11 [get_ports {GPIO_tri_o[0]}]
-#set_property PACKAGE_PIN J10 [get_ports {GPIO_tri_o[1]}]
-
-
 set_property PACKAGE_PIN AC2 [get_ports {HRDATAEXT[11]}]
 set_property PACKAGE_PIN F8 [get_ports {HWSTRB[0]}]
 set_property PACKAGE_PIN J5 [get_ports {SDCCS[0]}]
@@ -55,7 +46,7 @@ set_property PACKAGE_PIN P6 [get_ports {SPICS[1]}]
 set_property PACKAGE_PIN AE2 [get_ports {HRDATAEXT[2]}]
 set_property PACKAGE_PIN A2 [get_ports {HSIZE[2]}]
 set_property PACKAGE_PIN J9 [get_ports SDCIn]
-set_property PACKAGE_PIN H7 [get_ports reset_ext]
+#set_property PACKAGE_PIN H7 [get_ports reset_ext]
 set_property PACKAGE_PIN AE10 [get_ports {HRDATAEXT[59]}]
 set_property PACKAGE_PIN D7 [get_ports {HPROT[0]}]
 set_property PACKAGE_PIN AH12 [get_ports {HRDATAEXT[61]}]
@@ -89,7 +80,7 @@ set_property PACKAGE_PIN A3 [get_ports {HSIZE[1]}]
 set_property PACKAGE_PIN AE5 [get_ports {HRDATAEXT[20]}]
 set_property PACKAGE_PIN G3 [get_ports HRESETn]
 set_property PACKAGE_PIN E1 [get_ports SDCCmd]
-set_property PACKAGE_PIN D4 [get_ports clk]
+#set_property PACKAGE_PIN D4 [get_ports clk]
 set_property PACKAGE_PIN N8 [get_ports {SDCCS[3]}]
 set_property PACKAGE_PIN AG6 [get_ports {HRDATAEXT[24]}]
 set_property PACKAGE_PIN AH1 [get_ports {HRDATAEXT[1]}]
@@ -123,18 +114,13 @@ set_property PACKAGE_PIN AA10 [get_ports {HRDATAEXT[50]}]
 set_property PACKAGE_PIN E3 [get_ports HREADY]
 set_property PACKAGE_PIN D1 [get_ports SPICLK]
 
-
-
 #BY SISA
-
-
-
 set_property IOSTANDARD LVCMOS18 [get_ports UARTSin]
 set_property IOSTANDARD LVCMOS18 [get_ports UARTSout]
 set_property IOSTANDARD LVCMOS18 [get_ports HRESPEXT]
 set_property IOSTANDARD LVCMOS18 [get_ports HSELEXT]
 set_property IOSTANDARD LVCMOS18 [get_ports HWRITE]
-set_property IOSTANDARD LVCMOS18 [get_ports reset_ext]
+#set_property IOSTANDARD LVCMOS18 [get_ports reset_ext]
 set_property IOSTANDARD LVCMOS18 [get_ports SDCCLK]
 set_property IOSTANDARD LVCMOS18 [get_ports SDCCmd]
 set_property IOSTANDARD LVCMOS18 [get_ports SDCIn]
@@ -142,7 +128,7 @@ set_property IOSTANDARD LVCMOS18 [get_ports SPICLK]
 set_property IOSTANDARD LVCMOS18 [get_ports SPIIn]
 set_property IOSTANDARD LVCMOS18 [get_ports SPIOut]
 set_property IOSTANDARD LVCMOS18 [get_ports TIMECLK]
-set_property IOSTANDARD LVCMOS18 [get_ports clk]
+#set_property IOSTANDARD LVCMOS18 [get_ports clk]
 set_property IOSTANDARD LVCMOS18 [get_ports HCLK]
 set_property IOSTANDARD LVCMOS18 [get_ports {HBURST[2]}]
 set_property IOSTANDARD LVCMOS18 [get_ports {HBURST[1]}]
@@ -246,11 +232,6 @@ set_property IOSTANDARD LVCMOS18 [get_ports HRESETn]
 set_property PACKAGE_PIN C4 [get_ports {HBURST[2]}]
 set_property PACKAGE_PIN A4 [get_ports {HBURST[1]}]
 set_property PACKAGE_PIN B4 [get_ports {HBURST[0]}]
-
-
-
-
-
 
 set_property PACKAGE_PIN AG8 [get_ports UARTSout]
 set_property PACKAGE_PIN AE9 [get_ports UARTSin]

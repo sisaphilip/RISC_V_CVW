@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xck24-ubva530-2LV-c" LaunchTime="1740853829" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/wallypipelinedsoc.dcp">
+<GenRun Id="synth_1" LaunchPart="xck24-ubva530-2LV-c" LaunchTime="1744405535" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/wallypipelinedsoc.dcp">
+  <File Type="VDS-TIMINGSUMMARY" Name="wallypipelinedsoc_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="wallypipelinedsoc.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="wallypipelinedsoc_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="wallypipelinedsoc_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="wallypipelinedsoc_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="wallypipelinedsoc.vds"/>
   <File Type="REPORTS-TCL" Name="wallypipelinedsoc_reports.tcl"/>
+  <File Type="VDS-TIMING-PB" Name="wallypipelinedsoc_timing_summary_synth.pb"/>
   <File Type="PA-TCL" Name="wallypipelinedsoc.tcl"/>
-  <File Type="RDS-UTIL" Name="wallypipelinedsoc_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="wallypipelinedsoc_utilization_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/cvw/config/shared/BranchPredictorType.vh">
@@ -2105,6 +2108,14 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/bd/uart_blk/uart_blk.bd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/clocks/clocks.bd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
