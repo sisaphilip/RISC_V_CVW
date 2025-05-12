@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-| Date         : Sat Apr 12 00:06:13 2025
-| Host         : thinkpad-p1-gen-5 running 64-bit Ubuntu 24.10
+| Date         : Mon May 12 20:32:54 2025
+| Host         : thinkpad-p1-gen-5 running 64-bit Ubuntu 25.04
 | Command      : report_utilization -file wallypipelinedsoc_utilization_synth.rpt -pb wallypipelinedsoc_utilization_synth.pb
 | Design       : wallypipelinedsoc
 | Device       : xck24-ubva530-2LV-c

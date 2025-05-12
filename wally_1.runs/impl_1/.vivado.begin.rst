@@ -1,15 +1,5 @@
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="ishfisav" Host="thinkpad-p1-gen-5" Pid="77363" HostCore="20" HostMemory="31996240">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="ishfisav" Host="thinkpad-p1-gen-5" Pid="126525" HostCore="20" HostMemory="31996240">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="ishfisav" Host="thinkpad-p1-gen-5" Pid="192692" HostCore="20" HostMemory="31996240">
+    <Process Command="vivado" Owner="ishfisav" Host="thinkpad-p1-gen-5" Pid="80285" HostCore="20" HostMemory="31996168">
     </Process>
 </ProcessHandle>

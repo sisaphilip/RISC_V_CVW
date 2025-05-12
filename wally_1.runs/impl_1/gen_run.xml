@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xck26-sfvc784-2LV-c" LaunchTime="1744405535" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/impl_1/wallypipelinedsoc_routed.dcp" LaunchDirective="Quick">
+<GenRun Id="impl_1" LaunchPart="xck26-sfvc784-2LV-c" LaunchTime="1747071249" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/impl_1/wallypipelinedsoc_routed.dcp" LaunchDirective="Quick">
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-RQS" Name="wallypipelinedsoc_postroute_physopted.rqs"/>
   <File Type="ROUTE-RQS" Name="wallypipelinedsoc_routed.rqs"/>
@@ -2198,6 +2198,14 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/bd/baremetal_block/baremetal_block.bd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="wallypipelinedsoc"/>
@@ -2233,6 +2241,7 @@
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedInSteps" Val="impl_1"/>
+        <Attr Name="UsedInSteps" Val="impl_1_copy_1"/>
         <Attr Name="AutoDcp" Val="1"/>
       </FileInfo>
     </File>

@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xE2C8D9818A424CEA",
+      "boundary_crc": "0x815471C2BCF7C980",
       "device": "xck26-sfvc784-2LV-c",
       "gen_directory": "../../../../wally_1.gen/sources_1/bd/clocks",
       "name": "clocks",
@@ -11,7 +11,21 @@
     },
     "design_tree": {
       "zynq_ultra_ps_e_0": "",
-      "clk_wiz_0": ""
+      "clk_wiz_0": "",
+      "iomodule_0": ""
+    },
+    "interface_ports": {
+      "som240_1_connector_bank45_gpio": {
+        "mode": "Master",
+        "vlnv_bus_definition": "xilinx.com:interface:gpio:1.0",
+        "vlnv": "xilinx.com:interface:gpio_rtl:1.0",
+        "port_maps": {
+          "TRI_O": {
+            "physical_name": "som240_1_connector_bank45_gpio_tri_o",
+            "direction": "O"
+          }
+        }
+      }
     },
     "ports": {
       "clk_600M": {
@@ -1520,6 +1534,29 @@
             "value": "3"
           }
         }
+      },
+      "iomodule_0": {
+        "vlnv": "xilinx.com:ip:iomodule:3.1",
+        "ip_revision": "11",
+        "xci_name": "clocks_iomodule_0_0",
+        "xci_path": "ip/clocks_iomodule_0_0/clocks_iomodule_0_0.xci",
+        "inst_hier_path": "iomodule_0",
+        "parameters": {
+          "GPIO3_BOARD_INTERFACE": {
+            "value": "som240_1_connector_bank45_gpio"
+          },
+          "USE_BOARD_FLOW": {
+            "value": "true"
+          }
+        }
+      }
+    },
+    "interface_nets": {
+      "iomodule_0_GPIO3": {
+        "interface_ports": [
+          "som240_1_connector_bank45_gpio",
+          "iomodule_0/GPIO3"
+        ]
       }
     },
     "nets": {

@@ -126,9 +126,9 @@ localparam cvw_t P = '{
   BPRED_TYPE       :        4,
                       //  verilator lint_on ENUMVALUE 
   BPRED_SIZE       :        32'd10,
-  BPRED_NUM_LHR    :    32'd6,                       
-  BTB_SIZE         : 32'd10,
-  RAS_SIZE         : 32'd16,
+  BPRED_NUM_LHR    :  32'd6,                       
+  BTB_SIZE         :  32'd10,
+  RAS_SIZE         :  32'd16,
   INSTR_CLASS_PRED :  1,
   RADIX :             32'd4,
   DIVCOPIES        :  32'd4,
