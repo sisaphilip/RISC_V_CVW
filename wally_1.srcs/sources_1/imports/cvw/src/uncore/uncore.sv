@@ -109,30 +109,47 @@ module uncore import cvw::*;  #(parameter cvw_t P)(
     .PCLK, .PRESETn, .PSEL, .PWRITE, .PENABLE, .PADDR, .PWDATA, .PSTRB, .PREADY, .PRDATA);
   assign HSELBRIDGE = HSELGPIO | HSELCLINT | HSELPLIC | HSELUART | HSELSPI | HSELSDC; // if any of the bridge signals are selected
      
-     
+   
+   
+   
+  // by SISA
+  //uncore RAM disabled, not necessary since IP block has RAM 
                 
-  // on-chip RAM
+ /* // on-chip RAM
   if (P.UNCORE_RAM_SUPPORTED) begin : ram
     ram_ahb #(.P(P), .BASE(P.UNCORE_RAM_BASE), .RANGE(P.UNCORE_RAM_RANGE), .PRELOAD(P.UNCORE_RAM_PRELOAD)) ram (
       .HCLK, .HRESETn, .HSELRam, .HADDR, .HWRITE, .HREADY, 
       .HTRANS, .HWDATA, .HWSTRB, .HREADRam, .HRESPRam, .HREADYRam);
   end else assign {HREADRam, HRESPRam, HREADYRam} = '0;
+*/
 
-
-
-
-/**            by SISA
-
-
-
+  // BY SISA
+  // IP block instance >>(ahbtoaxibridge, smartaxi connector, BRAM controller, Memory gen)
+  
+  
+  baremetal_block instance_0
+   (.s_ahb_haddr(HADDR),
+    .s_ahb_hburst(HBURST),
+    .s_ahb_hclk(HCLK),
+    .s_ahb_hprot(HPROT),        
+    .s_ahb_hrdata(HRDATA),
+    .s_ahb_hready_in(HREADY),
+    .s_ahb_hready_out(1'b1),               // to be changed later
+    .s_ahb_hresetn(HRESETN),
+    .s_ahb_hresp(HRESP),
+    .s_ahb_hsel(1'b1),
+    .s_ahb_hsize(HSIZE),
+    .s_ahb_htrans(HTRANS),
+    .s_ahb_hwdata(HWDATA),
+    .s_ahb_hwrite(HWRITE));
+  
+  
+  /**            by SISA
  if (P.BOOTROM_SUPPORTED) begin : bootrom
     rom_ahb #(.P(P), .BASE(P.BOOTROM_BASE), .RANGE(P.BOOTROM_RANGE), .PRELOAD(P.BOOTROM_PRELOAD))
     bootrom(.HCLK, .HRESETn, .HSELRom(HSELBootRom), .HADDR, .HREADY, .HTRANS, 
       .HREADRom(HREADBootRom), .HRESPRom(HRESPBootRom), .HREADYRom(HREADYBootRom));
   end else assign {HREADBootRom, HRESPBootRom, HREADYBootRom} = '0;
-
-
-
 
 **/
 

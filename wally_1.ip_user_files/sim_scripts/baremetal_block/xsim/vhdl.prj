@@ -1,0 +1,6 @@
+vhdl xil_defaultlib  \
+"../../../bd/baremetal_block/ip/baremetal_block_axi_bram_ctrl_0_0/sim/baremetal_block_axi_bram_ctrl_0_0.vhd" \
+"../../../bd/baremetal_block/ip/baremetal_block_ahblite_axi_bridge_0_0/sim/baremetal_block_ahblite_axi_bridge_0_0.vhd" \
+
+# Do not sort compile order
+nosort

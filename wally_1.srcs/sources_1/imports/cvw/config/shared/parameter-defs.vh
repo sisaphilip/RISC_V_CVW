@@ -74,7 +74,7 @@ localparam cvw_t P = '{
   BOOTROM_RANGE :          64'h00000FFF,
   BOOTROM_PRELOAD :       1'b0,
   
-  UNCORE_RAM_SUPPORTED :  1,
+  UNCORE_RAM_SUPPORTED :  0,
   UNCORE_RAM_BASE :       64'h80000000,
   UNCORE_RAM_RANGE :      64'h00009000,         //64'h07FFFFFF
   UNCORE_RAM_PRELOAD :    1'b0,

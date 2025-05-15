@@ -6,15 +6,14 @@
       "gen_directory": "../../../../wally_1.gen/sources_1/bd/baremetal_block",
       "name": "baremetal_block",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
-      "synth_flow_mode": "Hierarchical",
+      "synth_flow_mode": "None",
       "tool_version": "2024.2",
       "validated": "true"
     },
     "design_tree": {
       "axi_bram_ctrl_0": "",
       "blk_mem_gen_0": "",
-      "ahblite_axi_bridge_0": "",
-      "smartconnect_0": ""
+      "ahblite_axi_bridge_0": ""
     },
     "ports": {
       "s_ahb_hresetn": {
@@ -165,52 +164,19 @@
             ]
           }
         }
-      },
-      "smartconnect_0": {
-        "vlnv": "xilinx.com:ip:smartconnect:1.0",
-        "ip_revision": "25",
-        "xci_name": "baremetal_block_smartconnect_0_0",
-        "xci_path": "ip/baremetal_block_smartconnect_0_0/baremetal_block_smartconnect_0_0.xci",
-        "inst_hier_path": "smartconnect_0",
-        "parameters": {
-          "NUM_SI": {
-            "value": "1"
-          }
-        },
-        "interface_ports": {
-          "S00_AXI": {
-            "mode": "Slave",
-            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
-            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
-            "bridges": [
-              "M00_AXI"
-            ]
-          },
-          "M00_AXI": {
-            "mode": "Master",
-            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
-            "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
-          }
-        }
       }
     },
     "interface_nets": {
       "ahblite_axi_bridge_0_M_AXI": {
         "interface_ports": [
           "ahblite_axi_bridge_0/M_AXI",
-          "smartconnect_0/S00_AXI"
+          "axi_bram_ctrl_0/S_AXI"
         ]
       },
       "axi_bram_ctrl_0_BRAM_PORTA": {
         "interface_ports": [
           "axi_bram_ctrl_0/BRAM_PORTA",
           "blk_mem_gen_0/BRAM_PORTA"
-        ]
-      },
-      "smartconnect_0_M00_AXI": {
-        "interface_ports": [
-          "smartconnect_0/M00_AXI",
-          "axi_bram_ctrl_0/S_AXI"
         ]
       }
     },
@@ -249,7 +215,6 @@
         "ports": [
           "s_ahb_hclk",
           "ahblite_axi_bridge_0/s_ahb_hclk",
-          "smartconnect_0/aclk",
           "axi_bram_ctrl_0/s_axi_aclk"
         ]
       },
@@ -269,7 +234,6 @@
         "ports": [
           "s_ahb_hresetn",
           "ahblite_axi_bridge_0/s_ahb_hresetn",
-          "smartconnect_0/aresetn",
           "axi_bram_ctrl_0/s_axi_aresetn"
         ]
       },

@@ -56,6 +56,12 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param power.BramSDPPropagationFix 1
+set_param chipscope.maxJobs 5
+set_param bd.open.in_stealth_mode 1
+set_param power.enableUnconnectedCarry8PinPower 1
+set_param power.enableCarry8RouteBelPower 1
+set_param power.enableLutRouteBelPower 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xck24-ubva530-2LV-c
 
@@ -65,7 +71,7 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir /home/ishfisav/wally_1/wally_1.cache/wt [current_project]
 set_property parent.project_path /home/ishfisav/wally_1/wally_1.xpr [current_project]
-set_property XPM_LIBRARIES XPM_MEMORY [current_project]
+set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part xilinx.com:kv260_som:part0:1.4 [current_project]
@@ -235,7 +241,6 @@ read_verilog -library xil_defaultlib -sv {
   /home/ishfisav/wally_1/wally_1.srcs/sources_1/imports/cvw/src/generic/mem/ram1p1rwe.sv
   /home/ishfisav/wally_1/wally_1.srcs/sources_1/imports/cvw/src/generic/mem/ram2p1r1wbe.sv
   /home/ishfisav/wally_1/wally_1.srcs/sources_1/imports/cvw/src/generic/mem/ram2p1r1wbe_1024x68.sv
-  /home/ishfisav/wally_1/wally_1.srcs/sources_1/imports/cvw/src/uncore/ram_ahb.sv
   /home/ishfisav/wally_1/wally_1.srcs/sources_1/imports/cvw/src/ieu/aes/rconlut32.sv
   /home/ishfisav/wally_1/wally_1.srcs/sources_1/imports/cvw/src/ieu/regfile.sv
   /home/ishfisav/wally_1/wally_1.srcs/sources_1/imports/cvw/src/fpu/postproc/resultsign.sv
@@ -284,6 +289,11 @@ read_verilog -library xil_defaultlib -sv {
   /home/ishfisav/wally_1/wally_1.srcs/sources_1/imports/cvw/src/ieu/kmu/zknh64.sv
   /home/ishfisav/wally_1/wally_1.srcs/sources_1/imports/cvw/src/wally/wallypipelinedsoc.sv
 }
+add_files /home/ishfisav/wally_1/wally_1.srcs/sources_1/bd/baremetal_block/baremetal_block.bd
+set_property used_in_implementation false [get_files -all /home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ip/baremetal_block_blk_mem_gen_0_0/baremetal_block_blk_mem_gen_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ip/baremetal_block_ahblite_axi_bridge_0_0/baremetal_block_ahblite_axi_bridge_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/baremetal_block_ooc.xdc]
+
 add_files /home/ishfisav/wally_1/wally_1.srcs/sources_1/bd/design_1/design_1.bd
 set_property used_in_implementation false [get_files -all /home/ishfisav/wally_1/wally_1.gen/sources_1/bd/design_1/ip/design_1_blk_mem_gen_0_0/design_1_blk_mem_gen_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/ishfisav/wally_1/wally_1.gen/sources_1/bd/design_1/design_1_ooc.xdc]
@@ -304,6 +314,8 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 read_xdc /home/ishfisav/wally_1/wally_1.srcs/constrs_1/imports/constraints/pins_wally.xdc
 set_property used_in_implementation false [get_files /home/ishfisav/wally_1/wally_1.srcs/constrs_1/imports/constraints/pins_wally.xdc]
 
+read_xdc dont_touch.xdc
+set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 
 read_checkpoint -auto_incremental -incremental /home/ishfisav/wally_1/wally_1.srcs/utils_1/imports/synth_1/wallypipelinedsoc.dcp

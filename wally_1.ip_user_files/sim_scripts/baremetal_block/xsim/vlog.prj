@@ -1,0 +1,10 @@
+verilog xil_defaultlib --include "/home/ishfisav/Desktop/amd2024.2/Vivado/2024.2/data/xilinx_vip/include" --include "../../../../wally_1.gen/sources_1/bd/baremetal_block/ipshared/f0b6/hdl/verilog" --include "../../../../wally_1.gen/sources_1/bd/baremetal_block/ipshared/0127/hdl/verilog" --include "../../../../wally_1.gen/sources_1/bd/baremetal_block/ipshared/ec67/hdl" \
+"../../../bd/baremetal_block/ip/baremetal_block_blk_mem_gen_0_0/sim/baremetal_block_blk_mem_gen_0_0.v" \
+"../../../bd/baremetal_block/ip/baremetal_block_smartconnect_0_0/bd_0/sim/bd_c80a.v" \
+"../../../bd/baremetal_block/ip/baremetal_block_smartconnect_0_0/sim/baremetal_block_smartconnect_0_0.v" \
+"../../../bd/baremetal_block/sim/baremetal_block.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

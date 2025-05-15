@@ -1,9 +1,14 @@
 
 
 #CLOCKING
-create_clock -name clk_out3 -period 2 [get_ports {clk}]
+create_clock -name clk100M -period 10  [get_ports {clk }]
+create_clock -name clk600M -period 1.6 [get_ports {HCLK}]      
+
+
 set_property PACKAGE_PIN D4 [get_ports {clk}]
 set_property IOSTANDARD LVCMOS18 [get_ports {clk}]
+set_property IOSTANDARD LVCMOS18 [get_ports {HCLK}]
+
 
 set_property PACKAGE_PIN H7 [get_ports {reset_ext}]
 set_property IOSTANDARD LVCMOS18 [get_ports {reset_ext}]
