@@ -107,7 +107,6 @@ set rc [catch {
   create_msg_db write_bitstream.pb
   set_param power.BramSDPPropagationFix 1
   set_param chipscope.maxJobs 5
-  set_param bd.open.in_stealth_mode 1
   set_param power.enableUnconnectedCarry8PinPower 1
   set_param power.enableCarry8RouteBelPower 1
   set_param power.enableLutRouteBelPower 1

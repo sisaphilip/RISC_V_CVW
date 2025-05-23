@@ -36,8 +36,8 @@ preplace netloc s_ahb_hsize_1 1 0 1 NJ 590
 preplace netloc s_ahb_htrans_1 1 0 1 NJ 650
 preplace netloc s_ahb_hwdata_1 1 0 1 NJ 710
 preplace netloc s_ahb_hwrite_1 1 0 1 NJ 770
-preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 2 1 NJ 550
 preplace netloc ahblite_axi_bridge_0_M_AXI 1 1 1 N 530
+preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 2 1 NJ 550
 levelinfo -pg 1 0 260 620 880 1020
 pagesize -pg 1 -db -bbox -sgen -190 0 1200 1010
 "

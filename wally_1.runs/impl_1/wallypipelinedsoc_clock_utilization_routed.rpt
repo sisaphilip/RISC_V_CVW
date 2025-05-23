@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version      : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-| Date              : Thu May 15 23:38:10 2025
+| Date              : Thu May 22 21:18:41 2025
 | Host              : thinkpad-p1-gen-5 running 64-bit Ubuntu 25.04
 | Command           : report_clock_utilization -file wallypipelinedsoc_clock_utilization_routed.rpt
 | Design            : wallypipelinedsoc
@@ -45,11 +45,11 @@ Table of Contents
 2. Global Clock Resources
 -------------------------
 
-+-----------+-----------+-----------------+------------+--------------+--------------+------+-------------------+------------------+-------------------+-------------+-----------------+--------------+---------+-----------------------+----------------+
-| Global Id | Source Id | Driver Type/Pin | Constraint | Site         | Clock Region | Root | Clock Delay Group | Clock Low Fanout | Load Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock   | Driver Pin            | Net            |
-+-----------+-----------+-----------------+------------+--------------+--------------+------+-------------------+------------------+-------------------+-------------+-----------------+--------------+---------+-----------------------+----------------+
-| g0        | src0      | BUFGCE/O        | None       | BUFGCE_X0Y76 | X1Y3         | X1Y3 |                   |                  |                 2 |         788 |               1 |       10.000 | clk100M | HCLK_OBUF_BUFG_inst/O | HCLK_OBUF_BUFG |
-+-----------+-----------+-----------------+------------+--------------+--------------+------+-------------------+------------------+-------------------+-------------+-----------------+--------------+---------+-----------------------+----------------+
++-----------+-----------+-----------------+------------+--------------+--------------+------+-------------------+------------------+-------------------+-------------+-----------------+--------------+-------+-----------------------+----------------+
+| Global Id | Source Id | Driver Type/Pin | Constraint | Site         | Clock Region | Root | Clock Delay Group | Clock Low Fanout | Load Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock | Driver Pin            | Net            |
++-----------+-----------+-----------------+------------+--------------+--------------+------+-------------------+------------------+-------------------+-------------+-----------------+--------------+-------+-----------------------+----------------+
+| g0        | src0      | BUFGCE/O        | None       | BUFGCE_X0Y76 | X1Y3         | X1Y3 |                   |                  |                 2 |         788 |               1 |              |       | HCLK_OBUF_BUFG_inst/O | HCLK_OBUF_BUFG |
++-----------+-----------+-----------------+------------+--------------+--------------+------+-------------------+------------------+-------------------+-------------+-----------------+--------------+-------+-----------------------+----------------+
 * Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
 ** Non-Clock Loads column represents cell count of non-clock pin loads
 
@@ -60,7 +60,7 @@ Table of Contents
 +-----------+-----------+-----------------+------------+------------+--------------+-------------+-----------------+---------------------+--------------+-------------------------------+-----------------+
 | Source Id | Global Id | Driver Type/Pin | Constraint | Site       | Clock Region | Clock Loads | Non-Clock Loads | Source Clock Period | Source Clock | Driver Pin                    | Net             |
 +-----------+-----------+-----------------+------------+------------+--------------+-------------+-----------------+---------------------+--------------+-------------------------------+-----------------+
-| src0      | g0        | IBUFCTRL/O      | IOB_X1Y177 | IOB_X1Y177 | X1Y3         |           1 |               0 |              10.000 | clk100M      | clk_IBUF_inst/IBUFCTRL_INST/O | clk_IBUF_inst/O |
+| src0      | g0        | IBUFCTRL/O      | IOB_X1Y177 | IOB_X1Y177 | X1Y3         |           1 |               0 |                     |              | clk_IBUF_inst/IBUFCTRL_INST/O | clk_IBUF_inst/O |
 +-----------+-----------+-----------------+------------+------------+--------------+-------------+-----------------+---------------------+--------------+-------------------------------+-----------------+
 * Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
 ** Non-Clock Loads column represents cell count of non-clock pin loads
@@ -155,11 +155,11 @@ All Modules
 8. Device Cell Placement Summary for Global Clock g0
 ----------------------------------------------------
 
-+-----------+-----------------+-------------------+---------+-------------+---------------+----------+-------------+----------+----------------+----------+----------------+
-| Global Id | Driver Type/Pin | Driver Region (D) | Clock   | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net            |
-+-----------+-----------------+-------------------+---------+-------------+---------------+----------+-------------+----------+----------------+----------+----------------+
-| g0        | BUFGCE/O        | X1Y3              | clk100M |      10.000 | {0.000 5.000} | X1Y3     |         788 |        1 |              0 |        0 | HCLK_OBUF_BUFG |
-+-----------+-----------------+-------------------+---------+-------------+---------------+----------+-------------+----------+----------------+----------+----------------+
++-----------+-----------------+-------------------+-------+-------------+---------------+----------+-------------+----------+----------------+----------+----------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net            |
++-----------+-----------------+-------------------+-------+-------------+---------------+----------+-------------+----------+----------------+----------+----------------+
+| g0        | BUFGCE/O        | X1Y3              |       |             |               | X1Y3     |         788 |        1 |              0 |        0 | HCLK_OBUF_BUFG |
++-----------+-----------------+-------------------+-------+-------------+---------------+----------+-------------+----------+----------------+----------+----------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
 *** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)

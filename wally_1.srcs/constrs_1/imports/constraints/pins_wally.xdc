@@ -1,14 +1,12 @@
 
 
 #CLOCKING
-create_clock -name clk100M -period 10  [get_ports {clk }]
-create_clock -name clk600M -period 1.6 [get_ports {HCLK}]      
-
+create_clock -name clk300M -period 3.33  [get_ports {clk }]
+create_clock -name clk300M -period 3.33  [get_ports {HCLK}]      
 
 set_property PACKAGE_PIN D4 [get_ports {clk}]
 set_property IOSTANDARD LVCMOS18 [get_ports {clk}]
 set_property IOSTANDARD LVCMOS18 [get_ports {HCLK}]
-
 
 set_property PACKAGE_PIN H7 [get_ports {reset_ext}]
 set_property IOSTANDARD LVCMOS18 [get_ports {reset_ext}]
@@ -51,6 +49,7 @@ set_property PACKAGE_PIN P6 [get_ports {SPICS[1]}]
 set_property PACKAGE_PIN AE2 [get_ports {HRDATAEXT[2]}]
 set_property PACKAGE_PIN A2 [get_ports {HSIZE[2]}]
 set_property PACKAGE_PIN J9 [get_ports SDCIn]
+
 #set_property PACKAGE_PIN H7 [get_ports reset_ext]
 set_property PACKAGE_PIN AE10 [get_ports {HRDATAEXT[59]}]
 set_property PACKAGE_PIN D7 [get_ports {HPROT[0]}]
@@ -232,7 +231,6 @@ set_property IOSTANDARD LVCMOS18 [get_ports HMASTLOCK]
 set_property IOSTANDARD LVCMOS18 [get_ports HREADY]
 set_property IOSTANDARD LVCMOS18 [get_ports HREADYEXT]
 set_property IOSTANDARD LVCMOS18 [get_ports HRESETn]
-
 
 set_property PACKAGE_PIN C4 [get_ports {HBURST[2]}]
 set_property PACKAGE_PIN A4 [get_ports {HBURST[1]}]
