@@ -1,9 +1,9 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-//Date        : Tue Oct 22 15:12:34 2024
-//Host        : gen-5 running 64-bit Ubuntu 24.04.1 LTS
+//Tool Version: Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+//Date        : Sun May 25 16:42:43 2025
+//Host        : thinkpad-p1-gen-5 running 64-bit Ubuntu 25.04
 //Command     : generate_target design_1.bd
 //Design      : design_1
 //Purpose     : IP block netlist
@@ -25,24 +25,18 @@ module design_1
   input ena_0;
   input [7:0]wea_0;
 
-  wire [12:0]addra_0_1;
-  wire [63:0]blk_mem_gen_0_douta;
-  wire clka_0_1;
-  wire [63:0]dina_0_1;
-  wire ena_0_1;
-  wire [7:0]wea_0_1;
+  wire [12:0]addra_0;
+  wire clka_0;
+  wire [63:0]dina_0;
+  wire [63:0]douta_0;
+  wire ena_0;
+  wire [7:0]wea_0;
 
-  assign addra_0_1 = addra_0[12:0];
-  assign clka_0_1 = clka_0;
-  assign dina_0_1 = dina_0[63:0];
-  assign douta_0[63:0] = blk_mem_gen_0_douta;
-  assign ena_0_1 = ena_0;
-  assign wea_0_1 = wea_0[7:0];
   design_1_blk_mem_gen_0_0 blk_mem_gen_0
-       (.addra({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,addra_0_1}),
-        .clka(clka_0_1),
-        .dina(dina_0_1),
-        .douta(blk_mem_gen_0_douta),
-        .ena(ena_0_1),
-        .wea(wea_0_1));
+       (.addra({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,addra_0}),
+        .clka(clka_0),
+        .dina(dina_0),
+        .douta(douta_0),
+        .ena(ena_0),
+        .wea(wea_0));
 endmodule

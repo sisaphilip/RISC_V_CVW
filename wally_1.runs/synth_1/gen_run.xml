@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xck24-ubva530-2LV-c" LaunchTime="1747937511" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/wallypipelinedsoc.dcp">
-  <File Type="VDS-TIMINGSUMMARY" Name="wallypipelinedsoc_timing_summary_synth.rpt"/>
+<GenRun Id="synth_1" LaunchPart="xck24-ubva530-2LV-c" LaunchTime="1748182494" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/wallypipelinedsoc.dcp">
   <File Type="RDS-DCP" Name="wallypipelinedsoc.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="wallypipelinedsoc_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="wallypipelinedsoc_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="wallypipelinedsoc_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="wallypipelinedsoc.vds"/>
   <File Type="REPORTS-TCL" Name="wallypipelinedsoc_reports.tcl"/>
-  <File Type="VDS-TIMING-PB" Name="wallypipelinedsoc_timing_summary_synth.pb"/>
   <File Type="PA-TCL" Name="wallypipelinedsoc.tcl"/>
+  <File Type="RDS-UTIL" Name="wallypipelinedsoc_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="wallypipelinedsoc_utilization_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/cvw/config/shared/BranchPredictorType.vh">
@@ -1378,15 +1375,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/cvw/src/generic/mem/ram1p1rwbe_64x22.sv">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Desktop/rtl_design/asic_dev/cvw/src/generic/mem/ram1p1rwbe_64x22.sv"/>
-        <Attr Name="ImportTime" Val="1727949307"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/imports/cvw/src/generic/mem/ram1p1rwbe_64x44.sv">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../Desktop/rtl_design/asic_dev/cvw/src/generic/mem/ram1p1rwbe_64x44.sv"/>
@@ -1855,6 +1843,16 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/imports/cvw/src/generic/mem/ram1p1rwbe_64x22.sv">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Desktop/rtl_design/asic_dev/cvw/src/generic/mem/ram1p1rwbe_64x22.sv"/>
+        <Attr Name="ImportTime" Val="1727949307"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/imports/cvw/src/uncore/ram_ahb.sv">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
@@ -2159,6 +2157,7 @@
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedInSteps" Val="impl_1"/>
         <Attr Name="UsedInSteps" Val="impl_1_copy_1"/>
+        <Attr Name="UsedInSteps" Val="impl_1_copy_2"/>
         <Attr Name="AutoDcp" Val="1"/>
       </FileInfo>
     </File>

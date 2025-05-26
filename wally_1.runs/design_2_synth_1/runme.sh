@@ -8,9 +8,9 @@
 # 
 
 if [ -z "$PATH" ]; then
-  PATH=/home/ishfisav/Desktop/amd2024.2/Vitis/2024.2/bin:/home/ishfisav/Desktop/amd2024.2/Vivado/2024.2/bin
+  PATH=/home/ishfisav/Desktop/amd2024.2/Vitis/2024.2/bin:/home/ishfisav/Desktop/amd2024.2/Vivado/2024.2/ids_lite/ISE/bin/lin64:/home/ishfisav/Desktop/amd2024.2/Vivado/2024.2/bin
 else
-  PATH=/home/ishfisav/Desktop/amd2024.2/Vitis/2024.2/bin:/home/ishfisav/Desktop/amd2024.2/Vivado/2024.2/bin:$PATH
+  PATH=/home/ishfisav/Desktop/amd2024.2/Vitis/2024.2/bin:/home/ishfisav/Desktop/amd2024.2/Vivado/2024.2/ids_lite/ISE/bin/lin64:/home/ishfisav/Desktop/amd2024.2/Vivado/2024.2/bin:$PATH
 fi
 export PATH
 

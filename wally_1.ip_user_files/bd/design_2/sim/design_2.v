@@ -1,9 +1,9 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-//Date        : Sun Nov  3 13:05:52 2024
-//Host        : gen-5 running 64-bit Ubuntu 24.04.1 LTS
+//Tool Version: Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+//Date        : Sun May 25 16:42:44 2025
+//Host        : thinkpad-p1-gen-5 running 64-bit Ubuntu 25.04
 //Command     : generate_target design_2.bd
 //Design      : design_2
 //Purpose     : IP block netlist
@@ -37,42 +37,30 @@ module design_2
   input [7:0]wea;
   input [7:0]web;
 
-  wire [31:0]addra_1;
-  wire [31:0]addrb_1;
-  wire [63:0]blk_mem_gen_0_douta;
-  wire [63:0]blk_mem_gen_0_doutb;
-  wire clka_1;
-  wire clkb_1;
-  wire [63:0]dina_1;
-  wire [63:0]dinb_1;
-  wire ena_1;
-  wire enb_1;
-  wire [7:0]wea_1;
-  wire [7:0]web_1;
+  wire [31:0]addra;
+  wire [31:0]addrb;
+  wire clka;
+  wire clkb;
+  wire [63:0]dina;
+  wire [63:0]dinb;
+  wire [63:0]douta;
+  wire [63:0]doutb;
+  wire ena;
+  wire enb;
+  wire [7:0]wea;
+  wire [7:0]web;
 
-  assign addra_1 = addra[31:0];
-  assign addrb_1 = addrb[31:0];
-  assign clka_1 = clka;
-  assign clkb_1 = clkb;
-  assign dina_1 = dina[63:0];
-  assign dinb_1 = dinb[63:0];
-  assign douta[63:0] = blk_mem_gen_0_douta;
-  assign doutb[63:0] = blk_mem_gen_0_doutb;
-  assign ena_1 = ena;
-  assign enb_1 = enb;
-  assign wea_1 = wea[7:0];
-  assign web_1 = web[7:0];
   design_2_blk_mem_gen_0_0 blk_mem_gen_0
-       (.addra(addra_1),
-        .addrb(addrb_1),
-        .clka(clka_1),
-        .clkb(clkb_1),
-        .dina(dina_1),
-        .dinb(dinb_1),
-        .douta(blk_mem_gen_0_douta),
-        .doutb(blk_mem_gen_0_doutb),
-        .ena(ena_1),
-        .enb(enb_1),
-        .wea(wea_1),
-        .web(web_1));
+       (.addra(addra),
+        .addrb(addrb),
+        .clka(clka),
+        .clkb(clkb),
+        .dina(dina),
+        .dinb(dinb),
+        .douta(douta),
+        .doutb(doutb),
+        .ena(ena),
+        .enb(enb),
+        .wea(wea),
+        .web(web));
 endmodule

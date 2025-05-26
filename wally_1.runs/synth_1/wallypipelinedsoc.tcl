@@ -57,10 +57,14 @@ if {$::dispatch::connected} {
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param power.BramSDPPropagationFix 1
+set_param checkpoint.writeSynthRtdsInDcp 1
 set_param chipscope.maxJobs 5
+set_param synth.incrementalSynthesisCache ./.Xil/Vivado-61072-thinkpad-p1-gen-5/incrSyn
 set_param power.enableUnconnectedCarry8PinPower 1
 set_param power.enableCarry8RouteBelPower 1
 set_param power.enableLutRouteBelPower 1
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xck24-ubva530-2LV-c
 
@@ -235,7 +239,6 @@ read_verilog -library xil_defaultlib -sv {
   /home/ishfisav/wally_1/wally_1.srcs/sources_1/imports/cvw/src/privileged/privmode.sv
   /home/ishfisav/wally_1/wally_1.srcs/sources_1/imports/cvw/src/privileged/privpiperegs.sv
   /home/ishfisav/wally_1/wally_1.srcs/sources_1/imports/cvw/src/generic/mem/ram1p1rwbe.sv
-  /home/ishfisav/wally_1/wally_1.srcs/sources_1/imports/cvw/src/generic/mem/ram1p1rwbe_64x22.sv
   /home/ishfisav/wally_1/wally_1.srcs/sources_1/imports/cvw/src/generic/mem/ram1p1rwbe_64x44.sv
   /home/ishfisav/wally_1/wally_1.srcs/sources_1/imports/cvw/src/generic/mem/ram1p1rwe.sv
   /home/ishfisav/wally_1/wally_1.srcs/sources_1/imports/cvw/src/generic/mem/ram2p1r1wbe.sv

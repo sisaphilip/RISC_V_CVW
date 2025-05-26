@@ -27,7 +27,7 @@ module design_1 (
   (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLKA_0, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_clka_0, INSERT_VIP 0" *)
   input clka_0;
   (* X_INTERFACE_IGNORE = "true" *)
-  input [12:0]addra_0;
+  input [31:0]addra_0;
 
   // stub module has no contents
 

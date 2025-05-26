@@ -61,6 +61,12 @@ module ram1p1rwbe import cvw::*; #(parameter USE_SRAM=1, DEPTH=9, WIDTH=64, PREL
  
  **/
     
+ 
+ 
+ 
+ 
+ 
+ 
   end else if ((USE_SRAM == 1) & (WIDTH == 64)  & (DEPTH == 9)) begin     // RV64 cache tag     mordified SISA
     genvar index;
     // 64 x 44-bit SRAM
@@ -70,6 +76,10 @@ module ram1p1rwbe import cvw::*; #(parameter USE_SRAM=1, DEPTH=9, WIDTH=64, PREL
     ram1p1rwbe_64x44 sram1B (.CLK(clk), .CEB(~ce), .WEB(~we),
       .A(addr), .D(din), 
       .BWEB(~BitWriteMask), .Q(dout));
+
+
+
+
 
 
 

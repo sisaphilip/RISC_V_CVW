@@ -2,8 +2,8 @@
 -- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
--- Date        : Fri Apr 11 23:53:43 2025
--- Host        : thinkpad-p1-gen-5 running 64-bit Ubuntu 24.10
+-- Date        : Sun May 25 17:15:25 2025
+-- Host        : thinkpad-p1-gen-5 running 64-bit Ubuntu 25.04
 -- Command     : write_vhdl -force -mode synth_stub
 --               /home/ishfisav/wally_1/wally_1.gen/sources_1/bd/design_1/design_1_stub.vhdl
 -- Design      : design_1
@@ -15,7 +15,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity design_1 is
   Port ( 
-    addra_0 : in STD_LOGIC_VECTOR ( 12 downto 0 );
+    addra_0 : in STD_LOGIC_VECTOR ( 31 downto 0 );
     clka_0 : in STD_LOGIC;
     dina_0 : in STD_LOGIC_VECTOR ( 63 downto 0 );
     douta_0 : out STD_LOGIC_VECTOR ( 63 downto 0 );
@@ -33,7 +33,7 @@ architecture stub of design_1 is
   attribute syn_black_box : boolean;
   attribute black_box_pad_pin : string;
   attribute syn_black_box of stub : architecture is true;
-  attribute black_box_pad_pin of stub : architecture is "addra_0[12:0],clka_0,dina_0[63:0],douta_0[63:0],ena_0,wea_0[7:0]";
+  attribute black_box_pad_pin of stub : architecture is "addra_0[31:0],clka_0,dina_0[63:0],douta_0[63:0],ena_0,wea_0[7:0]";
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of clka_0 : signal is "xilinx.com:signal:clock:1.0 CLK.CLKA_0 CLK";
   attribute X_INTERFACE_PARAMETER : string;

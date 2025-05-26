@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x80306C94098B4BDA",
+      "boundary_crc": "0x80306C948FF85998",
       "device": "xck26-sfvc784-2LV-c",
       "gen_directory": "../../../../wally_1.gen/sources_1/bd/design_2",
       "name": "design_2",
@@ -12,62 +12,6 @@
     },
     "design_tree": {
       "blk_mem_gen_0": ""
-    },
-    "interface_ports": {
-      "BRAM_PORTB": {
-        "mode": "Slave",
-        "vlnv_bus_definition": "xilinx.com:interface:bram:1.0",
-        "vlnv": "xilinx.com:interface:bram_rtl:1.0",
-        "parameters": {
-          "MASTER_TYPE": {
-            "value": "OTHER",
-            "value_src": "default"
-          },
-          "MEM_ECC": {
-            "value": "NONE",
-            "value_src": "default"
-          },
-          "MEM_SIZE": {
-            "value": "8192",
-            "value_src": "default"
-          },
-          "MEM_WIDTH": {
-            "value": "32",
-            "value_src": "default"
-          },
-          "READ_LATENCY": {
-            "value": "1",
-            "value_src": "default"
-          }
-        }
-      },
-      "BRAM_PORTA": {
-        "mode": "Slave",
-        "vlnv_bus_definition": "xilinx.com:interface:bram:1.0",
-        "vlnv": "xilinx.com:interface:bram_rtl:1.0",
-        "parameters": {
-          "MASTER_TYPE": {
-            "value": "OTHER",
-            "value_src": "default"
-          },
-          "MEM_ECC": {
-            "value": "NONE",
-            "value_src": "default"
-          },
-          "MEM_SIZE": {
-            "value": "8192",
-            "value_src": "default"
-          },
-          "MEM_WIDTH": {
-            "value": "32",
-            "value_src": "default"
-          },
-          "READ_LATENCY": {
-            "value": "1",
-            "value_src": "default"
-          }
-        }
-      }
     },
     "ports": {
       "enb": {
@@ -227,20 +171,6 @@
             "value": "Stand_Alone"
           }
         }
-      }
-    },
-    "interface_nets": {
-      "BRAM_PORTA_1": {
-        "interface_ports": [
-          "blk_mem_gen_0/BRAM_PORTA",
-          "BRAM_PORTA"
-        ]
-      },
-      "BRAM_PORTB_1": {
-        "interface_ports": [
-          "blk_mem_gen_0/BRAM_PORTB",
-          "BRAM_PORTB"
-        ]
       }
     },
     "nets": {
