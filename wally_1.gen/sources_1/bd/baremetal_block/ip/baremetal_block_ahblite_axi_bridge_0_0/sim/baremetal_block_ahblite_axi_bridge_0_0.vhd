@@ -47,14 +47,14 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:ip:ahblite_axi_bridge:3.0
--- IP Revision: 28
+-- IP Revision: 29
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 
-LIBRARY ahblite_axi_bridge_v3_0_28;
-USE ahblite_axi_bridge_v3_0_28.ahblite_axi_bridge;
+LIBRARY ahblite_axi_bridge_v3_0_29;
+USE ahblite_axi_bridge_v3_0_29.ahblite_axi_bridge;
 
 ENTITY baremetal_block_ahblite_axi_bridge_0_0 IS
   PORT (

@@ -1,5 +1,5 @@
 // (c) Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-// (c) Copyright 2022-2024 Advanced Micro Devices, Inc. All rights reserved.
+// (c) Copyright 2022-2025 Advanced Micro Devices, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of AMD and is protected under U.S. and international copyright
@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:ip:blk_mem_gen:8.4
-// IP Revision: 9
+// IP Revision: 11
 
 `timescale 1ns/1ps
 
@@ -77,7 +77,7 @@ input wire [63 : 0] dina;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA DOUT" *)
 output wire [63 : 0] douta;
 
-  blk_mem_gen_v8_4_9 #(
+  blk_mem_gen_v8_4_11 #(
     .C_FAMILY("zynquplus"),
     .C_XDEVICEFAMILY("zynquplus"),
     .C_ELABORATION_DIR("./"),

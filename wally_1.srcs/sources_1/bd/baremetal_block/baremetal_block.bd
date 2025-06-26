@@ -7,7 +7,7 @@
       "name": "baremetal_block",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "None",
-      "tool_version": "2024.2",
+      "tool_version": "2025.1",
       "validated": "true"
     },
     "design_tree": {
@@ -113,10 +113,11 @@
     "components": {
       "axi_bram_ctrl_0": {
         "vlnv": "xilinx.com:ip:axi_bram_ctrl:4.1",
-        "ip_revision": "11",
+        "ip_revision": "13",
         "xci_name": "baremetal_block_axi_bram_ctrl_0_0",
         "xci_path": "ip/baremetal_block_axi_bram_ctrl_0_0/baremetal_block_axi_bram_ctrl_0_0.xci",
         "inst_hier_path": "axi_bram_ctrl_0",
+        "has_run_ip_tcl": "true",
         "parameters": {
           "DATA_WIDTH": {
             "value": "64"
@@ -124,14 +125,25 @@
           "SINGLE_PORT_BRAM": {
             "value": "1"
           }
+        },
+        "interface_ports": {
+          "S_AXI": {
+            "bd_attributes": {
+              "FUNCTION": {
+                "value": "BRAM_CTRL",
+                "value_src": "default"
+              }
+            }
+          }
         }
       },
       "blk_mem_gen_0": {
         "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
-        "ip_revision": "9",
+        "ip_revision": "11",
         "xci_name": "baremetal_block_blk_mem_gen_0_0",
         "xci_path": "ip/baremetal_block_blk_mem_gen_0_0/baremetal_block_blk_mem_gen_0_0.xci",
         "inst_hier_path": "blk_mem_gen_0",
+        "has_run_ip_tcl": "true",
         "parameters": {
           "Enable_32bit_Address": {
             "value": "true"
@@ -146,17 +158,39 @@
       },
       "ahblite_axi_bridge_0": {
         "vlnv": "xilinx.com:ip:ahblite_axi_bridge:3.0",
-        "ip_revision": "28",
+        "ip_revision": "29",
         "xci_name": "baremetal_block_ahblite_axi_bridge_0_0",
         "xci_path": "ip/baremetal_block_ahblite_axi_bridge_0_0/baremetal_block_ahblite_axi_bridge_0_0.xci",
         "inst_hier_path": "ahblite_axi_bridge_0",
+        "has_run_ip_tcl": "true",
         "parameters": {
+          "C_M_AXI_DATA_WIDTH": {
+            "value": "64"
+          },
           "C_S_AHB_DATA_WIDTH": {
             "value": "64"
           }
         },
         "interface_ports": {
+          "M_AXI": {
+            "bd_attributes": {
+              "TYPE": {
+                "value": "INTERIOR",
+                "value_src": "auto"
+              }
+            }
+          },
           "AHB_INTERFACE": {
+            "bd_attributes": {
+              "BRIDGES": {
+                "value": "M_AXI",
+                "value_src": "auto"
+              },
+              "TYPE": {
+                "value": "INTERIOR",
+                "value_src": "auto"
+              }
+            },
             "vlnv": "xilinx.com:interface:ahblite_rtl:2.0",
             "mode": "Slave",
             "bridges": [

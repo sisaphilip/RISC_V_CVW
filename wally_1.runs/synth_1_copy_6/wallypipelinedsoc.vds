@@ -1,10 +1,10 @@
 #-----------------------------------------------------------
-# Vivado v2024.2 (64-bit)
-# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
-# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
-# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Sun May 25 22:36:15 2025
-# Process ID         : 161468
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Thu Jun 26 19:01:25 2025
+# Process ID         : 44468
 # Current directory  : /home/ishfisav/wally_1/wally_1.runs/synth_1_copy_6
 # Command line       : vivado -log wallypipelinedsoc.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source wallypipelinedsoc.tcl
 # Log file           : /home/ishfisav/wally_1/wally_1.runs/synth_1_copy_6/wallypipelinedsoc.vds
@@ -13,18 +13,18 @@
 # Platform           : Ubuntu
 # Operating System   : Ubuntu 25.04
 # Processor Detail   : 12th Gen Intel(R) Core(TM) i7-12800H
-# CPU Frequency      : 2332.465 MHz
+# CPU Frequency      : 400.000 MHz
 # CPU Physical cores : 14
 # CPU Logical cores  : 20
 # Host memory        : 32764 MB
 # Swap memory        : 103079 MB
 # Total Virtual      : 135843 MB
-# Available Virtual  : 126716 MB
+# Available Virtual  : 126970 MB
 #-----------------------------------------------------------
 source wallypipelinedsoc.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/ishfisav/Desktop/amd2024.2/Vivado/2024.2/data/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/ishfisav/Desktop/amd2025.1/2025.1/Vivado/data/ip'.
 Command: synth_design -top wallypipelinedsoc -part xck26-sfvc784-2LV-c
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xck26'
@@ -32,9 +32,9 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
 INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 161544
+INFO: [Synth 8-7075] Helper process launched with PID 44545
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2842.164 ; gain = 8.000 ; free physical = 10580 ; free virtual = 119127
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3009.344 ; gain = 8.000 ; free physical = 11388 ; free virtual = 119302
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-11241] undeclared symbol 'HRESETN', assumed default net type 'wire' [/home/ishfisav/wally_1/wally_1.srcs/sources_1/imports/cvw/src/uncore/uncore.sv:138]
 INFO: [Synth 8-11241] undeclared symbol 'GPIOOUT', assumed default net type 'wire' [/home/ishfisav/wally_1/wally_1.srcs/sources_1/imports/cvw/src/wally/wallypipelinedsoc.sv:97]
@@ -653,23 +653,23 @@ INFO: [Synth 8-638] synthesizing module 'baremetal_block_ahblite_axi_bridge_0_0'
 	Parameter C_M_AXI_PROTOCOL bound to: AXI4 - type: string 
 	Parameter C_M_AXI_THREAD_ID_WIDTH bound to: 4 - type: integer 
 	Parameter C_AHB_AXI_TIMEOUT bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'ahblite_axi_bridge' declared at '/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/f7fd/hdl/ahblite_axi_bridge_v3_0_vh_rfs.vhd:4206' bound to instance 'U0' of component 'ahblite_axi_bridge' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ip/baremetal_block_ahblite_axi_bridge_0_0/synth/baremetal_block_ahblite_axi_bridge_0_0.vhd:251]
-INFO: [Synth 8-638] synthesizing module 'ahblite_axi_bridge' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/f7fd/hdl/ahblite_axi_bridge_v3_0_vh_rfs.vhd:4302]
-INFO: [Synth 8-638] synthesizing module 'ahblite_axi_control' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/f7fd/hdl/ahblite_axi_bridge_v3_0_vh_rfs.vhd:3602]
-INFO: [Synth 8-256] done synthesizing module 'ahblite_axi_control' (0#1) [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/f7fd/hdl/ahblite_axi_bridge_v3_0_vh_rfs.vhd:3602]
-INFO: [Synth 8-638] synthesizing module 'ahb_if' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/f7fd/hdl/ahblite_axi_bridge_v3_0_vh_rfs.vhd:2470]
-INFO: [Synth 8-256] done synthesizing module 'ahb_if' (0#1) [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/f7fd/hdl/ahblite_axi_bridge_v3_0_vh_rfs.vhd:2470]
-INFO: [Synth 8-638] synthesizing module 'ahb_data_counter' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/f7fd/hdl/ahblite_axi_bridge_v3_0_vh_rfs.vhd:3326]
-INFO: [Synth 8-638] synthesizing module 'counter_f' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/f7fd/hdl/ahblite_axi_bridge_v3_0_vh_rfs.vhd:312]
-INFO: [Synth 8-256] done synthesizing module 'counter_f' (0#1) [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/f7fd/hdl/ahblite_axi_bridge_v3_0_vh_rfs.vhd:312]
-INFO: [Synth 8-256] done synthesizing module 'ahb_data_counter' (0#1) [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/f7fd/hdl/ahblite_axi_bridge_v3_0_vh_rfs.vhd:3326]
-INFO: [Synth 8-638] synthesizing module 'axi_wchannel' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/f7fd/hdl/ahblite_axi_bridge_v3_0_vh_rfs.vhd:884]
-INFO: [Synth 8-256] done synthesizing module 'axi_wchannel' (0#1) [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/f7fd/hdl/ahblite_axi_bridge_v3_0_vh_rfs.vhd:884]
-INFO: [Synth 8-638] synthesizing module 'axi_rchannel' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/f7fd/hdl/ahblite_axi_bridge_v3_0_vh_rfs.vhd:1900]
-INFO: [Synth 8-256] done synthesizing module 'axi_rchannel' (0#1) [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/f7fd/hdl/ahblite_axi_bridge_v3_0_vh_rfs.vhd:1900]
-INFO: [Synth 8-638] synthesizing module 'time_out' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/f7fd/hdl/ahblite_axi_bridge_v3_0_vh_rfs.vhd:513]
-INFO: [Synth 8-256] done synthesizing module 'time_out' (0#1) [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/f7fd/hdl/ahblite_axi_bridge_v3_0_vh_rfs.vhd:513]
-INFO: [Synth 8-256] done synthesizing module 'ahblite_axi_bridge' (0#1) [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/f7fd/hdl/ahblite_axi_bridge_v3_0_vh_rfs.vhd:4302]
+INFO: [Synth 8-3491] module 'ahblite_axi_bridge' declared at '/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/6b9d/hdl/ahblite_axi_bridge_v3_0_vh_rfs.vhd:4206' bound to instance 'U0' of component 'ahblite_axi_bridge' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ip/baremetal_block_ahblite_axi_bridge_0_0/synth/baremetal_block_ahblite_axi_bridge_0_0.vhd:251]
+INFO: [Synth 8-638] synthesizing module 'ahblite_axi_bridge' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/6b9d/hdl/ahblite_axi_bridge_v3_0_vh_rfs.vhd:4302]
+INFO: [Synth 8-638] synthesizing module 'ahblite_axi_control' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/6b9d/hdl/ahblite_axi_bridge_v3_0_vh_rfs.vhd:3602]
+INFO: [Synth 8-256] done synthesizing module 'ahblite_axi_control' (0#1) [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/6b9d/hdl/ahblite_axi_bridge_v3_0_vh_rfs.vhd:3602]
+INFO: [Synth 8-638] synthesizing module 'ahb_if' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/6b9d/hdl/ahblite_axi_bridge_v3_0_vh_rfs.vhd:2470]
+INFO: [Synth 8-256] done synthesizing module 'ahb_if' (0#1) [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/6b9d/hdl/ahblite_axi_bridge_v3_0_vh_rfs.vhd:2470]
+INFO: [Synth 8-638] synthesizing module 'ahb_data_counter' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/6b9d/hdl/ahblite_axi_bridge_v3_0_vh_rfs.vhd:3326]
+INFO: [Synth 8-638] synthesizing module 'counter_f' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/6b9d/hdl/ahblite_axi_bridge_v3_0_vh_rfs.vhd:312]
+INFO: [Synth 8-256] done synthesizing module 'counter_f' (0#1) [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/6b9d/hdl/ahblite_axi_bridge_v3_0_vh_rfs.vhd:312]
+INFO: [Synth 8-256] done synthesizing module 'ahb_data_counter' (0#1) [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/6b9d/hdl/ahblite_axi_bridge_v3_0_vh_rfs.vhd:3326]
+INFO: [Synth 8-638] synthesizing module 'axi_wchannel' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/6b9d/hdl/ahblite_axi_bridge_v3_0_vh_rfs.vhd:884]
+INFO: [Synth 8-256] done synthesizing module 'axi_wchannel' (0#1) [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/6b9d/hdl/ahblite_axi_bridge_v3_0_vh_rfs.vhd:884]
+INFO: [Synth 8-638] synthesizing module 'axi_rchannel' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/6b9d/hdl/ahblite_axi_bridge_v3_0_vh_rfs.vhd:1900]
+INFO: [Synth 8-256] done synthesizing module 'axi_rchannel' (0#1) [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/6b9d/hdl/ahblite_axi_bridge_v3_0_vh_rfs.vhd:1900]
+INFO: [Synth 8-638] synthesizing module 'time_out' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/6b9d/hdl/ahblite_axi_bridge_v3_0_vh_rfs.vhd:513]
+INFO: [Synth 8-256] done synthesizing module 'time_out' (0#1) [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/6b9d/hdl/ahblite_axi_bridge_v3_0_vh_rfs.vhd:513]
+INFO: [Synth 8-256] done synthesizing module 'ahblite_axi_bridge' (0#1) [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/6b9d/hdl/ahblite_axi_bridge_v3_0_vh_rfs.vhd:4302]
 INFO: [Synth 8-256] done synthesizing module 'baremetal_block_ahblite_axi_bridge_0_0' (0#1) [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ip/baremetal_block_ahblite_axi_bridge_0_0/synth/baremetal_block_ahblite_axi_bridge_0_0.vhd:113]
 INFO: [Synth 8-638] synthesizing module 'baremetal_block_axi_bram_ctrl_0_0' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ip/baremetal_block_axi_bram_ctrl_0_0/synth/baremetal_block_axi_bram_ctrl_0_0.vhd:108]
 	Parameter C_BRAM_INST_MODE bound to: EXTERNAL - type: string 
@@ -690,55 +690,55 @@ INFO: [Synth 8-638] synthesizing module 'baremetal_block_axi_bram_ctrl_0_0' [/ho
 	Parameter C_ECC_TYPE bound to: 0 - type: integer 
 	Parameter C_FAULT_INJECT bound to: 0 - type: integer 
 	Parameter C_ECC_ONOFF_RESET_VALUE bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'axi_bram_ctrl' declared at '/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/df79/hdl/axi_bram_ctrl_v4_1_rfs.vhd:31263' bound to instance 'U0' of component 'axi_bram_ctrl' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ip/baremetal_block_axi_bram_ctrl_0_0/synth/baremetal_block_axi_bram_ctrl_0_0.vhd:268]
-INFO: [Synth 8-638] synthesizing module 'axi_bram_ctrl' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/df79/hdl/axi_bram_ctrl_v4_1_rfs.vhd:31434]
-INFO: [Synth 8-638] synthesizing module 'axi_bram_ctrl_top' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/df79/hdl/axi_bram_ctrl_v4_1_rfs.vhd:30438]
-INFO: [Synth 8-638] synthesizing module 'full_axi' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/df79/hdl/axi_bram_ctrl_v4_1_rfs.vhd:29196]
-WARNING: [Synth 8-6774] Null subtype or type declaration found [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/df79/hdl/axi_bram_ctrl_v4_1_rfs.vhd:29266]
-INFO: [Synth 8-3919] null assignment ignored [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/df79/hdl/axi_bram_ctrl_v4_1_rfs.vhd:29266]
-INFO: [Synth 8-3919] null assignment ignored [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/df79/hdl/axi_bram_ctrl_v4_1_rfs.vhd:29472]
-INFO: [Synth 8-638] synthesizing module 'sng_port_arb' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/df79/hdl/axi_bram_ctrl_v4_1_rfs.vhd:11397]
-INFO: [Synth 8-256] done synthesizing module 'sng_port_arb' (0#1) [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/df79/hdl/axi_bram_ctrl_v4_1_rfs.vhd:11397]
-INFO: [Synth 8-638] synthesizing module 'wr_chnl' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/df79/hdl/axi_bram_ctrl_v4_1_rfs.vhd:24080]
-INFO: [Synth 8-506] null port 'FaultInjectECC' ignored [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/df79/hdl/axi_bram_ctrl_v4_1_rfs.vhd:24047]
-INFO: [Synth 8-638] synthesizing module 'wrap_brst' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/df79/hdl/axi_bram_ctrl_v4_1_rfs.vhd:12386]
-INFO: [Synth 8-256] done synthesizing module 'wrap_brst' (0#1) [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/df79/hdl/axi_bram_ctrl_v4_1_rfs.vhd:12386]
-INFO: [Synth 8-638] synthesizing module 'SRL_FIFO' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/df79/hdl/axi_bram_ctrl_v4_1_rfs.vhd:91]
-INFO: [Synth 8-3491] module 'FDR' declared at '/home/ishfisav/Desktop/amd2024.2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:43175' bound to instance 'Data_Exists_DFF' of component 'FDR' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/df79/hdl/axi_bram_ctrl_v4_1_rfs.vhd:188]
-INFO: [Synth 8-6157] synthesizing module 'FDR' [/home/ishfisav/Desktop/amd2024.2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:43175]
-INFO: [Synth 8-6155] done synthesizing module 'FDR' (0#1) [/home/ishfisav/Desktop/amd2024.2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:43175]
-INFO: [Synth 8-3491] module 'MUXCY_L' declared at '/home/ishfisav/Desktop/amd2024.2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:90780' bound to instance 'MUXCY_L_I' of component 'MUXCY_L' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/df79/hdl/axi_bram_ctrl_v4_1_rfs.vhd:205]
-INFO: [Synth 8-6157] synthesizing module 'MUXCY_L' [/home/ishfisav/Desktop/amd2024.2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:90780]
-INFO: [Synth 8-6155] done synthesizing module 'MUXCY_L' (0#1) [/home/ishfisav/Desktop/amd2024.2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:90780]
-INFO: [Synth 8-3491] module 'XORCY' declared at '/home/ishfisav/Desktop/amd2024.2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:155012' bound to instance 'XORCY_I' of component 'XORCY' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/df79/hdl/axi_bram_ctrl_v4_1_rfs.vhd:212]
-INFO: [Synth 8-6157] synthesizing module 'XORCY' [/home/ishfisav/Desktop/amd2024.2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:155012]
-INFO: [Synth 8-6155] done synthesizing module 'XORCY' (0#1) [/home/ishfisav/Desktop/amd2024.2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:155012]
-INFO: [Synth 8-3491] module 'FDRE' declared at '/home/ishfisav/Desktop/amd2024.2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:43188' bound to instance 'FDRE_I' of component 'FDRE' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/df79/hdl/axi_bram_ctrl_v4_1_rfs.vhd:218]
-INFO: [Synth 8-6157] synthesizing module 'FDRE' [/home/ishfisav/Desktop/amd2024.2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:43188]
-INFO: [Synth 8-6155] done synthesizing module 'FDRE' (0#1) [/home/ishfisav/Desktop/amd2024.2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:43188]
-INFO: [Synth 8-3491] module 'MUXCY_L' declared at '/home/ishfisav/Desktop/amd2024.2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:90780' bound to instance 'MUXCY_L_I' of component 'MUXCY_L' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/df79/hdl/axi_bram_ctrl_v4_1_rfs.vhd:205]
-INFO: [Synth 8-3491] module 'XORCY' declared at '/home/ishfisav/Desktop/amd2024.2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:155012' bound to instance 'XORCY_I' of component 'XORCY' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/df79/hdl/axi_bram_ctrl_v4_1_rfs.vhd:212]
-INFO: [Synth 8-3491] module 'FDRE' declared at '/home/ishfisav/Desktop/amd2024.2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:43188' bound to instance 'FDRE_I' of component 'FDRE' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/df79/hdl/axi_bram_ctrl_v4_1_rfs.vhd:218]
-INFO: [Synth 8-3491] module 'MUXCY_L' declared at '/home/ishfisav/Desktop/amd2024.2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:90780' bound to instance 'MUXCY_L_I' of component 'MUXCY_L' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/df79/hdl/axi_bram_ctrl_v4_1_rfs.vhd:205]
-INFO: [Synth 8-3491] module 'XORCY' declared at '/home/ishfisav/Desktop/amd2024.2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:155012' bound to instance 'XORCY_I' of component 'XORCY' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/df79/hdl/axi_bram_ctrl_v4_1_rfs.vhd:212]
-INFO: [Synth 8-3491] module 'FDRE' declared at '/home/ishfisav/Desktop/amd2024.2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:43188' bound to instance 'FDRE_I' of component 'FDRE' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/df79/hdl/axi_bram_ctrl_v4_1_rfs.vhd:218]
-INFO: [Synth 8-3491] module 'MUXCY_L' declared at '/home/ishfisav/Desktop/amd2024.2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:90780' bound to instance 'MUXCY_L_I' of component 'MUXCY_L' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/df79/hdl/axi_bram_ctrl_v4_1_rfs.vhd:205]
-INFO: [Synth 8-3491] module 'XORCY' declared at '/home/ishfisav/Desktop/amd2024.2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:155012' bound to instance 'XORCY_I' of component 'XORCY' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/df79/hdl/axi_bram_ctrl_v4_1_rfs.vhd:212]
-INFO: [Synth 8-3491] module 'FDRE' declared at '/home/ishfisav/Desktop/amd2024.2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:43188' bound to instance 'FDRE_I' of component 'FDRE' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/df79/hdl/axi_bram_ctrl_v4_1_rfs.vhd:218]
-INFO: [Synth 8-3491] module 'SRL16E' declared at '/home/ishfisav/Desktop/amd2024.2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:149045' bound to instance 'SRL16E_I' of component 'SRL16E' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/df79/hdl/axi_bram_ctrl_v4_1_rfs.vhd:229]
-INFO: [Synth 8-6157] synthesizing module 'SRL16E' [/home/ishfisav/Desktop/amd2024.2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:149045]
-INFO: [Synth 8-6155] done synthesizing module 'SRL16E' (0#1) [/home/ishfisav/Desktop/amd2024.2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:149045]
-INFO: [Synth 8-3491] module 'SRL16E' declared at '/home/ishfisav/Desktop/amd2024.2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:149045' bound to instance 'SRL16E_I' of component 'SRL16E' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/df79/hdl/axi_bram_ctrl_v4_1_rfs.vhd:229]
-INFO: [Synth 8-3491] module 'SRL16E' declared at '/home/ishfisav/Desktop/amd2024.2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:149045' bound to instance 'SRL16E_I' of component 'SRL16E' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/df79/hdl/axi_bram_ctrl_v4_1_rfs.vhd:229]
-INFO: [Synth 8-3491] module 'SRL16E' declared at '/home/ishfisav/Desktop/amd2024.2/Vivado/2024.2/scripts/rt/data/unisim_comp.v:149045' bound to instance 'SRL16E_I' of component 'SRL16E' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/df79/hdl/axi_bram_ctrl_v4_1_rfs.vhd:229]
-INFO: [Synth 8-256] done synthesizing module 'SRL_FIFO' (0#1) [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/df79/hdl/axi_bram_ctrl_v4_1_rfs.vhd:91]
-INFO: [Synth 8-256] done synthesizing module 'wr_chnl' (0#1) [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/df79/hdl/axi_bram_ctrl_v4_1_rfs.vhd:24080]
-WARNING: [Synth 8-6778] Component port with null array found, Will be ignored [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/df79/hdl/axi_bram_ctrl_v4_1_rfs.vhd:29936]
-INFO: [Synth 8-638] synthesizing module 'rd_chnl' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/df79/hdl/axi_bram_ctrl_v4_1_rfs.vhd:14672]
-INFO: [Synth 8-256] done synthesizing module 'rd_chnl' (0#1) [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/df79/hdl/axi_bram_ctrl_v4_1_rfs.vhd:14672]
-INFO: [Synth 8-256] done synthesizing module 'full_axi' (0#1) [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/df79/hdl/axi_bram_ctrl_v4_1_rfs.vhd:29196]
-INFO: [Synth 8-256] done synthesizing module 'axi_bram_ctrl_top' (0#1) [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/df79/hdl/axi_bram_ctrl_v4_1_rfs.vhd:30438]
-INFO: [Synth 8-256] done synthesizing module 'axi_bram_ctrl' (0#1) [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/df79/hdl/axi_bram_ctrl_v4_1_rfs.vhd:31434]
+INFO: [Synth 8-3491] module 'axi_bram_ctrl' declared at '/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:31263' bound to instance 'U0' of component 'axi_bram_ctrl' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ip/baremetal_block_axi_bram_ctrl_0_0/synth/baremetal_block_axi_bram_ctrl_0_0.vhd:268]
+INFO: [Synth 8-638] synthesizing module 'axi_bram_ctrl' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:31434]
+INFO: [Synth 8-638] synthesizing module 'axi_bram_ctrl_top' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:30438]
+INFO: [Synth 8-638] synthesizing module 'full_axi' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:29196]
+WARNING: [Synth 8-6774] Null subtype or type declaration found [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:29266]
+INFO: [Synth 8-3919] null assignment ignored [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:29266]
+INFO: [Synth 8-3919] null assignment ignored [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:29472]
+INFO: [Synth 8-638] synthesizing module 'sng_port_arb' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:11397]
+INFO: [Synth 8-256] done synthesizing module 'sng_port_arb' (0#1) [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:11397]
+INFO: [Synth 8-638] synthesizing module 'wr_chnl' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:24080]
+INFO: [Synth 8-506] null port 'FaultInjectECC' ignored [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:24047]
+INFO: [Synth 8-638] synthesizing module 'wrap_brst' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:12386]
+INFO: [Synth 8-256] done synthesizing module 'wrap_brst' (0#1) [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:12386]
+INFO: [Synth 8-638] synthesizing module 'SRL_FIFO' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:91]
+INFO: [Synth 8-3491] module 'FDR' declared at '/home/ishfisav/Desktop/amd2025.1/2025.1/Vivado/scripts/rt/data/unisim_comp.v:44218' bound to instance 'Data_Exists_DFF' of component 'FDR' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:188]
+INFO: [Synth 8-6157] synthesizing module 'FDR' [/home/ishfisav/Desktop/amd2025.1/2025.1/Vivado/scripts/rt/data/unisim_comp.v:44218]
+INFO: [Synth 8-6155] done synthesizing module 'FDR' (0#1) [/home/ishfisav/Desktop/amd2025.1/2025.1/Vivado/scripts/rt/data/unisim_comp.v:44218]
+INFO: [Synth 8-3491] module 'MUXCY_L' declared at '/home/ishfisav/Desktop/amd2025.1/2025.1/Vivado/scripts/rt/data/unisim_comp.v:95613' bound to instance 'MUXCY_L_I' of component 'MUXCY_L' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:205]
+INFO: [Synth 8-6157] synthesizing module 'MUXCY_L' [/home/ishfisav/Desktop/amd2025.1/2025.1/Vivado/scripts/rt/data/unisim_comp.v:95613]
+INFO: [Synth 8-6155] done synthesizing module 'MUXCY_L' (0#1) [/home/ishfisav/Desktop/amd2025.1/2025.1/Vivado/scripts/rt/data/unisim_comp.v:95613]
+INFO: [Synth 8-3491] module 'XORCY' declared at '/home/ishfisav/Desktop/amd2025.1/2025.1/Vivado/scripts/rt/data/unisim_comp.v:164593' bound to instance 'XORCY_I' of component 'XORCY' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:212]
+INFO: [Synth 8-6157] synthesizing module 'XORCY' [/home/ishfisav/Desktop/amd2025.1/2025.1/Vivado/scripts/rt/data/unisim_comp.v:164593]
+INFO: [Synth 8-6155] done synthesizing module 'XORCY' (0#1) [/home/ishfisav/Desktop/amd2025.1/2025.1/Vivado/scripts/rt/data/unisim_comp.v:164593]
+INFO: [Synth 8-3491] module 'FDRE' declared at '/home/ishfisav/Desktop/amd2025.1/2025.1/Vivado/scripts/rt/data/unisim_comp.v:44231' bound to instance 'FDRE_I' of component 'FDRE' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:218]
+INFO: [Synth 8-6157] synthesizing module 'FDRE' [/home/ishfisav/Desktop/amd2025.1/2025.1/Vivado/scripts/rt/data/unisim_comp.v:44231]
+INFO: [Synth 8-6155] done synthesizing module 'FDRE' (0#1) [/home/ishfisav/Desktop/amd2025.1/2025.1/Vivado/scripts/rt/data/unisim_comp.v:44231]
+INFO: [Synth 8-3491] module 'MUXCY_L' declared at '/home/ishfisav/Desktop/amd2025.1/2025.1/Vivado/scripts/rt/data/unisim_comp.v:95613' bound to instance 'MUXCY_L_I' of component 'MUXCY_L' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:205]
+INFO: [Synth 8-3491] module 'XORCY' declared at '/home/ishfisav/Desktop/amd2025.1/2025.1/Vivado/scripts/rt/data/unisim_comp.v:164593' bound to instance 'XORCY_I' of component 'XORCY' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:212]
+INFO: [Synth 8-3491] module 'FDRE' declared at '/home/ishfisav/Desktop/amd2025.1/2025.1/Vivado/scripts/rt/data/unisim_comp.v:44231' bound to instance 'FDRE_I' of component 'FDRE' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:218]
+INFO: [Synth 8-3491] module 'MUXCY_L' declared at '/home/ishfisav/Desktop/amd2025.1/2025.1/Vivado/scripts/rt/data/unisim_comp.v:95613' bound to instance 'MUXCY_L_I' of component 'MUXCY_L' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:205]
+INFO: [Synth 8-3491] module 'XORCY' declared at '/home/ishfisav/Desktop/amd2025.1/2025.1/Vivado/scripts/rt/data/unisim_comp.v:164593' bound to instance 'XORCY_I' of component 'XORCY' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:212]
+INFO: [Synth 8-3491] module 'FDRE' declared at '/home/ishfisav/Desktop/amd2025.1/2025.1/Vivado/scripts/rt/data/unisim_comp.v:44231' bound to instance 'FDRE_I' of component 'FDRE' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:218]
+INFO: [Synth 8-3491] module 'MUXCY_L' declared at '/home/ishfisav/Desktop/amd2025.1/2025.1/Vivado/scripts/rt/data/unisim_comp.v:95613' bound to instance 'MUXCY_L_I' of component 'MUXCY_L' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:205]
+INFO: [Synth 8-3491] module 'XORCY' declared at '/home/ishfisav/Desktop/amd2025.1/2025.1/Vivado/scripts/rt/data/unisim_comp.v:164593' bound to instance 'XORCY_I' of component 'XORCY' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:212]
+INFO: [Synth 8-3491] module 'FDRE' declared at '/home/ishfisav/Desktop/amd2025.1/2025.1/Vivado/scripts/rt/data/unisim_comp.v:44231' bound to instance 'FDRE_I' of component 'FDRE' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:218]
+INFO: [Synth 8-3491] module 'SRL16E' declared at '/home/ishfisav/Desktop/amd2025.1/2025.1/Vivado/scripts/rt/data/unisim_comp.v:158612' bound to instance 'SRL16E_I' of component 'SRL16E' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:229]
+INFO: [Synth 8-6157] synthesizing module 'SRL16E' [/home/ishfisav/Desktop/amd2025.1/2025.1/Vivado/scripts/rt/data/unisim_comp.v:158612]
+INFO: [Synth 8-6155] done synthesizing module 'SRL16E' (0#1) [/home/ishfisav/Desktop/amd2025.1/2025.1/Vivado/scripts/rt/data/unisim_comp.v:158612]
+INFO: [Synth 8-3491] module 'SRL16E' declared at '/home/ishfisav/Desktop/amd2025.1/2025.1/Vivado/scripts/rt/data/unisim_comp.v:158612' bound to instance 'SRL16E_I' of component 'SRL16E' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:229]
+INFO: [Synth 8-3491] module 'SRL16E' declared at '/home/ishfisav/Desktop/amd2025.1/2025.1/Vivado/scripts/rt/data/unisim_comp.v:158612' bound to instance 'SRL16E_I' of component 'SRL16E' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:229]
+INFO: [Synth 8-3491] module 'SRL16E' declared at '/home/ishfisav/Desktop/amd2025.1/2025.1/Vivado/scripts/rt/data/unisim_comp.v:158612' bound to instance 'SRL16E_I' of component 'SRL16E' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:229]
+INFO: [Synth 8-256] done synthesizing module 'SRL_FIFO' (0#1) [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:91]
+INFO: [Synth 8-256] done synthesizing module 'wr_chnl' (0#1) [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:24080]
+WARNING: [Synth 8-6778] Component port with null array found, Will be ignored [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:29936]
+INFO: [Synth 8-638] synthesizing module 'rd_chnl' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:14672]
+INFO: [Synth 8-256] done synthesizing module 'rd_chnl' (0#1) [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:14672]
+INFO: [Synth 8-256] done synthesizing module 'full_axi' (0#1) [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:29196]
+INFO: [Synth 8-256] done synthesizing module 'axi_bram_ctrl_top' (0#1) [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:30438]
+INFO: [Synth 8-256] done synthesizing module 'axi_bram_ctrl' (0#1) [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:31434]
 INFO: [Synth 8-256] done synthesizing module 'baremetal_block_axi_bram_ctrl_0_0' (0#1) [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ip/baremetal_block_axi_bram_ctrl_0_0/synth/baremetal_block_axi_bram_ctrl_0_0.vhd:108]
 INFO: [Synth 8-638] synthesizing module 'baremetal_block_blk_mem_gen_0_0' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ip/baremetal_block_blk_mem_gen_0_0/synth/baremetal_block_blk_mem_gen_0_0.vhd:72]
 	Parameter C_FAMILY bound to: zynquplus - type: string 
@@ -816,7 +816,7 @@ INFO: [Synth 8-638] synthesizing module 'baremetal_block_blk_mem_gen_0_0' [/home
 	Parameter C_COUNT_36K_BRAM bound to: 2 - type: string 
 	Parameter C_COUNT_18K_BRAM bound to: 0 - type: string 
 	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     3.303437 mW - type: string 
-INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_9' declared at '/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/5ec1/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195208' bound to instance 'U0' of component 'blk_mem_gen_v8_4_9' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ip/baremetal_block_blk_mem_gen_0_0/synth/baremetal_block_blk_mem_gen_0_0.vhd:241]
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_11' declared at '/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/a32c/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195209' bound to instance 'U0' of component 'blk_mem_gen_v8_4_11' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ip/baremetal_block_blk_mem_gen_0_0/synth/baremetal_block_blk_mem_gen_0_0.vhd:241]
 INFO: [Synth 8-256] done synthesizing module 'baremetal_block_blk_mem_gen_0_0' (0#1) [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ip/baremetal_block_blk_mem_gen_0_0/synth/baremetal_block_blk_mem_gen_0_0.vhd:72]
 WARNING: [Synth 8-7071] port 'rsta_busy' of module 'baremetal_block_blk_mem_gen_0_0' is unconnected for instance 'blk_mem_gen_0' [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/synth/baremetal_block.v:196]
 WARNING: [Synth 8-7023] instance 'blk_mem_gen_0' of module 'baremetal_block_blk_mem_gen_0_0' has 8 connections declared, but only 7 given [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/synth/baremetal_block.v:196]
@@ -10235,15 +10235,15 @@ WARNING: [Synth 8-7071] port 'reset' of module 'wallypipelinedcore' is unconnect
 WARNING: [Synth 8-7071] port 'HADDR' of module 'wallypipelinedcore' is unconnected for instance 'core' [/home/ishfisav/wally_1/wally_1.srcs/sources_1/imports/cvw/src/wally/wallypipelinedsoc.sv:82]
 WARNING: [Synth 8-7071] port 'HWDATA' of module 'wallypipelinedcore' is unconnected for instance 'core' [/home/ishfisav/wally_1/wally_1.srcs/sources_1/imports/cvw/src/wally/wallypipelinedsoc.sv:82]
 WARNING: [Synth 8-7023] instance 'core' of module 'wallypipelinedcore' has 22 connections declared, but only 19 given [/home/ishfisav/wally_1/wally_1.srcs/sources_1/imports/cvw/src/wally/wallypipelinedsoc.sv:82]
-WARNING: [Synth 8-6014] Unused sequential element S_AHB_HBURST_i_reg was removed.  [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/f7fd/hdl/ahblite_axi_bridge_v3_0_vh_rfs.vhd:2687]
-WARNING: [Synth 8-6014] Unused sequential element next_wr_strobe_reg was removed.  [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/f7fd/hdl/ahblite_axi_bridge_v3_0_vh_rfs.vhd:1188]
-WARNING: [Synth 8-6014] Unused sequential element rdata_placed_on_ahb_reg was removed.  [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/f7fd/hdl/ahblite_axi_bridge_v3_0_vh_rfs.vhd:2153]
-WARNING: [Synth 8-6014] Unused sequential element curr_awsize_reg_reg was removed.  [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/df79/hdl/axi_bram_ctrl_v4_1_rfs.vhd:25239]
-WARNING: [Synth 8-6014] Unused sequential element curr_awlen_reg_1_or_2_reg was removed.  [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/df79/hdl/axi_bram_ctrl_v4_1_rfs.vhd:25517]
-WARNING: [Synth 8-6014] Unused sequential element GEN_NO_RD_CMD_OPT.axi_arsize_pipe_max_reg was removed.  [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/df79/hdl/axi_bram_ctrl_v4_1_rfs.vhd:15432]
-WARNING: [Synth 8-6014] Unused sequential element GEN_NO_RD_CMD_OPT.curr_arsize_reg_reg was removed.  [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/df79/hdl/axi_bram_ctrl_v4_1_rfs.vhd:15924]
-WARNING: [Synth 8-6014] Unused sequential element GEN_NO_RD_CMD_OPT.no_ar_ack_reg was removed.  [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/df79/hdl/axi_bram_ctrl_v4_1_rfs.vhd:19829]
-WARNING: [Synth 8-6014] Unused sequential element GEN_NO_RD_CMD_OPT.do_cmplt_burst_reg was removed.  [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/df79/hdl/axi_bram_ctrl_v4_1_rfs.vhd:21170]
+WARNING: [Synth 8-6014] Unused sequential element S_AHB_HBURST_i_reg was removed.  [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/6b9d/hdl/ahblite_axi_bridge_v3_0_vh_rfs.vhd:2687]
+WARNING: [Synth 8-6014] Unused sequential element next_wr_strobe_reg was removed.  [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/6b9d/hdl/ahblite_axi_bridge_v3_0_vh_rfs.vhd:1188]
+WARNING: [Synth 8-6014] Unused sequential element rdata_placed_on_ahb_reg was removed.  [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/6b9d/hdl/ahblite_axi_bridge_v3_0_vh_rfs.vhd:2153]
+WARNING: [Synth 8-6014] Unused sequential element curr_awsize_reg_reg was removed.  [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:25239]
+WARNING: [Synth 8-6014] Unused sequential element curr_awlen_reg_1_or_2_reg was removed.  [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:25517]
+WARNING: [Synth 8-6014] Unused sequential element GEN_NO_RD_CMD_OPT.axi_arsize_pipe_max_reg was removed.  [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:15432]
+WARNING: [Synth 8-6014] Unused sequential element GEN_NO_RD_CMD_OPT.curr_arsize_reg_reg was removed.  [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:15924]
+WARNING: [Synth 8-6014] Unused sequential element GEN_NO_RD_CMD_OPT.no_ar_ack_reg was removed.  [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:19829]
+WARNING: [Synth 8-6014] Unused sequential element GEN_NO_RD_CMD_OPT.do_cmplt_burst_reg was removed.  [/home/ishfisav/wally_1/wally_1.gen/sources_1/bd/baremetal_block/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd:21170]
 WARNING: [Synth 8-3848] Net HREADRam in module/entity uncore does not have driver. [/home/ishfisav/wally_1/wally_1.srcs/sources_1/imports/cvw/src/uncore/uncore.sv:67]
 WARNING: [Synth 8-3848] Net HREADBootRom in module/entity uncore does not have driver. [/home/ishfisav/wally_1/wally_1.srcs/sources_1/imports/cvw/src/uncore/uncore.sv:74]
 WARNING: [Synth 8-3848] Net HREADYRam in module/entity uncore does not have driver. [/home/ishfisav/wally_1/wally_1.srcs/sources_1/imports/cvw/src/uncore/uncore.sv:73]
@@ -10362,18 +10362,18 @@ WARNING: [Synth 8-7129] Port dout[38] in module ram1p1rwbe is either unconnected
 WARNING: [Synth 8-7129] Port dout[37] in module ram1p1rwbe is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 3019.672 ; gain = 185.508 ; free physical = 10391 ; free virtual = 118986
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 3211.852 ; gain = 210.508 ; free physical = 11330 ; free virtual = 119210
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 3019.672 ; gain = 185.508 ; free physical = 10411 ; free virtual = 119006
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 3211.852 ; gain = 210.508 ; free physical = 11341 ; free virtual = 119221
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 3019.672 ; gain = 185.508 ; free physical = 10411 ; free virtual = 119006
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 3211.852 ; gain = 210.508 ; free physical = 11341 ; free virtual = 119221
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.39 ; elapsed = 00:00:00.39 . Memory (MB): peak = 3019.672 ; gain = 0.000 ; free physical = 10241 ; free virtual = 118833
+Netlist sorting complete. Time (s): cpu = 00:00:00.38 ; elapsed = 00:00:00.38 . Memory (MB): peak = 3211.852 ; gain = 0.000 ; free physical = 11092 ; free virtual = 119116
 INFO: [Netlist 29-17] Analyzing 9 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -10391,15 +10391,15 @@ Parsing XDC File [/home/ishfisav/wally_1/wally_1.runs/synth_1_copy_6/dont_touch.
 Finished Parsing XDC File [/home/ishfisav/wally_1/wally_1.runs/synth_1_copy_6/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3103.566 ; gain = 0.000 ; free physical = 10950 ; free virtual = 119384
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3284.887 ; gain = 0.000 ; free physical = 11040 ; free virtual = 119053
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 5 instances were transformed.
   FDR => FDRE: 1 instance 
   MUXCY_L => MUXCY: 4 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.07 . Memory (MB): peak = 3103.566 ; gain = 0.000 ; free physical = 10949 ; free virtual = 119383
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.08 . Memory (MB): peak = 3284.922 ; gain = 0.000 ; free physical = 11035 ; free virtual = 119048
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 3103.566 ; gain = 269.402 ; free physical = 10998 ; free virtual = 119392
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 3284.922 ; gain = 283.578 ; free physical = 10953 ; free virtual = 118971
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -10407,18 +10407,13 @@ Start Loading Part and Timing Information
 Loading part: xck26-sfvc784-2LV-c
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 3111.570 ; gain = 277.406 ; free physical = 10998 ; free virtual = 119392
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 3292.891 ; gain = 291.547 ; free physical = 10953 ; free virtual = 118971
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property KEEP_HIERARCHY = SOFT for \uncoregen.uncore /instance_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for \uncoregen.uncore /instance_0/axi_bram_ctrl_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for \uncoregen.uncore /instance_0/blk_mem_gen_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for \uncoregen.uncore /instance_0/ahblite_axi_bridge_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core/ifu/\bpred.bpred /TargetPredictor/memory/memory1/sramIP. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:19 . Memory (MB): peak = 3111.570 ; gain = 277.406 ; free physical = 10998 ; free virtual = 119392
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 3292.891 ; gain = 291.547 ; free physical = 10949 ; free virtual = 118967
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'ctl_sm_cs_reg' in module 'ahblite_axi_control'
 INFO: [Synth 8-802] inferred FSM for state register 'arb_sm_cs_reg' in module 'sng_port_arb'
@@ -10548,7 +10543,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'CurrState_reg' using encod
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'CurrState_reg' using encoding 'one-hot' in module 'buscachefsm__parameterized0'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 3111.570 ; gain = 277.406 ; free physical = 10967 ; free virtual = 119406
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 3292.891 ; gain = 291.547 ; free physical = 10897 ; free virtual = 118872
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -10558,7 +10553,7 @@ Detailed RTL Component Info :
 	   4 Input  128 Bit       Adders := 1     
 	   2 Input   65 Bit       Adders := 4     
 	   3 Input   65 Bit       Adders := 1     
-	   2 Input   64 Bit       Adders := 5     
+	   2 Input   64 Bit       Adders := 36    
 	   2 Input   62 Bit       Adders := 33    
 	   2 Input   17 Bit       Adders := 1     
 	   2 Input   16 Bit       Adders := 1     
@@ -10620,7 +10615,7 @@ Detailed RTL Component Info :
 	   2 Input   73 Bit        Muxes := 1     
 	   2 Input   68 Bit        Muxes := 1     
 	   2 Input   66 Bit        Muxes := 1     
-	   2 Input   64 Bit        Muxes := 224   
+	   2 Input   64 Bit        Muxes := 255   
 	   4 Input   64 Bit        Muxes := 3     
 	   3 Input   64 Bit        Muxes := 1     
 	   2 Input   63 Bit        Muxes := 2     
@@ -10677,8 +10672,8 @@ Detailed RTL Component Info :
 	   7 Input    3 Bit        Muxes := 2     
 	  22 Input    3 Bit        Muxes := 1     
 	   6 Input    3 Bit        Muxes := 1     
-	   2 Input    2 Bit        Muxes := 47    
-	   3 Input    2 Bit        Muxes := 6     
+	   3 Input    2 Bit        Muxes := 10    
+	   2 Input    2 Bit        Muxes := 39    
 	   6 Input    2 Bit        Muxes := 2     
 	   5 Input    2 Bit        Muxes := 2     
 	   4 Input    2 Bit        Muxes := 3     
@@ -11078,7 +11073,7 @@ WARNING: [Synth 8-3332] Sequential element (mul/PP1Reg/q_reg[34]__1) is unused a
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:11 ; elapsed = 00:01:33 . Memory (MB): peak = 3139.504 ; gain = 305.340 ; free physical = 3349 ; free virtual = 111861
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:07 ; elapsed = 00:01:28 . Memory (MB): peak = 3320.824 ; gain = 319.480 ; free physical = 3118 ; free virtual = 111143
 ---------------------------------------------------------------------------------
  Sort Area is wallypipelinedcore__GCB1 PP1E_0 : 0 0 : 3101 12490 : Used 1 time 0
  Sort Area is wallypipelinedcore__GCB1 PP1E_0 : 0 1 : 3120 12490 : Used 1 time 0
@@ -11147,13 +11142,13 @@ Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-565] redefining clock 'clk300M'
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:38 ; elapsed = 00:01:43 . Memory (MB): peak = 3660.680 ; gain = 826.516 ; free physical = 2932 ; free virtual = 111573
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:31 ; elapsed = 00:01:38 . Memory (MB): peak = 3869.730 ; gain = 868.387 ; free physical = 1948 ; free virtual = 110085
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:47 ; elapsed = 00:01:53 . Memory (MB): peak = 3858.680 ; gain = 1024.516 ; free physical = 3207 ; free virtual = 111587
+Finished Timing Optimization : Time (s): cpu = 00:03:03 ; elapsed = 00:02:11 . Memory (MB): peak = 4010.730 ; gain = 1009.387 ; free physical = 1962 ; free virtual = 110070
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
@@ -11161,7 +11156,7 @@ Start Technology Mapping
 WARNING: [Synth 8-565] redefining clock 'clk300M'
 WARNING: [Synth 8-565] redefining clock 'clk300M'
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:49 ; elapsed = 00:02:03 . Memory (MB): peak = 3894.621 ; gain = 1060.457 ; free physical = 1725 ; free virtual = 110063
+Finished Technology Mapping : Time (s): cpu = 00:03:12 ; elapsed = 00:02:38 . Memory (MB): peak = 4046.672 ; gain = 1045.328 ; free physical = 557 ; free virtual = 108709
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -11179,37 +11174,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:52 ; elapsed = 00:02:07 . Memory (MB): peak = 3894.621 ; gain = 1060.457 ; free physical = 1719 ; free virtual = 110216
+Finished IO Insertion : Time (s): cpu = 00:03:30 ; elapsed = 00:02:56 . Memory (MB): peak = 4053.664 ; gain = 1052.320 ; free physical = 545 ; free virtual = 108396
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:52 ; elapsed = 00:02:07 . Memory (MB): peak = 3894.621 ; gain = 1060.457 ; free physical = 1718 ; free virtual = 110215
+Finished Renaming Generated Instances : Time (s): cpu = 00:03:30 ; elapsed = 00:02:56 . Memory (MB): peak = 4053.664 ; gain = 1052.320 ; free physical = 545 ; free virtual = 108396
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:54 ; elapsed = 00:02:08 . Memory (MB): peak = 3894.621 ; gain = 1060.457 ; free physical = 1869 ; free virtual = 110262
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:34 ; elapsed = 00:03:00 . Memory (MB): peak = 4075.234 ; gain = 1073.891 ; free physical = 418 ; free virtual = 108269
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:54 ; elapsed = 00:02:08 . Memory (MB): peak = 3894.621 ; gain = 1060.457 ; free physical = 1875 ; free virtual = 110268
+Finished Renaming Generated Ports : Time (s): cpu = 00:03:34 ; elapsed = 00:03:00 . Memory (MB): peak = 4075.234 ; gain = 1073.891 ; free physical = 384 ; free virtual = 108275
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:54 ; elapsed = 00:02:09 . Memory (MB): peak = 3894.621 ; gain = 1060.457 ; free physical = 1885 ; free virtual = 110278
+Finished Handling Custom Attributes : Time (s): cpu = 00:03:35 ; elapsed = 00:03:01 . Memory (MB): peak = 4078.375 ; gain = 1077.031 ; free physical = 421 ; free virtual = 108272
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:55 ; elapsed = 00:02:09 . Memory (MB): peak = 3894.621 ; gain = 1060.457 ; free physical = 1916 ; free virtual = 110305
+Finished Renaming Generated Nets : Time (s): cpu = 00:03:35 ; elapsed = 00:03:02 . Memory (MB): peak = 4078.375 ; gain = 1077.031 ; free physical = 420 ; free virtual = 108271
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -11260,46 +11255,47 @@ Report Cell Usage:
 |9     |DSP_OUTPUT      |    16|
 |11    |DSP_PREADD      |    16|
 |12    |DSP_PREADD_DATA |    16|
-|13    |LUT1            |   142|
-|14    |LUT2            |   602|
-|15    |LUT3            |  1932|
-|16    |LUT4            |  3056|
-|17    |LUT5            |  2549|
-|18    |LUT6            |  7365|
-|19    |MUXF7           |   865|
-|20    |MUXF8           |   281|
-|21    |FDRE            | 12467|
+|13    |LUT1            |   173|
+|14    |LUT2            |   610|
+|15    |LUT3            |  2705|
+|16    |LUT4            |  3034|
+|17    |LUT5            |  2509|
+|18    |LUT6            |  6688|
+|19    |MUXF7           |   860|
+|20    |MUXF8           |   273|
+|21    |FDRE            | 12470|
 |22    |FDSE            |     2|
 |23    |IBUF            |     2|
 |24    |OBUF            |    39|
 +------+----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:55 ; elapsed = 00:02:09 . Memory (MB): peak = 3894.621 ; gain = 1060.457 ; free physical = 1916 ; free virtual = 110305
+Finished Writing Synthesis Report : Time (s): cpu = 00:03:36 ; elapsed = 00:03:02 . Memory (MB): peak = 4078.375 ; gain = 1077.031 ; free physical = 420 ; free virtual = 108271
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 559 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:02:46 ; elapsed = 00:02:04 . Memory (MB): peak = 3894.621 ; gain = 976.562 ; free physical = 11114 ; free virtual = 119507
-Synthesis Optimization Complete : Time (s): cpu = 00:02:55 ; elapsed = 00:02:11 . Memory (MB): peak = 3894.621 ; gain = 1060.457 ; free physical = 11127 ; free virtual = 119510
+Synthesis Optimization Runtime : Time (s): cpu = 00:03:28 ; elapsed = 00:02:58 . Memory (MB): peak = 4078.375 ; gain = 1003.961 ; free physical = 10331 ; free virtual = 118222
+Synthesis Optimization Complete : Time (s): cpu = 00:03:36 ; elapsed = 00:03:05 . Memory (MB): peak = 4078.375 ; gain = 1077.031 ; free physical = 10344 ; free virtual = 118224
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.25 ; elapsed = 00:00:00.26 . Memory (MB): peak = 3894.621 ; gain = 0.000 ; free physical = 11195 ; free virtual = 119527
-INFO: [Netlist 29-17] Analyzing 1700 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.62 ; elapsed = 00:00:00.62 . Memory (MB): peak = 4078.375 ; gain = 0.000 ; free physical = 10438 ; free virtual = 118278
+INFO: [Netlist 29-17] Analyzing 1687 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3894.621 ; gain = 0.000 ; free physical = 11208 ; free virtual = 119540
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4078.375 ; gain = 0.000 ; free physical = 10479 ; free virtual = 118319
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 19 instances were transformed.
   BUFG => BUFGCE: 1 instance 
   DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 16 instances
   IBUF => IBUF (IBUFCTRL, INBUF): 2 instances
 
-Synth Design complete | Checksum: 21aaacca
+Synth Design complete | Checksum: b3d3b70b
 INFO: [Common 17-83] Releasing license: Synthesis
 530 Infos, 242 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:03:05 ; elapsed = 00:02:20 . Memory (MB): peak = 3894.621 ; gain = 2195.527 ; free physical = 11178 ; free virtual = 119550
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 10218.431; main = 3002.621; forked = 8101.879
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 18692.844; main = 3890.715; forked = 15557.254
-Write ShapeDB Complete: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3894.621 ; gain = 0.000 ; free physical = 11181 ; free virtual = 119556
+synth_design: Time (s): cpu = 00:03:52 ; elapsed = 00:03:19 . Memory (MB): peak = 4078.375 ; gain = 2290.891 ; free physical = 10456 ; free virtual = 118295
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 10665.000; main = 3144.521; forked = 8395.597
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 19455.602; main = 4078.379; forked = 16138.691
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.1 ; elapsed = 00:00:00.03 . Memory (MB): peak = 4078.375 ; gain = 0.000 ; free physical = 10455 ; free virtual = 118296
 INFO: [Common 17-1381] The checkpoint '/home/ishfisav/wally_1/wally_1.runs/synth_1_copy_6/wallypipelinedsoc.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 4078.375 ; gain = 0.000 ; free physical = 10387 ; free virtual = 118253
 INFO: [Vivado 12-24828] Executing command : report_utilization -file wallypipelinedsoc_utilization_synth.rpt -pb wallypipelinedsoc_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun May 25 22:38:41 2025...
+INFO: [Common 17-206] Exiting Vivado at Thu Jun 26 19:04:54 2025...

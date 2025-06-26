@@ -1,7 +1,7 @@
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-| Date         : Sun May 25 22:38:41 2025
+| Tool Version : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
+| Date         : Thu Jun 26 19:04:54 2025
 | Host         : thinkpad-p1-gen-5 running 64-bit Ubuntu 25.04
 | Command      : report_utilization -file wallypipelinedsoc_utilization_synth.rpt -pb wallypipelinedsoc_utilization_synth.pb
 | Design       : wallypipelinedsoc
@@ -32,15 +32,15 @@ Table of Contents
 +-------------------------+-------+-------+------------+-----------+-------+
 |        Site Type        |  Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+-------+-------+------------+-----------+-------+
-| CLB LUTs*               | 14088 |     0 |          0 |    117120 | 12.03 |
-|   LUT as Logic          | 14088 |     0 |          0 |    117120 | 12.03 |
+| CLB LUTs*               | 13410 |     0 |          0 |    117120 | 11.45 |
+|   LUT as Logic          | 13410 |     0 |          0 |    117120 | 11.45 |
 |   LUT as Memory         |     0 |     0 |          0 |     57600 |  0.00 |
-| CLB Registers           | 12469 |     0 |          0 |    234240 |  5.32 |
-|   Register as Flip Flop | 12469 |     0 |          0 |    234240 |  5.32 |
+| CLB Registers           | 12472 |     0 |          0 |    234240 |  5.32 |
+|   Register as Flip Flop | 12472 |     0 |          0 |    234240 |  5.32 |
 |   Register as Latch     |     0 |     0 |          0 |    234240 |  0.00 |
 | CARRY8                  |   535 |     0 |          0 |     14640 |  3.65 |
-| F7 Muxes                |   865 |     0 |          0 |     58560 |  1.48 |
-| F8 Muxes                |   281 |     0 |          0 |     29280 |  0.96 |
+| F7 Muxes                |   860 |     0 |          0 |     58560 |  1.47 |
+| F8 Muxes                |   273 |     0 |          0 |     29280 |  0.93 |
 | F9 Muxes                |     0 |     0 |          0 |     14640 |  0.00 |
 +-------------------------+-------+-------+------------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
@@ -63,7 +63,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 2     |          Yes |         Set |            - |
-| 12467 |          Yes |       Reset |            - |
+| 12470 |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -95,11 +95,23 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 4. I/O
 ------
 
-+------------+------+-------+------------+-----------+-------+
-|  Site Type | Used | Fixed | Prohibited | Available | Util% |
-+------------+------+-------+------------+-----------+-------+
-| Bonded IOB |   41 |     0 |          0 |       189 | 21.69 |
-+------------+------+-------+------------+-----------+-------+
++------------------+------+-------+------------+-----------+-------+
+|     Site Type    | Used | Fixed | Prohibited | Available | Util% |
++------------------+------+-------+------------+-----------+-------+
+| Bonded IOB       |   41 |     0 |          0 |       189 | 21.69 |
+|   HPIOB_M        |    0 |     0 |          0 |        58 |  0.00 |
+|   HPIOB_S        |    0 |     0 |          0 |        58 |  0.00 |
+|   HDIOB_M        |    0 |     0 |          0 |        35 |  0.00 |
+|   HDIOB_S        |    0 |     0 |          0 |        35 |  0.00 |
+|   HPIOB_SNGL     |    0 |     0 |          0 |         3 |  0.00 |
+| HPIOBDIFFINBUF   |    0 |     0 |          0 |        82 |  0.00 |
+| HPIOBDIFFOUTBUF  |    0 |     0 |          0 |        82 |  0.00 |
+| HDIOBDIFFINBUF   |    0 |     0 |          0 |        35 |  0.00 |
+| BITSLICE_CONTROL |    0 |     0 |          0 |        32 |  0.00 |
+| BITSLICE_RX_TX   |    0 |     0 |          0 |      1248 |  0.00 |
+| BITSLICE_TX      |    0 |     0 |          0 |        32 |  0.00 |
+| RIU_OR           |    0 |     0 |          0 |        16 |  0.00 |
++------------------+------+-------+------------+-----------+-------+
 
 
 5. CLOCK
@@ -158,16 +170,16 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +----------+-------+---------------------+
 | Ref Name |  Used | Functional Category |
 +----------+-------+---------------------+
-| FDRE     | 12467 |            Register |
-| LUT6     |  7365 |                 CLB |
-| LUT4     |  3056 |                 CLB |
-| LUT5     |  2549 |                 CLB |
-| LUT3     |  1932 |                 CLB |
-| MUXF7    |   865 |                 CLB |
-| LUT2     |   602 |                 CLB |
+| FDRE     | 12470 |            Register |
+| LUT6     |  6688 |                 CLB |
+| LUT4     |  3034 |                 CLB |
+| LUT3     |  2705 |                 CLB |
+| LUT5     |  2509 |                 CLB |
+| MUXF7    |   860 |                 CLB |
+| LUT2     |   610 |                 CLB |
 | CARRY8   |   535 |                 CLB |
-| MUXF8    |   281 |                 CLB |
-| LUT1     |   142 |                 CLB |
+| MUXF8    |   273 |                 CLB |
+| LUT1     |   173 |                 CLB |
 | OBUF     |    39 |                 I/O |
 | DSP48E2  |    16 |          Arithmetic |
 | INBUF    |     2 |                 I/O |

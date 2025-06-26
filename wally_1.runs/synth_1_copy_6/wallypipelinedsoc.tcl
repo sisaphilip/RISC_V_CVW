@@ -56,6 +56,9 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1_copy_6" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 5
+set_param general.usePosixSpawnForFork 1
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xck26-sfvc784-2LV-c
 
@@ -68,8 +71,8 @@ set_property parent.project_path /home/ishfisav/wally_1/wally_1.xpr [current_pro
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property board_part xilinx.com:kv260_som:part0:1.4 [current_project]
-set_property board_connections {som240_1_connector xilinx.com:kv260_carrier:som240_1_connector:1.3} [current_project]
+set_property board_part xilinx.com:k26c:part0:1.4 [current_project]
+set_property board_connections {som240_1_connector xilinx.com:kv260_carrier:som240_1_connector:1.3 som240_2_connector xilinx.com:kv260_carrier:som240_1_connector:1.3} [current_project]
 set_property ip_output_repo /home/ishfisav/wally_1/wally_1.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }

@@ -1,7 +1,7 @@
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version      : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-| Date              : Sun May 25 22:41:43 2025
+| Tool Version      : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
+| Date              : Thu Jun 26 19:16:01 2025
 | Host              : thinkpad-p1-gen-5 running 64-bit Ubuntu 25.04
 | Command           : report_timing_summary -max_paths 10 -report_unconstrained -file wallypipelinedsoc_timing_summary_routed.rpt -pb wallypipelinedsoc_timing_summary_routed.pb -rpx wallypipelinedsoc_timing_summary_routed.rpx
 | Design            : wallypipelinedsoc
@@ -144,7 +144,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-        inf        0.000                      0                 2003          inf        0.000                      0                 2003           NA           NA                      NA                    NA  
+        inf        0.000                      0                 1756          inf        0.000                      0                 1756           NA           NA                      NA                    NA  
 
 
 All user specified timing constraints are met.
@@ -217,855 +217,802 @@ Path Group:  (none)
 From Clock:  
   To Clock:  
 
-Max Delay          2003 Endpoints
-Min Delay          2003 Endpoints
+Max Delay          1756 Endpoints
+Min Delay          1756 Endpoints
 --------------------------------------------------------------------------------------
 
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
 Slack:                    inf
-  Source:                 core/lsu/AddressMReg/q_reg[4]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            HSIZE[1]
-                            (output port)
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        16.421ns  (logic 4.848ns (29.520%)  route 11.573ns (70.480%))
-  Logic Levels:           23  (CARRY8=2 FDRE=1 LUT2=3 LUT3=2 LUT4=3 LUT5=2 LUT6=9 OBUF=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X22Y231        FDRE                         0.000     0.000 r  core/lsu/AddressMReg/q_reg[4]/C
-    SLICE_X22Y231        FDRE (Prop_EFF_SLICEL_C_Q)
-                                                      0.114     0.114 r  core/lsu/AddressMReg/q_reg[4]/Q
-                         net (fo=4, routed)           0.352     0.466    core/lsu/AddressMReg/Q[4]
-    SLICE_X21Y231        CARRY8 (Prop_CARRY8_SLICEM_S[2]_CO[7])
-                                                      0.229     0.695 r  core/lsu/AddressMReg/q_reg[6]_i_3__0/CO[7]
-                         net (fo=1, routed)           0.030     0.725    core/lsu/AddressMReg/q_reg[6]_i_3__0_n_0
-    SLICE_X21Y232        CARRY8 (Prop_CARRY8_SLICEM_CI_O[4])
-                                                      0.119     0.844 r  core/lsu/AddressMReg/q_reg[3]_i_5/O[4]
-                         net (fo=2, routed)           0.208     1.052    core/lsu/AddressMReg/ziccslm_align.align/IEUAdrIncrementM[14]
-    SLICE_X21Y230        LUT3 (Prop_B5LUT_SLICEM_I0_O)
-                                                      0.199     1.251 r  core/lsu/AddressMReg/q[2]_i_2__8/O
-                         net (fo=1, routed)           0.696     1.947    core/lsu/hptw.hptw/WalkerStateReg/ziccslm_align.IEUAdrSpillM[11]
-    SLICE_X21Y230        LUT2 (Prop_F6LUT_SLICEM_I1_O)
-                                                      0.186     2.133 r  core/lsu/hptw.hptw/WalkerStateReg/q[2]_i_1__14/O
-                         net (fo=65, routed)          1.917     4.050    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/lopt_3
-    SLICE_X30Y230        LUT6 (Prop_G6LUT_SLICEL_I3_O)
-                                                      0.151     4.201 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/q[16]_i_2__2_LOPT_REMAP/O
-                         net (fo=1, routed)           0.054     4.255    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/xlnx_opt_q_reg[0]_1
-    SLICE_X30Y230        LUT6 (Prop_F6LUT_SLICEL_I5_O)
-                                                      0.150     4.405 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/q[16]_i_2__2_LOPT_REMAP_1/O
-                         net (fo=5, routed)           0.322     4.727    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/q_reg[0]_1
-    SLICE_X32Y230        LUT6 (Prop_G6LUT_SLICEM_I1_O)
-                                                      0.226     4.953 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/q[12]_i_38/O
-                         net (fo=1, routed)           0.391     5.344    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[23]/pagetypeflop/q[0]_i_27__0_3
-    SLICE_X29Y231        LUT6 (Prop_H6LUT_SLICEM_I5_O)
-                                                      0.228     5.572 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[23]/pagetypeflop/q[12]_i_8__0/O
-                         net (fo=1, routed)           0.049     5.621    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/HitPageType[0]
-    SLICE_X29Y231        LUT4 (Prop_G6LUT_SLICEM_I3_O)
-                                                      0.082     5.703 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/q[12]_i_2__2/O
-                         net (fo=4, routed)           1.526     7.228    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/PageNumberMask[0]
-    SLICE_X23Y234        LUT4 (Prop_C6LUT_SLICEL_I2_O)
-                                                      0.187     7.415 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_38/O
-                         net (fo=1, routed)           0.936     8.351    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/xlnx_opt_q_reg[1]_0_10
-    SLICE_X20Y234        LUT6 (Prop_H6LUT_SLICEM_I2_O)
-                                                      0.228     8.579 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_42/O
-                         net (fo=1, routed)           0.310     8.889    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/xlnx_opt_q_reg[1]_0_6
-    SLICE_X22Y239        LUT6 (Prop_G6LUT_SLICEL_I4_O)
-                                                      0.186     9.075 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_49/O
-                         net (fo=2, routed)           0.818     9.894    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/q_reg[5]
-    SLICE_X24Y232        LUT4 (Prop_G6LUT_SLICEM_I3_O)
-                                                      0.137    10.031 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/q[5]_i_3__2_LOPT_REMAP/O
-                         net (fo=8, routed)           0.196    10.227    core/ifu/InstrMReg/lopt_6
-    SLICE_X23Y233        LUT5 (Prop_B6LUT_SLICEL_I4_O)
-                                                      0.224    10.451 r  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP_1/O
-                         net (fo=1, routed)           0.060    10.511    core/ifu/InstrMReg/xlnx_opt_q_reg[17]_3_3
-    SLICE_X23Y233        LUT6 (Prop_F6LUT_SLICEL_I3_O)
-                                                      0.187    10.698 f  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP_4/O
-                         net (fo=1, routed)           0.099    10.797    core/ifu/InstrMReg/xlnx_opt_q_reg[17]_3
-    SLICE_X23Y231        LUT3 (Prop_F6LUT_SLICEL_I2_O)
-                                                      0.136    10.933 f  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP_5/O
-                         net (fo=81, routed)          0.844    11.776    core/ieu/c/controlregM/FSM_sequential_CurrState_reg[0]
-    SLICE_X18Y228        LUT2 (Prop_G6LUT_SLICEM_I0_O)
-                                                      0.137    11.913 f  core/ieu/c/controlregM/FSM_sequential_CurrState_i_1__0/O
-                         net (fo=13, routed)          0.269    12.183    core/ieu/c/controlregM/q_reg[17]_0
-    SLICE_X22Y227        LUT2 (Prop_H6LUT_SLICEL_I0_O)
-                                                      0.153    12.336 r  core/ieu/c/controlregM/q[65]_i_3/O
-                         net (fo=1, routed)           0.126    12.462    core/ifu/bus.icache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/q_reg[65]
-    SLICE_X22Y226        LUT6 (Prop_G6LUT_SLICEL_I4_O)
-                                                      0.226    12.688 r  core/ifu/bus.icache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/q[65]_i_1__1/O
-                         net (fo=4, routed)           0.171    12.859    core/ebu.ebu/IFUInput/SaveReg/IFUHTRANS[1]
-    SLICE_X22Y225        LUT5 (Prop_D5LUT_SLICEL_I2_O)
-                                                      0.217    13.076 f  core/ebu.ebu/IFUInput/SaveReg/HSIZE_OBUF[1]_inst_i_3/O
-                         net (fo=5, routed)           0.721    13.797    core/ebu.ebu/ebufsmarb/FinalBeatReg/HSIZE[1]
-    SLICE_X23Y225        LUT6 (Prop_G6LUT_SLICEL_I5_O)
-                                                      0.226    14.023 r  core/ebu.ebu/ebufsmarb/FinalBeatReg/HSIZE_OBUF[1]_inst_i_1/O
-                         net (fo=1, routed)           1.478    15.501    HSIZE_OBUF[1]
-    A3                   OBUF (Prop_OUTBUF_HPIOB_S_I_O)
-                                                      0.920    16.421 r  HSIZE_OBUF[1]_inst/O
-                         net (fo=0)                   0.000    16.421    HSIZE[1]
-    A3                                                                r  HSIZE[1] (OUT)
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 core/lsu/AddressMReg/q_reg[4]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            HBURST[0]
-                            (output port)
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        16.157ns  (logic 4.786ns (29.624%)  route 11.371ns (70.376%))
-  Logic Levels:           23  (CARRY8=2 FDRE=1 LUT2=3 LUT3=2 LUT4=3 LUT5=2 LUT6=9 OBUF=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X22Y231        FDRE                         0.000     0.000 r  core/lsu/AddressMReg/q_reg[4]/C
-    SLICE_X22Y231        FDRE (Prop_EFF_SLICEL_C_Q)
-                                                      0.114     0.114 r  core/lsu/AddressMReg/q_reg[4]/Q
-                         net (fo=4, routed)           0.352     0.466    core/lsu/AddressMReg/Q[4]
-    SLICE_X21Y231        CARRY8 (Prop_CARRY8_SLICEM_S[2]_CO[7])
-                                                      0.229     0.695 r  core/lsu/AddressMReg/q_reg[6]_i_3__0/CO[7]
-                         net (fo=1, routed)           0.030     0.725    core/lsu/AddressMReg/q_reg[6]_i_3__0_n_0
-    SLICE_X21Y232        CARRY8 (Prop_CARRY8_SLICEM_CI_O[4])
-                                                      0.119     0.844 r  core/lsu/AddressMReg/q_reg[3]_i_5/O[4]
-                         net (fo=2, routed)           0.208     1.052    core/lsu/AddressMReg/ziccslm_align.align/IEUAdrIncrementM[14]
-    SLICE_X21Y230        LUT3 (Prop_B5LUT_SLICEM_I0_O)
-                                                      0.199     1.251 r  core/lsu/AddressMReg/q[2]_i_2__8/O
-                         net (fo=1, routed)           0.696     1.947    core/lsu/hptw.hptw/WalkerStateReg/ziccslm_align.IEUAdrSpillM[11]
-    SLICE_X21Y230        LUT2 (Prop_F6LUT_SLICEM_I1_O)
-                                                      0.186     2.133 r  core/lsu/hptw.hptw/WalkerStateReg/q[2]_i_1__14/O
-                         net (fo=65, routed)          1.917     4.050    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/lopt_3
-    SLICE_X30Y230        LUT6 (Prop_G6LUT_SLICEL_I3_O)
-                                                      0.151     4.201 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/q[16]_i_2__2_LOPT_REMAP/O
-                         net (fo=1, routed)           0.054     4.255    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/xlnx_opt_q_reg[0]_1
-    SLICE_X30Y230        LUT6 (Prop_F6LUT_SLICEL_I5_O)
-                                                      0.150     4.405 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/q[16]_i_2__2_LOPT_REMAP_1/O
-                         net (fo=5, routed)           0.322     4.727    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/q_reg[0]_1
-    SLICE_X32Y230        LUT6 (Prop_G6LUT_SLICEM_I1_O)
-                                                      0.226     4.953 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/q[12]_i_38/O
-                         net (fo=1, routed)           0.391     5.344    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[23]/pagetypeflop/q[0]_i_27__0_3
-    SLICE_X29Y231        LUT6 (Prop_H6LUT_SLICEM_I5_O)
-                                                      0.228     5.572 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[23]/pagetypeflop/q[12]_i_8__0/O
-                         net (fo=1, routed)           0.049     5.621    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/HitPageType[0]
-    SLICE_X29Y231        LUT4 (Prop_G6LUT_SLICEM_I3_O)
-                                                      0.082     5.703 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/q[12]_i_2__2/O
-                         net (fo=4, routed)           1.526     7.228    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/PageNumberMask[0]
-    SLICE_X23Y234        LUT4 (Prop_C6LUT_SLICEL_I2_O)
-                                                      0.187     7.415 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_38/O
-                         net (fo=1, routed)           0.936     8.351    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/xlnx_opt_q_reg[1]_0_10
-    SLICE_X20Y234        LUT6 (Prop_H6LUT_SLICEM_I2_O)
-                                                      0.228     8.579 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_42/O
-                         net (fo=1, routed)           0.310     8.889    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/xlnx_opt_q_reg[1]_0_6
-    SLICE_X22Y239        LUT6 (Prop_G6LUT_SLICEL_I4_O)
-                                                      0.186     9.075 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_49/O
-                         net (fo=2, routed)           0.818     9.894    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/q_reg[5]
-    SLICE_X24Y232        LUT4 (Prop_G6LUT_SLICEM_I3_O)
-                                                      0.137    10.031 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/q[5]_i_3__2_LOPT_REMAP/O
-                         net (fo=8, routed)           0.196    10.227    core/ifu/InstrMReg/lopt_6
-    SLICE_X23Y233        LUT5 (Prop_B6LUT_SLICEL_I4_O)
-                                                      0.224    10.451 r  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP_1/O
-                         net (fo=1, routed)           0.060    10.511    core/ifu/InstrMReg/xlnx_opt_q_reg[17]_3_3
-    SLICE_X23Y233        LUT6 (Prop_F6LUT_SLICEL_I3_O)
-                                                      0.187    10.698 f  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP_4/O
-                         net (fo=1, routed)           0.099    10.797    core/ifu/InstrMReg/xlnx_opt_q_reg[17]_3
-    SLICE_X23Y231        LUT3 (Prop_F6LUT_SLICEL_I2_O)
-                                                      0.136    10.933 f  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP_5/O
-                         net (fo=81, routed)          0.844    11.776    core/ieu/c/controlregM/FSM_sequential_CurrState_reg[0]
-    SLICE_X18Y228        LUT2 (Prop_G6LUT_SLICEM_I0_O)
-                                                      0.137    11.913 f  core/ieu/c/controlregM/FSM_sequential_CurrState_i_1__0/O
-                         net (fo=13, routed)          0.269    12.183    core/ieu/c/controlregM/q_reg[17]_0
-    SLICE_X22Y227        LUT2 (Prop_H6LUT_SLICEL_I0_O)
-                                                      0.153    12.336 r  core/ieu/c/controlregM/q[65]_i_3/O
-                         net (fo=1, routed)           0.126    12.462    core/ifu/bus.icache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/q_reg[65]
-    SLICE_X22Y226        LUT6 (Prop_G6LUT_SLICEL_I4_O)
-                                                      0.226    12.688 r  core/ifu/bus.icache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/q[65]_i_1__1/O
-                         net (fo=4, routed)           0.171    12.859    core/ebu.ebu/IFUInput/SaveReg/IFUHTRANS[1]
-    SLICE_X22Y225        LUT5 (Prop_D5LUT_SLICEL_I2_O)
-                                                      0.217    13.076 f  core/ebu.ebu/IFUInput/SaveReg/HSIZE_OBUF[1]_inst_i_3/O
-                         net (fo=5, routed)           0.701    13.777    core/ebu.ebu/IFUInput/SaveReg/q_reg[64]_0
-    SLICE_X23Y225        LUT6 (Prop_C6LUT_SLICEL_I1_O)
-                                                      0.150    13.927 r  core/ebu.ebu/IFUInput/SaveReg/HBURST_OBUF[2]_inst_i_2/O
-                         net (fo=4, routed)           1.295    15.223    HBURST_OBUF[0]
-    B4                   OBUF (Prop_OUTBUF_HPIOB_M_I_O)
-                                                      0.934    16.157 r  HBURST_OBUF[0]_inst/O
-                         net (fo=0)                   0.000    16.157    HBURST[0]
-    B4                                                                r  HBURST[0] (OUT)
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 core/lsu/AddressMReg/q_reg[4]/C
+  Source:                 core/lsu/hptw.hptw/WalkerStateReg/q_reg[1]/C
                             (rising edge-triggered cell FDRE)
   Destination:            HBURST[2]
                             (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        16.096ns  (logic 4.759ns (29.563%)  route 11.338ns (70.437%))
-  Logic Levels:           23  (CARRY8=2 FDRE=1 LUT2=3 LUT3=2 LUT4=3 LUT5=2 LUT6=9 OBUF=1)
+  Data Path Delay:        13.690ns  (logic 3.922ns (28.646%)  route 9.768ns (71.354%))
+  Logic Levels:           21  (FDRE=1 LUT2=3 LUT3=4 LUT4=3 LUT5=2 LUT6=7 OBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X22Y231        FDRE                         0.000     0.000 r  core/lsu/AddressMReg/q_reg[4]/C
-    SLICE_X22Y231        FDRE (Prop_EFF_SLICEL_C_Q)
-                                                      0.114     0.114 r  core/lsu/AddressMReg/q_reg[4]/Q
-                         net (fo=4, routed)           0.352     0.466    core/lsu/AddressMReg/Q[4]
-    SLICE_X21Y231        CARRY8 (Prop_CARRY8_SLICEM_S[2]_CO[7])
-                                                      0.229     0.695 r  core/lsu/AddressMReg/q_reg[6]_i_3__0/CO[7]
-                         net (fo=1, routed)           0.030     0.725    core/lsu/AddressMReg/q_reg[6]_i_3__0_n_0
-    SLICE_X21Y232        CARRY8 (Prop_CARRY8_SLICEM_CI_O[4])
-                                                      0.119     0.844 r  core/lsu/AddressMReg/q_reg[3]_i_5/O[4]
-                         net (fo=2, routed)           0.208     1.052    core/lsu/AddressMReg/ziccslm_align.align/IEUAdrIncrementM[14]
-    SLICE_X21Y230        LUT3 (Prop_B5LUT_SLICEM_I0_O)
-                                                      0.199     1.251 r  core/lsu/AddressMReg/q[2]_i_2__8/O
-                         net (fo=1, routed)           0.696     1.947    core/lsu/hptw.hptw/WalkerStateReg/ziccslm_align.IEUAdrSpillM[11]
-    SLICE_X21Y230        LUT2 (Prop_F6LUT_SLICEM_I1_O)
-                                                      0.186     2.133 r  core/lsu/hptw.hptw/WalkerStateReg/q[2]_i_1__14/O
-                         net (fo=65, routed)          1.917     4.050    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/lopt_3
-    SLICE_X30Y230        LUT6 (Prop_G6LUT_SLICEL_I3_O)
-                                                      0.151     4.201 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/q[16]_i_2__2_LOPT_REMAP/O
-                         net (fo=1, routed)           0.054     4.255    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/xlnx_opt_q_reg[0]_1
-    SLICE_X30Y230        LUT6 (Prop_F6LUT_SLICEL_I5_O)
-                                                      0.150     4.405 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/q[16]_i_2__2_LOPT_REMAP_1/O
-                         net (fo=5, routed)           0.322     4.727    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/q_reg[0]_1
-    SLICE_X32Y230        LUT6 (Prop_G6LUT_SLICEM_I1_O)
-                                                      0.226     4.953 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/q[12]_i_38/O
-                         net (fo=1, routed)           0.391     5.344    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[23]/pagetypeflop/q[0]_i_27__0_3
-    SLICE_X29Y231        LUT6 (Prop_H6LUT_SLICEM_I5_O)
-                                                      0.228     5.572 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[23]/pagetypeflop/q[12]_i_8__0/O
-                         net (fo=1, routed)           0.049     5.621    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/HitPageType[0]
-    SLICE_X29Y231        LUT4 (Prop_G6LUT_SLICEM_I3_O)
-                                                      0.082     5.703 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/q[12]_i_2__2/O
-                         net (fo=4, routed)           1.526     7.228    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/PageNumberMask[0]
-    SLICE_X23Y234        LUT4 (Prop_C6LUT_SLICEL_I2_O)
-                                                      0.187     7.415 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_38/O
-                         net (fo=1, routed)           0.936     8.351    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/xlnx_opt_q_reg[1]_0_10
-    SLICE_X20Y234        LUT6 (Prop_H6LUT_SLICEM_I2_O)
-                                                      0.228     8.579 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_42/O
-                         net (fo=1, routed)           0.310     8.889    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/xlnx_opt_q_reg[1]_0_6
-    SLICE_X22Y239        LUT6 (Prop_G6LUT_SLICEL_I4_O)
-                                                      0.186     9.075 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_49/O
-                         net (fo=2, routed)           0.818     9.894    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/q_reg[5]
-    SLICE_X24Y232        LUT4 (Prop_G6LUT_SLICEM_I3_O)
-                                                      0.137    10.031 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/q[5]_i_3__2_LOPT_REMAP/O
-                         net (fo=8, routed)           0.196    10.227    core/ifu/InstrMReg/lopt_6
-    SLICE_X23Y233        LUT5 (Prop_B6LUT_SLICEL_I4_O)
-                                                      0.224    10.451 r  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP_1/O
-                         net (fo=1, routed)           0.060    10.511    core/ifu/InstrMReg/xlnx_opt_q_reg[17]_3_3
-    SLICE_X23Y233        LUT6 (Prop_F6LUT_SLICEL_I3_O)
-                                                      0.187    10.698 f  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP_4/O
-                         net (fo=1, routed)           0.099    10.797    core/ifu/InstrMReg/xlnx_opt_q_reg[17]_3
-    SLICE_X23Y231        LUT3 (Prop_F6LUT_SLICEL_I2_O)
-                                                      0.136    10.933 f  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP_5/O
-                         net (fo=81, routed)          0.844    11.776    core/ieu/c/controlregM/FSM_sequential_CurrState_reg[0]
-    SLICE_X18Y228        LUT2 (Prop_G6LUT_SLICEM_I0_O)
-                                                      0.137    11.913 f  core/ieu/c/controlregM/FSM_sequential_CurrState_i_1__0/O
-                         net (fo=13, routed)          0.269    12.183    core/ieu/c/controlregM/q_reg[17]_0
-    SLICE_X22Y227        LUT2 (Prop_H6LUT_SLICEL_I0_O)
-                                                      0.153    12.336 r  core/ieu/c/controlregM/q[65]_i_3/O
-                         net (fo=1, routed)           0.126    12.462    core/ifu/bus.icache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/q_reg[65]
-    SLICE_X22Y226        LUT6 (Prop_G6LUT_SLICEL_I4_O)
-                                                      0.226    12.688 r  core/ifu/bus.icache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/q[65]_i_1__1/O
-                         net (fo=4, routed)           0.171    12.859    core/ebu.ebu/IFUInput/SaveReg/IFUHTRANS[1]
-    SLICE_X22Y225        LUT5 (Prop_D5LUT_SLICEL_I2_O)
-                                                      0.217    13.076 f  core/ebu.ebu/IFUInput/SaveReg/HSIZE_OBUF[1]_inst_i_3/O
-                         net (fo=5, routed)           0.701    13.777    core/ebu.ebu/IFUInput/SaveReg/q_reg[64]_0
-    SLICE_X23Y225        LUT6 (Prop_C6LUT_SLICEL_I1_O)
-                                                      0.150    13.927 r  core/ebu.ebu/IFUInput/SaveReg/HBURST_OBUF[2]_inst_i_2/O
-                         net (fo=4, routed)           1.262    15.190    HBURST_OBUF[0]
+    SLICE_X27Y215        FDRE                         0.000     0.000 r  core/lsu/hptw.hptw/WalkerStateReg/q_reg[1]/C
+    SLICE_X27Y215        FDRE (Prop_BFF2_SLICEL_C_Q)
+                                                      0.115     0.115 f  core/lsu/hptw.hptw/WalkerStateReg/q_reg[1]/Q
+                         net (fo=43, routed)          0.514     0.629    core/lsu/hptw.hptw/WalkerStateReg/q_reg[1]_2
+    SLICE_X25Y217        LUT3 (Prop_C6LUT_SLICEM_I2_O)
+                                                      0.220     0.849 f  core/lsu/hptw.hptw/WalkerStateReg/q[3]_i_3__11/O
+                         net (fo=57, routed)          0.679     1.528    core/lsu/hptw.hptw/WalkerStateReg/q_reg[3]_2
+    SLICE_X29Y220        LUT2 (Prop_E6LUT_SLICEM_I0_O)
+                                                      0.083     1.611 r  core/lsu/hptw.hptw/WalkerStateReg/q[3]_i_1__16/O
+                         net (fo=65, routed)          1.331     2.942    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[6]/keyflop/IHAdrM[3]
+    SLICE_X38Y217        LUT3 (Prop_C6LUT_SLICEM_I1_O)
+                                                      0.149     3.091 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[6]/keyflop/q[6]_i_7__3/O
+                         net (fo=4, routed)           0.282     3.373    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[6]/keyflop/Match1__24
+    SLICE_X38Y218        LUT3 (Prop_H6LUT_SLICEM_I0_O)
+                                                      0.084     3.457 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[6]/keyflop/q[12]_i_70/O
+                         net (fo=1, routed)           0.327     3.784    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[7]/pagetypeflop/PageTypeRead[6]_136[0]
+    SLICE_X37Y214        LUT6 (Prop_G6LUT_SLICEM_I5_O)
+                                                      0.226     4.010 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[7]/pagetypeflop/q[12]_i_24/O
+                         net (fo=1, routed)           0.119     4.129    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/q[0]_i_25__1_1
+    SLICE_X36Y214        LUT4 (Prop_D6LUT_SLICEL_I3_O)
+                                                      0.221     4.350 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/q[12]_i_5__2/O
+                         net (fo=1, routed)           0.347     4.697    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/q_reg[1]_0
+    SLICE_X36Y207        LUT4 (Prop_B6LUT_SLICEL_I0_O)
+                                                      0.058     4.755 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/q[12]_i_2__2/O
+                         net (fo=4, routed)           1.300     6.055    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/PageNumberMask[0]
+    SLICE_X32Y215        LUT4 (Prop_F6LUT_SLICEM_I2_O)
+                                                      0.149     6.204 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_40/O
+                         net (fo=1, routed)           0.364     6.568    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/xlnx_opt_q_reg[1]_0_8
+    SLICE_X29Y219        LUT6 (Prop_C6LUT_SLICEM_I4_O)
+                                                      0.149     6.717 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_42/O
+                         net (fo=1, routed)           0.358     7.075    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/xlnx_opt_q_reg[1]_0_6
+    SLICE_X26Y220        LUT6 (Prop_G6LUT_SLICEL_I4_O)
+                                                      0.226     7.301 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_49/O
+                         net (fo=2, routed)           0.352     7.653    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/q_reg[5]
+    SLICE_X27Y216        LUT5 (Prop_B6LUT_SLICEL_I4_O)
+                                                      0.083     7.736 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/q[5]_i_2__3_LOPT_REMAP/O
+                         net (fo=8, routed)           0.117     7.853    core/ifu/InstrMReg/lopt
+    SLICE_X27Y215        LUT6 (Prop_H6LUT_SLICEL_I0_O)
+                                                      0.153     8.006 f  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP/O
+                         net (fo=1, routed)           0.186     8.192    core/ifu/InstrMReg/xlnx_opt_q_reg[17]_2_4
+    SLICE_X28Y215        LUT6 (Prop_B6LUT_SLICEM_I2_O)
+                                                      0.152     8.344 f  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP_4/O
+                         net (fo=1, routed)           0.051     8.395    core/ifu/InstrMReg/xlnx_opt_q_reg[17]_2
+    SLICE_X28Y215        LUT3 (Prop_F6LUT_SLICEM_I2_O)
+                                                      0.056     8.451 f  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP_5/O
+                         net (fo=81, routed)          0.456     8.907    core/ieu/c/controlregM/FSM_sequential_CurrState_reg[0]
+    SLICE_X30Y217        LUT2 (Prop_F6LUT_SLICEL_I0_O)
+                                                      0.187     9.094 f  core/ieu/c/controlregM/FSM_sequential_CurrState_i_1__0/O
+                         net (fo=13, routed)          0.629     9.723    core/ieu/c/controlregM/q_reg[17]_0
+    SLICE_X27Y211        LUT2 (Prop_H6LUT_SLICEL_I0_O)
+                                                      0.227     9.950 r  core/ieu/c/controlregM/q[65]_i_3/O
+                         net (fo=1, routed)           0.176    10.126    core/ifu/bus.icache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/q_reg[65]
+    SLICE_X27Y209        LUT6 (Prop_C6LUT_SLICEL_I4_O)
+                                                      0.150    10.276 r  core/ifu/bus.icache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/q[65]_i_1__1/O
+                         net (fo=4, routed)           0.449    10.725    core/ebu.ebu/IFUInput/SaveReg/IFUHTRANS[1]
+    SLICE_X25Y209        LUT5 (Prop_H5LUT_SLICEM_I2_O)
+                                                      0.189    10.914 f  core/ebu.ebu/IFUInput/SaveReg/HSIZE_OBUF[1]_inst_i_3/O
+                         net (fo=5, routed)           0.279    11.194    core/ebu.ebu/IFUInput/SaveReg/q_reg[64]_0
+    SLICE_X25Y210        LUT6 (Prop_H6LUT_SLICEM_I1_O)
+                                                      0.138    11.332 r  core/ebu.ebu/IFUInput/SaveReg/HBURST_OBUF[2]_inst_i_2/O
+                         net (fo=4, routed)           1.452    12.783    HBURST_OBUF[0]
     C4                   OBUF (Prop_OUTBUF_HPIOB_S_I_O)
-                                                      0.907    16.096 r  HBURST_OBUF[2]_inst/O
-                         net (fo=0)                   0.000    16.096    HBURST[2]
+                                                      0.907    13.690 r  HBURST_OBUF[2]_inst/O
+                         net (fo=0)                   0.000    13.690    HBURST[2]
     C4                                                                r  HBURST[2] (OUT)
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 core/lsu/AddressMReg/q_reg[4]/C
+  Source:                 core/lsu/hptw.hptw/WalkerStateReg/q_reg[1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            HBURST[0]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        13.667ns  (logic 3.949ns (28.897%)  route 9.718ns (71.103%))
+  Logic Levels:           21  (FDRE=1 LUT2=3 LUT3=4 LUT4=3 LUT5=2 LUT6=7 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X27Y215        FDRE                         0.000     0.000 r  core/lsu/hptw.hptw/WalkerStateReg/q_reg[1]/C
+    SLICE_X27Y215        FDRE (Prop_BFF2_SLICEL_C_Q)
+                                                      0.115     0.115 f  core/lsu/hptw.hptw/WalkerStateReg/q_reg[1]/Q
+                         net (fo=43, routed)          0.514     0.629    core/lsu/hptw.hptw/WalkerStateReg/q_reg[1]_2
+    SLICE_X25Y217        LUT3 (Prop_C6LUT_SLICEM_I2_O)
+                                                      0.220     0.849 f  core/lsu/hptw.hptw/WalkerStateReg/q[3]_i_3__11/O
+                         net (fo=57, routed)          0.679     1.528    core/lsu/hptw.hptw/WalkerStateReg/q_reg[3]_2
+    SLICE_X29Y220        LUT2 (Prop_E6LUT_SLICEM_I0_O)
+                                                      0.083     1.611 r  core/lsu/hptw.hptw/WalkerStateReg/q[3]_i_1__16/O
+                         net (fo=65, routed)          1.331     2.942    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[6]/keyflop/IHAdrM[3]
+    SLICE_X38Y217        LUT3 (Prop_C6LUT_SLICEM_I1_O)
+                                                      0.149     3.091 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[6]/keyflop/q[6]_i_7__3/O
+                         net (fo=4, routed)           0.282     3.373    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[6]/keyflop/Match1__24
+    SLICE_X38Y218        LUT3 (Prop_H6LUT_SLICEM_I0_O)
+                                                      0.084     3.457 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[6]/keyflop/q[12]_i_70/O
+                         net (fo=1, routed)           0.327     3.784    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[7]/pagetypeflop/PageTypeRead[6]_136[0]
+    SLICE_X37Y214        LUT6 (Prop_G6LUT_SLICEM_I5_O)
+                                                      0.226     4.010 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[7]/pagetypeflop/q[12]_i_24/O
+                         net (fo=1, routed)           0.119     4.129    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/q[0]_i_25__1_1
+    SLICE_X36Y214        LUT4 (Prop_D6LUT_SLICEL_I3_O)
+                                                      0.221     4.350 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/q[12]_i_5__2/O
+                         net (fo=1, routed)           0.347     4.697    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/q_reg[1]_0
+    SLICE_X36Y207        LUT4 (Prop_B6LUT_SLICEL_I0_O)
+                                                      0.058     4.755 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/q[12]_i_2__2/O
+                         net (fo=4, routed)           1.300     6.055    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/PageNumberMask[0]
+    SLICE_X32Y215        LUT4 (Prop_F6LUT_SLICEM_I2_O)
+                                                      0.149     6.204 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_40/O
+                         net (fo=1, routed)           0.364     6.568    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/xlnx_opt_q_reg[1]_0_8
+    SLICE_X29Y219        LUT6 (Prop_C6LUT_SLICEM_I4_O)
+                                                      0.149     6.717 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_42/O
+                         net (fo=1, routed)           0.358     7.075    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/xlnx_opt_q_reg[1]_0_6
+    SLICE_X26Y220        LUT6 (Prop_G6LUT_SLICEL_I4_O)
+                                                      0.226     7.301 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_49/O
+                         net (fo=2, routed)           0.352     7.653    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/q_reg[5]
+    SLICE_X27Y216        LUT5 (Prop_B6LUT_SLICEL_I4_O)
+                                                      0.083     7.736 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/q[5]_i_2__3_LOPT_REMAP/O
+                         net (fo=8, routed)           0.117     7.853    core/ifu/InstrMReg/lopt
+    SLICE_X27Y215        LUT6 (Prop_H6LUT_SLICEL_I0_O)
+                                                      0.153     8.006 f  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP/O
+                         net (fo=1, routed)           0.186     8.192    core/ifu/InstrMReg/xlnx_opt_q_reg[17]_2_4
+    SLICE_X28Y215        LUT6 (Prop_B6LUT_SLICEM_I2_O)
+                                                      0.152     8.344 f  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP_4/O
+                         net (fo=1, routed)           0.051     8.395    core/ifu/InstrMReg/xlnx_opt_q_reg[17]_2
+    SLICE_X28Y215        LUT3 (Prop_F6LUT_SLICEM_I2_O)
+                                                      0.056     8.451 f  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP_5/O
+                         net (fo=81, routed)          0.456     8.907    core/ieu/c/controlregM/FSM_sequential_CurrState_reg[0]
+    SLICE_X30Y217        LUT2 (Prop_F6LUT_SLICEL_I0_O)
+                                                      0.187     9.094 f  core/ieu/c/controlregM/FSM_sequential_CurrState_i_1__0/O
+                         net (fo=13, routed)          0.629     9.723    core/ieu/c/controlregM/q_reg[17]_0
+    SLICE_X27Y211        LUT2 (Prop_H6LUT_SLICEL_I0_O)
+                                                      0.227     9.950 r  core/ieu/c/controlregM/q[65]_i_3/O
+                         net (fo=1, routed)           0.176    10.126    core/ifu/bus.icache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/q_reg[65]
+    SLICE_X27Y209        LUT6 (Prop_C6LUT_SLICEL_I4_O)
+                                                      0.150    10.276 r  core/ifu/bus.icache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/q[65]_i_1__1/O
+                         net (fo=4, routed)           0.449    10.725    core/ebu.ebu/IFUInput/SaveReg/IFUHTRANS[1]
+    SLICE_X25Y209        LUT5 (Prop_H5LUT_SLICEM_I2_O)
+                                                      0.189    10.914 f  core/ebu.ebu/IFUInput/SaveReg/HSIZE_OBUF[1]_inst_i_3/O
+                         net (fo=5, routed)           0.279    11.194    core/ebu.ebu/IFUInput/SaveReg/q_reg[64]_0
+    SLICE_X25Y210        LUT6 (Prop_H6LUT_SLICEM_I1_O)
+                                                      0.138    11.332 r  core/ebu.ebu/IFUInput/SaveReg/HBURST_OBUF[2]_inst_i_2/O
+                         net (fo=4, routed)           1.401    12.733    HBURST_OBUF[0]
+    B4                   OBUF (Prop_OUTBUF_HPIOB_M_I_O)
+                                                      0.934    13.667 r  HBURST_OBUF[0]_inst/O
+                         net (fo=0)                   0.000    13.667    HBURST[0]
+    B4                                                                r  HBURST[0] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 core/lsu/hptw.hptw/WalkerStateReg/q_reg[1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            HSIZE[1]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        13.627ns  (logic 3.934ns (28.866%)  route 9.694ns (71.134%))
+  Logic Levels:           21  (FDRE=1 LUT2=3 LUT3=4 LUT4=3 LUT5=2 LUT6=7 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X27Y215        FDRE                         0.000     0.000 r  core/lsu/hptw.hptw/WalkerStateReg/q_reg[1]/C
+    SLICE_X27Y215        FDRE (Prop_BFF2_SLICEL_C_Q)
+                                                      0.115     0.115 f  core/lsu/hptw.hptw/WalkerStateReg/q_reg[1]/Q
+                         net (fo=43, routed)          0.514     0.629    core/lsu/hptw.hptw/WalkerStateReg/q_reg[1]_2
+    SLICE_X25Y217        LUT3 (Prop_C6LUT_SLICEM_I2_O)
+                                                      0.220     0.849 f  core/lsu/hptw.hptw/WalkerStateReg/q[3]_i_3__11/O
+                         net (fo=57, routed)          0.679     1.528    core/lsu/hptw.hptw/WalkerStateReg/q_reg[3]_2
+    SLICE_X29Y220        LUT2 (Prop_E6LUT_SLICEM_I0_O)
+                                                      0.083     1.611 r  core/lsu/hptw.hptw/WalkerStateReg/q[3]_i_1__16/O
+                         net (fo=65, routed)          1.331     2.942    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[6]/keyflop/IHAdrM[3]
+    SLICE_X38Y217        LUT3 (Prop_C6LUT_SLICEM_I1_O)
+                                                      0.149     3.091 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[6]/keyflop/q[6]_i_7__3/O
+                         net (fo=4, routed)           0.282     3.373    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[6]/keyflop/Match1__24
+    SLICE_X38Y218        LUT3 (Prop_H6LUT_SLICEM_I0_O)
+                                                      0.084     3.457 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[6]/keyflop/q[12]_i_70/O
+                         net (fo=1, routed)           0.327     3.784    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[7]/pagetypeflop/PageTypeRead[6]_136[0]
+    SLICE_X37Y214        LUT6 (Prop_G6LUT_SLICEM_I5_O)
+                                                      0.226     4.010 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[7]/pagetypeflop/q[12]_i_24/O
+                         net (fo=1, routed)           0.119     4.129    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/q[0]_i_25__1_1
+    SLICE_X36Y214        LUT4 (Prop_D6LUT_SLICEL_I3_O)
+                                                      0.221     4.350 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/q[12]_i_5__2/O
+                         net (fo=1, routed)           0.347     4.697    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/q_reg[1]_0
+    SLICE_X36Y207        LUT4 (Prop_B6LUT_SLICEL_I0_O)
+                                                      0.058     4.755 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/q[12]_i_2__2/O
+                         net (fo=4, routed)           1.300     6.055    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/PageNumberMask[0]
+    SLICE_X32Y215        LUT4 (Prop_F6LUT_SLICEM_I2_O)
+                                                      0.149     6.204 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_40/O
+                         net (fo=1, routed)           0.364     6.568    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/xlnx_opt_q_reg[1]_0_8
+    SLICE_X29Y219        LUT6 (Prop_C6LUT_SLICEM_I4_O)
+                                                      0.149     6.717 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_42/O
+                         net (fo=1, routed)           0.358     7.075    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/xlnx_opt_q_reg[1]_0_6
+    SLICE_X26Y220        LUT6 (Prop_G6LUT_SLICEL_I4_O)
+                                                      0.226     7.301 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_49/O
+                         net (fo=2, routed)           0.352     7.653    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/q_reg[5]
+    SLICE_X27Y216        LUT5 (Prop_B6LUT_SLICEL_I4_O)
+                                                      0.083     7.736 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/q[5]_i_2__3_LOPT_REMAP/O
+                         net (fo=8, routed)           0.117     7.853    core/ifu/InstrMReg/lopt
+    SLICE_X27Y215        LUT6 (Prop_H6LUT_SLICEL_I0_O)
+                                                      0.153     8.006 f  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP/O
+                         net (fo=1, routed)           0.186     8.192    core/ifu/InstrMReg/xlnx_opt_q_reg[17]_2_4
+    SLICE_X28Y215        LUT6 (Prop_B6LUT_SLICEM_I2_O)
+                                                      0.152     8.344 f  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP_4/O
+                         net (fo=1, routed)           0.051     8.395    core/ifu/InstrMReg/xlnx_opt_q_reg[17]_2
+    SLICE_X28Y215        LUT3 (Prop_F6LUT_SLICEM_I2_O)
+                                                      0.056     8.451 f  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP_5/O
+                         net (fo=81, routed)          0.456     8.907    core/ieu/c/controlregM/FSM_sequential_CurrState_reg[0]
+    SLICE_X30Y217        LUT2 (Prop_F6LUT_SLICEL_I0_O)
+                                                      0.187     9.094 f  core/ieu/c/controlregM/FSM_sequential_CurrState_i_1__0/O
+                         net (fo=13, routed)          0.629     9.723    core/ieu/c/controlregM/q_reg[17]_0
+    SLICE_X27Y211        LUT2 (Prop_H6LUT_SLICEL_I0_O)
+                                                      0.227     9.950 r  core/ieu/c/controlregM/q[65]_i_3/O
+                         net (fo=1, routed)           0.176    10.126    core/ifu/bus.icache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/q_reg[65]
+    SLICE_X27Y209        LUT6 (Prop_C6LUT_SLICEL_I4_O)
+                                                      0.150    10.276 r  core/ifu/bus.icache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/q[65]_i_1__1/O
+                         net (fo=4, routed)           0.449    10.725    core/ebu.ebu/IFUInput/SaveReg/IFUHTRANS[1]
+    SLICE_X25Y209        LUT5 (Prop_H5LUT_SLICEM_I2_O)
+                                                      0.189    10.914 f  core/ebu.ebu/IFUInput/SaveReg/HSIZE_OBUF[1]_inst_i_3/O
+                         net (fo=5, routed)           0.277    11.192    core/ebu.ebu/ebufsmarb/FinalBeatReg/HSIZE[1]
+    SLICE_X25Y210        LUT6 (Prop_G6LUT_SLICEM_I5_O)
+                                                      0.137    11.329 r  core/ebu.ebu/ebufsmarb/FinalBeatReg/HSIZE_OBUF[1]_inst_i_1/O
+                         net (fo=1, routed)           1.379    12.708    HSIZE_OBUF[1]
+    A3                   OBUF (Prop_OUTBUF_HPIOB_S_I_O)
+                                                      0.920    13.627 r  HSIZE_OBUF[1]_inst/O
+                         net (fo=0)                   0.000    13.627    HSIZE[1]
+    A3                                                                r  HSIZE[1] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 core/lsu/hptw.hptw/WalkerStateReg/q_reg[1]/C
                             (rising edge-triggered cell FDRE)
   Destination:            HTRANS[1]
                             (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        15.760ns  (logic 4.631ns (29.385%)  route 11.129ns (70.615%))
-  Logic Levels:           22  (CARRY8=2 FDRE=1 LUT2=3 LUT3=2 LUT4=3 LUT5=1 LUT6=9 OBUF=1)
+  Data Path Delay:        12.823ns  (logic 3.757ns (29.299%)  route 9.066ns (70.701%))
+  Logic Levels:           20  (FDRE=1 LUT2=3 LUT3=4 LUT4=3 LUT5=1 LUT6=7 OBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X22Y231        FDRE                         0.000     0.000 r  core/lsu/AddressMReg/q_reg[4]/C
-    SLICE_X22Y231        FDRE (Prop_EFF_SLICEL_C_Q)
-                                                      0.114     0.114 r  core/lsu/AddressMReg/q_reg[4]/Q
-                         net (fo=4, routed)           0.352     0.466    core/lsu/AddressMReg/Q[4]
-    SLICE_X21Y231        CARRY8 (Prop_CARRY8_SLICEM_S[2]_CO[7])
-                                                      0.229     0.695 r  core/lsu/AddressMReg/q_reg[6]_i_3__0/CO[7]
-                         net (fo=1, routed)           0.030     0.725    core/lsu/AddressMReg/q_reg[6]_i_3__0_n_0
-    SLICE_X21Y232        CARRY8 (Prop_CARRY8_SLICEM_CI_O[4])
-                                                      0.119     0.844 r  core/lsu/AddressMReg/q_reg[3]_i_5/O[4]
-                         net (fo=2, routed)           0.208     1.052    core/lsu/AddressMReg/ziccslm_align.align/IEUAdrIncrementM[14]
-    SLICE_X21Y230        LUT3 (Prop_B5LUT_SLICEM_I0_O)
-                                                      0.199     1.251 r  core/lsu/AddressMReg/q[2]_i_2__8/O
-                         net (fo=1, routed)           0.696     1.947    core/lsu/hptw.hptw/WalkerStateReg/ziccslm_align.IEUAdrSpillM[11]
-    SLICE_X21Y230        LUT2 (Prop_F6LUT_SLICEM_I1_O)
-                                                      0.186     2.133 r  core/lsu/hptw.hptw/WalkerStateReg/q[2]_i_1__14/O
-                         net (fo=65, routed)          1.917     4.050    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/lopt_3
-    SLICE_X30Y230        LUT6 (Prop_G6LUT_SLICEL_I3_O)
-                                                      0.151     4.201 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/q[16]_i_2__2_LOPT_REMAP/O
-                         net (fo=1, routed)           0.054     4.255    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/xlnx_opt_q_reg[0]_1
-    SLICE_X30Y230        LUT6 (Prop_F6LUT_SLICEL_I5_O)
-                                                      0.150     4.405 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/q[16]_i_2__2_LOPT_REMAP_1/O
-                         net (fo=5, routed)           0.322     4.727    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/q_reg[0]_1
-    SLICE_X32Y230        LUT6 (Prop_G6LUT_SLICEM_I1_O)
-                                                      0.226     4.953 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/q[12]_i_38/O
-                         net (fo=1, routed)           0.391     5.344    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[23]/pagetypeflop/q[0]_i_27__0_3
-    SLICE_X29Y231        LUT6 (Prop_H6LUT_SLICEM_I5_O)
-                                                      0.228     5.572 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[23]/pagetypeflop/q[12]_i_8__0/O
-                         net (fo=1, routed)           0.049     5.621    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/HitPageType[0]
-    SLICE_X29Y231        LUT4 (Prop_G6LUT_SLICEM_I3_O)
-                                                      0.082     5.703 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/q[12]_i_2__2/O
-                         net (fo=4, routed)           1.526     7.228    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/PageNumberMask[0]
-    SLICE_X23Y234        LUT4 (Prop_C6LUT_SLICEL_I2_O)
-                                                      0.187     7.415 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_38/O
-                         net (fo=1, routed)           0.936     8.351    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/xlnx_opt_q_reg[1]_0_10
-    SLICE_X20Y234        LUT6 (Prop_H6LUT_SLICEM_I2_O)
-                                                      0.228     8.579 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_42/O
-                         net (fo=1, routed)           0.310     8.889    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/xlnx_opt_q_reg[1]_0_6
-    SLICE_X22Y239        LUT6 (Prop_G6LUT_SLICEL_I4_O)
-                                                      0.186     9.075 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_49/O
-                         net (fo=2, routed)           0.818     9.894    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/q_reg[5]
-    SLICE_X24Y232        LUT4 (Prop_G6LUT_SLICEM_I3_O)
-                                                      0.137    10.031 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/q[5]_i_3__2_LOPT_REMAP/O
-                         net (fo=8, routed)           0.196    10.227    core/ifu/InstrMReg/lopt_6
-    SLICE_X23Y233        LUT5 (Prop_B6LUT_SLICEL_I4_O)
-                                                      0.224    10.451 r  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP_1/O
-                         net (fo=1, routed)           0.060    10.511    core/ifu/InstrMReg/xlnx_opt_q_reg[17]_3_3
-    SLICE_X23Y233        LUT6 (Prop_F6LUT_SLICEL_I3_O)
-                                                      0.187    10.698 f  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP_4/O
-                         net (fo=1, routed)           0.099    10.797    core/ifu/InstrMReg/xlnx_opt_q_reg[17]_3
-    SLICE_X23Y231        LUT3 (Prop_F6LUT_SLICEL_I2_O)
-                                                      0.136    10.933 f  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP_5/O
-                         net (fo=81, routed)          0.844    11.776    core/ieu/c/controlregM/FSM_sequential_CurrState_reg[0]
-    SLICE_X18Y228        LUT2 (Prop_G6LUT_SLICEM_I0_O)
-                                                      0.137    11.913 f  core/ieu/c/controlregM/FSM_sequential_CurrState_i_1__0/O
-                         net (fo=13, routed)          0.269    12.183    core/ieu/c/controlregM/q_reg[17]_0
-    SLICE_X22Y227        LUT2 (Prop_H6LUT_SLICEL_I0_O)
-                                                      0.153    12.336 r  core/ieu/c/controlregM/q[65]_i_3/O
-                         net (fo=1, routed)           0.126    12.462    core/ifu/bus.icache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/q_reg[65]
-    SLICE_X22Y226        LUT6 (Prop_G6LUT_SLICEL_I4_O)
-                                                      0.226    12.688 r  core/ifu/bus.icache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/q[65]_i_1__1/O
-                         net (fo=4, routed)           0.282    12.970    core/ebu.ebu/ebufsmarb/FinalBeatReg/IFUHTRANS[1]
-    SLICE_X22Y225        LUT6 (Prop_G6LUT_SLICEL_I5_O)
-                                                      0.226    13.196 r  core/ebu.ebu/ebufsmarb/FinalBeatReg/HTRANS_OBUF[1]_inst_i_1/O
-                         net (fo=1, routed)           1.644    14.840    HTRANS_OBUF[1]
+    SLICE_X27Y215        FDRE                         0.000     0.000 r  core/lsu/hptw.hptw/WalkerStateReg/q_reg[1]/C
+    SLICE_X27Y215        FDRE (Prop_BFF2_SLICEL_C_Q)
+                                                      0.115     0.115 f  core/lsu/hptw.hptw/WalkerStateReg/q_reg[1]/Q
+                         net (fo=43, routed)          0.514     0.629    core/lsu/hptw.hptw/WalkerStateReg/q_reg[1]_2
+    SLICE_X25Y217        LUT3 (Prop_C6LUT_SLICEM_I2_O)
+                                                      0.220     0.849 f  core/lsu/hptw.hptw/WalkerStateReg/q[3]_i_3__11/O
+                         net (fo=57, routed)          0.679     1.528    core/lsu/hptw.hptw/WalkerStateReg/q_reg[3]_2
+    SLICE_X29Y220        LUT2 (Prop_E6LUT_SLICEM_I0_O)
+                                                      0.083     1.611 r  core/lsu/hptw.hptw/WalkerStateReg/q[3]_i_1__16/O
+                         net (fo=65, routed)          1.331     2.942    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[6]/keyflop/IHAdrM[3]
+    SLICE_X38Y217        LUT3 (Prop_C6LUT_SLICEM_I1_O)
+                                                      0.149     3.091 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[6]/keyflop/q[6]_i_7__3/O
+                         net (fo=4, routed)           0.282     3.373    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[6]/keyflop/Match1__24
+    SLICE_X38Y218        LUT3 (Prop_H6LUT_SLICEM_I0_O)
+                                                      0.084     3.457 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[6]/keyflop/q[12]_i_70/O
+                         net (fo=1, routed)           0.327     3.784    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[7]/pagetypeflop/PageTypeRead[6]_136[0]
+    SLICE_X37Y214        LUT6 (Prop_G6LUT_SLICEM_I5_O)
+                                                      0.226     4.010 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[7]/pagetypeflop/q[12]_i_24/O
+                         net (fo=1, routed)           0.119     4.129    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/q[0]_i_25__1_1
+    SLICE_X36Y214        LUT4 (Prop_D6LUT_SLICEL_I3_O)
+                                                      0.221     4.350 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/q[12]_i_5__2/O
+                         net (fo=1, routed)           0.347     4.697    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/q_reg[1]_0
+    SLICE_X36Y207        LUT4 (Prop_B6LUT_SLICEL_I0_O)
+                                                      0.058     4.755 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/q[12]_i_2__2/O
+                         net (fo=4, routed)           1.300     6.055    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/PageNumberMask[0]
+    SLICE_X32Y215        LUT4 (Prop_F6LUT_SLICEM_I2_O)
+                                                      0.149     6.204 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_40/O
+                         net (fo=1, routed)           0.364     6.568    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/xlnx_opt_q_reg[1]_0_8
+    SLICE_X29Y219        LUT6 (Prop_C6LUT_SLICEM_I4_O)
+                                                      0.149     6.717 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_42/O
+                         net (fo=1, routed)           0.358     7.075    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/xlnx_opt_q_reg[1]_0_6
+    SLICE_X26Y220        LUT6 (Prop_G6LUT_SLICEL_I4_O)
+                                                      0.226     7.301 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_49/O
+                         net (fo=2, routed)           0.352     7.653    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/q_reg[5]
+    SLICE_X27Y216        LUT5 (Prop_B6LUT_SLICEL_I4_O)
+                                                      0.083     7.736 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/q[5]_i_2__3_LOPT_REMAP/O
+                         net (fo=8, routed)           0.117     7.853    core/ifu/InstrMReg/lopt
+    SLICE_X27Y215        LUT6 (Prop_H6LUT_SLICEL_I0_O)
+                                                      0.153     8.006 f  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP/O
+                         net (fo=1, routed)           0.186     8.192    core/ifu/InstrMReg/xlnx_opt_q_reg[17]_2_4
+    SLICE_X28Y215        LUT6 (Prop_B6LUT_SLICEM_I2_O)
+                                                      0.152     8.344 f  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP_4/O
+                         net (fo=1, routed)           0.051     8.395    core/ifu/InstrMReg/xlnx_opt_q_reg[17]_2
+    SLICE_X28Y215        LUT3 (Prop_F6LUT_SLICEM_I2_O)
+                                                      0.056     8.451 f  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP_5/O
+                         net (fo=81, routed)          0.456     8.907    core/ieu/c/controlregM/FSM_sequential_CurrState_reg[0]
+    SLICE_X30Y217        LUT2 (Prop_F6LUT_SLICEL_I0_O)
+                                                      0.187     9.094 f  core/ieu/c/controlregM/FSM_sequential_CurrState_i_1__0/O
+                         net (fo=13, routed)          0.629     9.723    core/ieu/c/controlregM/q_reg[17]_0
+    SLICE_X27Y211        LUT2 (Prop_H6LUT_SLICEL_I0_O)
+                                                      0.227     9.950 r  core/ieu/c/controlregM/q[65]_i_3/O
+                         net (fo=1, routed)           0.176    10.126    core/ifu/bus.icache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/q_reg[65]
+    SLICE_X27Y209        LUT6 (Prop_C6LUT_SLICEL_I4_O)
+                                                      0.150    10.276 r  core/ifu/bus.icache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/q[65]_i_1__1/O
+                         net (fo=4, routed)           0.196    10.472    core/ebu.ebu/ebufsmarb/FinalBeatReg/IFUHTRANS[1]
+    SLICE_X25Y209        LUT6 (Prop_C6LUT_SLICEM_I5_O)
+                                                      0.149    10.621 r  core/ebu.ebu/ebufsmarb/FinalBeatReg/HTRANS_OBUF[1]_inst_i_1/O
+                         net (fo=1, routed)           1.282    11.903    HTRANS_OBUF[1]
     C1                   OBUF (Prop_OUTBUF_HPIOB_M_I_O)
-                                                      0.920    15.760 r  HTRANS_OBUF[1]_inst/O
-                         net (fo=0)                   0.000    15.760    HTRANS[1]
+                                                      0.920    12.823 r  HTRANS_OBUF[1]_inst/O
+                         net (fo=0)                   0.000    12.823    HTRANS[1]
     C1                                                                r  HTRANS[1] (OUT)
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 core/lsu/AddressMReg/q_reg[4]/C
+  Source:                 core/lsu/hptw.hptw/WalkerStateReg/q_reg[1]/C
                             (rising edge-triggered cell FDRE)
-  Destination:            HPROT[0]
+  Destination:            HWRITE
                             (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        15.614ns  (logic 4.459ns (28.556%)  route 11.156ns (71.444%))
-  Logic Levels:           22  (CARRY8=2 FDRE=1 LUT2=1 LUT3=2 LUT4=4 LUT5=3 LUT6=8 OBUF=1)
+  Data Path Delay:        12.554ns  (logic 3.734ns (29.747%)  route 8.820ns (70.253%))
+  Logic Levels:           20  (FDRE=1 LUT2=1 LUT3=4 LUT4=3 LUT5=4 LUT6=6 OBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X22Y231        FDRE                         0.000     0.000 r  core/lsu/AddressMReg/q_reg[4]/C
-    SLICE_X22Y231        FDRE (Prop_EFF_SLICEL_C_Q)
-                                                      0.114     0.114 r  core/lsu/AddressMReg/q_reg[4]/Q
-                         net (fo=4, routed)           0.352     0.466    core/lsu/AddressMReg/Q[4]
-    SLICE_X21Y231        CARRY8 (Prop_CARRY8_SLICEM_S[2]_CO[7])
-                                                      0.229     0.695 r  core/lsu/AddressMReg/q_reg[6]_i_3__0/CO[7]
-                         net (fo=1, routed)           0.030     0.725    core/lsu/AddressMReg/q_reg[6]_i_3__0_n_0
-    SLICE_X21Y232        CARRY8 (Prop_CARRY8_SLICEM_CI_O[4])
-                                                      0.119     0.844 r  core/lsu/AddressMReg/q_reg[3]_i_5/O[4]
-                         net (fo=2, routed)           0.208     1.052    core/lsu/AddressMReg/ziccslm_align.align/IEUAdrIncrementM[14]
-    SLICE_X21Y230        LUT3 (Prop_B5LUT_SLICEM_I0_O)
-                                                      0.199     1.251 r  core/lsu/AddressMReg/q[2]_i_2__8/O
-                         net (fo=1, routed)           0.696     1.947    core/lsu/hptw.hptw/WalkerStateReg/ziccslm_align.IEUAdrSpillM[11]
-    SLICE_X21Y230        LUT2 (Prop_F6LUT_SLICEM_I1_O)
-                                                      0.186     2.133 r  core/lsu/hptw.hptw/WalkerStateReg/q[2]_i_1__14/O
-                         net (fo=65, routed)          1.917     4.050    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/lopt_3
-    SLICE_X30Y230        LUT6 (Prop_G6LUT_SLICEL_I3_O)
-                                                      0.151     4.201 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/q[16]_i_2__2_LOPT_REMAP/O
-                         net (fo=1, routed)           0.054     4.255    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/xlnx_opt_q_reg[0]_1
-    SLICE_X30Y230        LUT6 (Prop_F6LUT_SLICEL_I5_O)
-                                                      0.150     4.405 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/q[16]_i_2__2_LOPT_REMAP_1/O
-                         net (fo=5, routed)           0.322     4.727    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/q_reg[0]_1
-    SLICE_X32Y230        LUT6 (Prop_G6LUT_SLICEM_I1_O)
-                                                      0.226     4.953 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/q[12]_i_38/O
-                         net (fo=1, routed)           0.391     5.344    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[23]/pagetypeflop/q[0]_i_27__0_3
-    SLICE_X29Y231        LUT6 (Prop_H6LUT_SLICEM_I5_O)
-                                                      0.228     5.572 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[23]/pagetypeflop/q[12]_i_8__0/O
-                         net (fo=1, routed)           0.049     5.621    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/HitPageType[0]
-    SLICE_X29Y231        LUT4 (Prop_G6LUT_SLICEM_I3_O)
-                                                      0.082     5.703 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/q[12]_i_2__2/O
-                         net (fo=4, routed)           1.526     7.228    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/PageNumberMask[0]
-    SLICE_X23Y234        LUT4 (Prop_C6LUT_SLICEL_I2_O)
-                                                      0.187     7.415 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_38/O
-                         net (fo=1, routed)           0.936     8.351    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/xlnx_opt_q_reg[1]_0_10
-    SLICE_X20Y234        LUT6 (Prop_H6LUT_SLICEM_I2_O)
-                                                      0.228     8.579 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_42/O
-                         net (fo=1, routed)           0.310     8.889    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/xlnx_opt_q_reg[1]_0_6
-    SLICE_X22Y239        LUT6 (Prop_G6LUT_SLICEL_I4_O)
-                                                      0.186     9.075 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_49/O
-                         net (fo=2, routed)           0.818     9.894    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/q_reg[5]
-    SLICE_X24Y232        LUT4 (Prop_G6LUT_SLICEM_I3_O)
-                                                      0.137    10.031 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/q[5]_i_3__2_LOPT_REMAP/O
-                         net (fo=8, routed)           0.196    10.227    core/ifu/InstrMReg/lopt_6
-    SLICE_X23Y233        LUT5 (Prop_B6LUT_SLICEL_I4_O)
-                                                      0.224    10.451 f  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP_1/O
-                         net (fo=1, routed)           0.060    10.511    core/ifu/InstrMReg/xlnx_opt_q_reg[17]_3_3
-    SLICE_X23Y233        LUT6 (Prop_F6LUT_SLICEL_I3_O)
-                                                      0.187    10.698 r  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP_4/O
-                         net (fo=1, routed)           0.099    10.797    core/ifu/InstrMReg/xlnx_opt_q_reg[17]_3
-    SLICE_X23Y231        LUT3 (Prop_F6LUT_SLICEL_I2_O)
-                                                      0.136    10.933 r  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP_5/O
-                         net (fo=81, routed)          0.169    11.101    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/FlushW
-    SLICE_X23Y228        LUT5 (Prop_G6LUT_SLICEL_I4_O)
-                                                      0.082    11.183 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/FSM_sequential_CurrState[1]_i_1/O
-                         net (fo=12, routed)          0.318    11.502    core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/IgnoreRequest
-    SLICE_X24Y226        LUT6 (Prop_H6LUT_SLICEM_I3_O)
-                                                      0.084    11.586 f  core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/HWRITE_OBUF_inst_i_8/O
-                         net (fo=2, routed)           0.073    11.659    core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/q_reg[68]_0
-    SLICE_X24Y226        LUT5 (Prop_B6LUT_SLICEM_I4_O)
-                                                      0.225    11.884 r  core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/HWRITE_OBUF_inst_i_3/O
-                         net (fo=10, routed)          0.316    12.200    core/ebu.ebu/ebufsmarb/busreg/LSUHTRANS[0]
-    SLICE_X23Y225        LUT4 (Prop_D5LUT_SLICEL_I2_O)
-                                                      0.187    12.387 r  core/ebu.ebu/ebufsmarb/busreg/HPROT_OBUF[0]_inst_i_1/O
-                         net (fo=1, routed)           2.316    14.703    HPROT_OBUF[0]
-    D7                   OBUF (Prop_OUTBUF_HPIOB_M_I_O)
-                                                      0.912    15.614 r  HPROT_OBUF[0]_inst/O
-                         net (fo=0)                   0.000    15.614    HPROT[0]
-    D7                                                                r  HPROT[0] (OUT)
+    SLICE_X27Y215        FDRE                         0.000     0.000 r  core/lsu/hptw.hptw/WalkerStateReg/q_reg[1]/C
+    SLICE_X27Y215        FDRE (Prop_BFF2_SLICEL_C_Q)
+                                                      0.115     0.115 f  core/lsu/hptw.hptw/WalkerStateReg/q_reg[1]/Q
+                         net (fo=43, routed)          0.514     0.629    core/lsu/hptw.hptw/WalkerStateReg/q_reg[1]_2
+    SLICE_X25Y217        LUT3 (Prop_C6LUT_SLICEM_I2_O)
+                                                      0.220     0.849 f  core/lsu/hptw.hptw/WalkerStateReg/q[3]_i_3__11/O
+                         net (fo=57, routed)          0.679     1.528    core/lsu/hptw.hptw/WalkerStateReg/q_reg[3]_2
+    SLICE_X29Y220        LUT2 (Prop_E6LUT_SLICEM_I0_O)
+                                                      0.083     1.611 r  core/lsu/hptw.hptw/WalkerStateReg/q[3]_i_1__16/O
+                         net (fo=65, routed)          1.331     2.942    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[6]/keyflop/IHAdrM[3]
+    SLICE_X38Y217        LUT3 (Prop_C6LUT_SLICEM_I1_O)
+                                                      0.149     3.091 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[6]/keyflop/q[6]_i_7__3/O
+                         net (fo=4, routed)           0.282     3.373    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[6]/keyflop/Match1__24
+    SLICE_X38Y218        LUT3 (Prop_H6LUT_SLICEM_I0_O)
+                                                      0.084     3.457 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[6]/keyflop/q[12]_i_70/O
+                         net (fo=1, routed)           0.327     3.784    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[7]/pagetypeflop/PageTypeRead[6]_136[0]
+    SLICE_X37Y214        LUT6 (Prop_G6LUT_SLICEM_I5_O)
+                                                      0.226     4.010 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[7]/pagetypeflop/q[12]_i_24/O
+                         net (fo=1, routed)           0.119     4.129    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/q[0]_i_25__1_1
+    SLICE_X36Y214        LUT4 (Prop_D6LUT_SLICEL_I3_O)
+                                                      0.221     4.350 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/q[12]_i_5__2/O
+                         net (fo=1, routed)           0.347     4.697    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/q_reg[1]_0
+    SLICE_X36Y207        LUT4 (Prop_B6LUT_SLICEL_I0_O)
+                                                      0.058     4.755 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/q[12]_i_2__2/O
+                         net (fo=4, routed)           1.300     6.055    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/PageNumberMask[0]
+    SLICE_X32Y215        LUT4 (Prop_F6LUT_SLICEM_I2_O)
+                                                      0.149     6.204 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_40/O
+                         net (fo=1, routed)           0.364     6.568    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/xlnx_opt_q_reg[1]_0_8
+    SLICE_X29Y219        LUT6 (Prop_C6LUT_SLICEM_I4_O)
+                                                      0.149     6.717 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_42/O
+                         net (fo=1, routed)           0.358     7.075    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/xlnx_opt_q_reg[1]_0_6
+    SLICE_X26Y220        LUT6 (Prop_G6LUT_SLICEL_I4_O)
+                                                      0.226     7.301 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_49/O
+                         net (fo=2, routed)           0.352     7.653    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/q_reg[5]
+    SLICE_X27Y216        LUT5 (Prop_B6LUT_SLICEL_I4_O)
+                                                      0.083     7.736 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/q[5]_i_2__3_LOPT_REMAP/O
+                         net (fo=8, routed)           0.117     7.853    core/ifu/InstrMReg/lopt
+    SLICE_X27Y215        LUT6 (Prop_H6LUT_SLICEL_I0_O)
+                                                      0.153     8.006 f  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP/O
+                         net (fo=1, routed)           0.186     8.192    core/ifu/InstrMReg/xlnx_opt_q_reg[17]_2_4
+    SLICE_X28Y215        LUT6 (Prop_B6LUT_SLICEM_I2_O)
+                                                      0.152     8.344 f  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP_4/O
+                         net (fo=1, routed)           0.051     8.395    core/ifu/InstrMReg/xlnx_opt_q_reg[17]_2
+    SLICE_X28Y215        LUT3 (Prop_F6LUT_SLICEM_I2_O)
+                                                      0.056     8.451 f  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP_5/O
+                         net (fo=81, routed)          0.373     8.824    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/FlushW
+    SLICE_X26Y215        LUT5 (Prop_G6LUT_SLICEL_I4_O)
+                                                      0.186     9.010 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/FSM_sequential_CurrState[1]_i_1/O
+                         net (fo=12, routed)          0.188     9.198    core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/IgnoreRequest
+    SLICE_X26Y212        LUT6 (Prop_H6LUT_SLICEL_I3_O)
+                                                      0.137     9.335 r  core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/HWRITE_OBUF_inst_i_8/O
+                         net (fo=2, routed)           0.067     9.402    core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/q_reg[68]_0
+    SLICE_X26Y212        LUT5 (Prop_B5LUT_SLICEL_I4_O)
+                                                      0.226     9.628 r  core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/HWRITE_OBUF_inst_i_4/O
+                         net (fo=10, routed)          0.431    10.060    core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/q_reg[2]_1
+    SLICE_X25Y210        LUT5 (Prop_C5LUT_SLICEM_I4_O)
+                                                      0.154    10.214 r  core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/HWRITE_OBUF_inst_i_1/O
+                         net (fo=1, routed)           1.433    11.647    HWRITE_OBUF
+    F2                   OBUF (Prop_OUTBUF_HPIOB_M_I_O)
+                                                      0.907    12.554 r  HWRITE_OBUF_inst/O
+                         net (fo=0)                   0.000    12.554    HWRITE
+    F2                                                                r  HWRITE (OUT)
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 core/lsu/AddressMReg/q_reg[4]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            HSIZE[0]
-                            (output port)
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        15.416ns  (logic 4.505ns (29.220%)  route 10.911ns (70.780%))
-  Logic Levels:           22  (CARRY8=2 FDRE=1 LUT2=1 LUT3=2 LUT4=3 LUT5=4 LUT6=8 OBUF=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X22Y231        FDRE                         0.000     0.000 r  core/lsu/AddressMReg/q_reg[4]/C
-    SLICE_X22Y231        FDRE (Prop_EFF_SLICEL_C_Q)
-                                                      0.114     0.114 r  core/lsu/AddressMReg/q_reg[4]/Q
-                         net (fo=4, routed)           0.352     0.466    core/lsu/AddressMReg/Q[4]
-    SLICE_X21Y231        CARRY8 (Prop_CARRY8_SLICEM_S[2]_CO[7])
-                                                      0.229     0.695 r  core/lsu/AddressMReg/q_reg[6]_i_3__0/CO[7]
-                         net (fo=1, routed)           0.030     0.725    core/lsu/AddressMReg/q_reg[6]_i_3__0_n_0
-    SLICE_X21Y232        CARRY8 (Prop_CARRY8_SLICEM_CI_O[4])
-                                                      0.119     0.844 r  core/lsu/AddressMReg/q_reg[3]_i_5/O[4]
-                         net (fo=2, routed)           0.208     1.052    core/lsu/AddressMReg/ziccslm_align.align/IEUAdrIncrementM[14]
-    SLICE_X21Y230        LUT3 (Prop_B5LUT_SLICEM_I0_O)
-                                                      0.199     1.251 r  core/lsu/AddressMReg/q[2]_i_2__8/O
-                         net (fo=1, routed)           0.696     1.947    core/lsu/hptw.hptw/WalkerStateReg/ziccslm_align.IEUAdrSpillM[11]
-    SLICE_X21Y230        LUT2 (Prop_F6LUT_SLICEM_I1_O)
-                                                      0.186     2.133 r  core/lsu/hptw.hptw/WalkerStateReg/q[2]_i_1__14/O
-                         net (fo=65, routed)          1.917     4.050    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/lopt_3
-    SLICE_X30Y230        LUT6 (Prop_G6LUT_SLICEL_I3_O)
-                                                      0.151     4.201 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/q[16]_i_2__2_LOPT_REMAP/O
-                         net (fo=1, routed)           0.054     4.255    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/xlnx_opt_q_reg[0]_1
-    SLICE_X30Y230        LUT6 (Prop_F6LUT_SLICEL_I5_O)
-                                                      0.150     4.405 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/q[16]_i_2__2_LOPT_REMAP_1/O
-                         net (fo=5, routed)           0.322     4.727    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/q_reg[0]_1
-    SLICE_X32Y230        LUT6 (Prop_G6LUT_SLICEM_I1_O)
-                                                      0.226     4.953 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/q[12]_i_38/O
-                         net (fo=1, routed)           0.391     5.344    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[23]/pagetypeflop/q[0]_i_27__0_3
-    SLICE_X29Y231        LUT6 (Prop_H6LUT_SLICEM_I5_O)
-                                                      0.228     5.572 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[23]/pagetypeflop/q[12]_i_8__0/O
-                         net (fo=1, routed)           0.049     5.621    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/HitPageType[0]
-    SLICE_X29Y231        LUT4 (Prop_G6LUT_SLICEM_I3_O)
-                                                      0.082     5.703 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/q[12]_i_2__2/O
-                         net (fo=4, routed)           1.526     7.228    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/PageNumberMask[0]
-    SLICE_X23Y234        LUT4 (Prop_C6LUT_SLICEL_I2_O)
-                                                      0.187     7.415 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_38/O
-                         net (fo=1, routed)           0.936     8.351    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/xlnx_opt_q_reg[1]_0_10
-    SLICE_X20Y234        LUT6 (Prop_H6LUT_SLICEM_I2_O)
-                                                      0.228     8.579 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_42/O
-                         net (fo=1, routed)           0.310     8.889    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/xlnx_opt_q_reg[1]_0_6
-    SLICE_X22Y239        LUT6 (Prop_G6LUT_SLICEL_I4_O)
-                                                      0.186     9.075 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_49/O
-                         net (fo=2, routed)           0.818     9.894    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/q_reg[5]
-    SLICE_X24Y232        LUT4 (Prop_G6LUT_SLICEM_I3_O)
-                                                      0.137    10.031 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/q[5]_i_3__2_LOPT_REMAP/O
-                         net (fo=8, routed)           0.196    10.227    core/ifu/InstrMReg/lopt_6
-    SLICE_X23Y233        LUT5 (Prop_B6LUT_SLICEL_I4_O)
-                                                      0.224    10.451 r  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP_1/O
-                         net (fo=1, routed)           0.060    10.511    core/ifu/InstrMReg/xlnx_opt_q_reg[17]_3_3
-    SLICE_X23Y233        LUT6 (Prop_F6LUT_SLICEL_I3_O)
-                                                      0.187    10.698 f  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP_4/O
-                         net (fo=1, routed)           0.099    10.797    core/ifu/InstrMReg/xlnx_opt_q_reg[17]_3
-    SLICE_X23Y231        LUT3 (Prop_F6LUT_SLICEL_I2_O)
-                                                      0.136    10.933 f  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP_5/O
-                         net (fo=81, routed)          0.169    11.101    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/FlushW
-    SLICE_X23Y228        LUT5 (Prop_G6LUT_SLICEL_I4_O)
-                                                      0.082    11.183 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/FSM_sequential_CurrState[1]_i_1/O
-                         net (fo=12, routed)          0.318    11.502    core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/IgnoreRequest
-    SLICE_X24Y226        LUT6 (Prop_H6LUT_SLICEM_I3_O)
-                                                      0.084    11.586 r  core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/HWRITE_OBUF_inst_i_8/O
-                         net (fo=2, routed)           0.073    11.659    core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/q_reg[68]_0
-    SLICE_X24Y226        LUT5 (Prop_B5LUT_SLICEM_I4_O)
-                                                      0.229    11.888 r  core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/HWRITE_OBUF_inst_i_4/O
-                         net (fo=10, routed)          0.262    12.149    core/ebu.ebu/ebufsmarb/busreg/LSUHTRANS[1]
-    SLICE_X23Y225        LUT5 (Prop_B6LUT_SLICEL_I4_O)
-                                                      0.224    12.373 r  core/ebu.ebu/ebufsmarb/busreg/HSIZE_OBUF[0]_inst_i_1/O
-                         net (fo=1, routed)           2.126    14.499    HSIZE_OBUF[0]
-    B3                   OBUF (Prop_OUTBUF_HPIOB_M_I_O)
-                                                      0.917    15.416 r  HSIZE_OBUF[0]_inst/O
-                         net (fo=0)                   0.000    15.416    HSIZE[0]
-    B3                                                                r  HSIZE[0] (OUT)
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 core/lsu/AddressMReg/q_reg[4]/C
+  Source:                 core/lsu/hptw.hptw/WalkerStateReg/q_reg[1]/C
                             (rising edge-triggered cell FDRE)
   Destination:            HTRANS[0]
                             (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        15.240ns  (logic 4.445ns (29.168%)  route 10.795ns (70.832%))
-  Logic Levels:           22  (CARRY8=2 FDRE=1 LUT2=1 LUT3=2 LUT4=3 LUT5=3 LUT6=9 OBUF=1)
+  Data Path Delay:        12.447ns  (logic 3.819ns (30.685%)  route 8.627ns (69.315%))
+  Logic Levels:           20  (FDRE=1 LUT2=1 LUT3=4 LUT4=3 LUT5=3 LUT6=7 OBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X22Y231        FDRE                         0.000     0.000 r  core/lsu/AddressMReg/q_reg[4]/C
-    SLICE_X22Y231        FDRE (Prop_EFF_SLICEL_C_Q)
-                                                      0.114     0.114 r  core/lsu/AddressMReg/q_reg[4]/Q
-                         net (fo=4, routed)           0.352     0.466    core/lsu/AddressMReg/Q[4]
-    SLICE_X21Y231        CARRY8 (Prop_CARRY8_SLICEM_S[2]_CO[7])
-                                                      0.229     0.695 r  core/lsu/AddressMReg/q_reg[6]_i_3__0/CO[7]
-                         net (fo=1, routed)           0.030     0.725    core/lsu/AddressMReg/q_reg[6]_i_3__0_n_0
-    SLICE_X21Y232        CARRY8 (Prop_CARRY8_SLICEM_CI_O[4])
-                                                      0.119     0.844 r  core/lsu/AddressMReg/q_reg[3]_i_5/O[4]
-                         net (fo=2, routed)           0.208     1.052    core/lsu/AddressMReg/ziccslm_align.align/IEUAdrIncrementM[14]
-    SLICE_X21Y230        LUT3 (Prop_B5LUT_SLICEM_I0_O)
-                                                      0.199     1.251 r  core/lsu/AddressMReg/q[2]_i_2__8/O
-                         net (fo=1, routed)           0.696     1.947    core/lsu/hptw.hptw/WalkerStateReg/ziccslm_align.IEUAdrSpillM[11]
-    SLICE_X21Y230        LUT2 (Prop_F6LUT_SLICEM_I1_O)
-                                                      0.186     2.133 r  core/lsu/hptw.hptw/WalkerStateReg/q[2]_i_1__14/O
-                         net (fo=65, routed)          1.917     4.050    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/lopt_3
-    SLICE_X30Y230        LUT6 (Prop_G6LUT_SLICEL_I3_O)
-                                                      0.151     4.201 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/q[16]_i_2__2_LOPT_REMAP/O
-                         net (fo=1, routed)           0.054     4.255    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/xlnx_opt_q_reg[0]_1
-    SLICE_X30Y230        LUT6 (Prop_F6LUT_SLICEL_I5_O)
-                                                      0.150     4.405 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/q[16]_i_2__2_LOPT_REMAP_1/O
-                         net (fo=5, routed)           0.322     4.727    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/q_reg[0]_1
-    SLICE_X32Y230        LUT6 (Prop_G6LUT_SLICEM_I1_O)
-                                                      0.226     4.953 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/q[12]_i_38/O
-                         net (fo=1, routed)           0.391     5.344    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[23]/pagetypeflop/q[0]_i_27__0_3
-    SLICE_X29Y231        LUT6 (Prop_H6LUT_SLICEM_I5_O)
-                                                      0.228     5.572 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[23]/pagetypeflop/q[12]_i_8__0/O
-                         net (fo=1, routed)           0.049     5.621    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/HitPageType[0]
-    SLICE_X29Y231        LUT4 (Prop_G6LUT_SLICEM_I3_O)
-                                                      0.082     5.703 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/q[12]_i_2__2/O
-                         net (fo=4, routed)           1.526     7.228    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/PageNumberMask[0]
-    SLICE_X23Y234        LUT4 (Prop_C6LUT_SLICEL_I2_O)
-                                                      0.187     7.415 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_38/O
-                         net (fo=1, routed)           0.936     8.351    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/xlnx_opt_q_reg[1]_0_10
-    SLICE_X20Y234        LUT6 (Prop_H6LUT_SLICEM_I2_O)
-                                                      0.228     8.579 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_42/O
-                         net (fo=1, routed)           0.310     8.889    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/xlnx_opt_q_reg[1]_0_6
-    SLICE_X22Y239        LUT6 (Prop_G6LUT_SLICEL_I4_O)
-                                                      0.186     9.075 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_49/O
-                         net (fo=2, routed)           0.818     9.894    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/q_reg[5]
-    SLICE_X24Y232        LUT4 (Prop_G6LUT_SLICEM_I3_O)
-                                                      0.137    10.031 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/q[5]_i_3__2_LOPT_REMAP/O
-                         net (fo=8, routed)           0.196    10.227    core/ifu/InstrMReg/lopt_6
-    SLICE_X23Y233        LUT5 (Prop_B6LUT_SLICEL_I4_O)
-                                                      0.224    10.451 f  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP_1/O
-                         net (fo=1, routed)           0.060    10.511    core/ifu/InstrMReg/xlnx_opt_q_reg[17]_3_3
-    SLICE_X23Y233        LUT6 (Prop_F6LUT_SLICEL_I3_O)
-                                                      0.187    10.698 r  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP_4/O
-                         net (fo=1, routed)           0.099    10.797    core/ifu/InstrMReg/xlnx_opt_q_reg[17]_3
-    SLICE_X23Y231        LUT3 (Prop_F6LUT_SLICEL_I2_O)
-                                                      0.136    10.933 r  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP_5/O
-                         net (fo=81, routed)          0.169    11.101    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/FlushW
-    SLICE_X23Y228        LUT5 (Prop_G6LUT_SLICEL_I4_O)
-                                                      0.082    11.183 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/FSM_sequential_CurrState[1]_i_1/O
-                         net (fo=12, routed)          0.318    11.502    core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/IgnoreRequest
-    SLICE_X24Y226        LUT6 (Prop_H6LUT_SLICEM_I3_O)
-                                                      0.084    11.586 f  core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/HWRITE_OBUF_inst_i_8/O
-                         net (fo=2, routed)           0.073    11.659    core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/q_reg[68]_0
-    SLICE_X24Y226        LUT5 (Prop_B5LUT_SLICEM_I4_O)
-                                                      0.229    11.888 f  core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/HWRITE_OBUF_inst_i_4/O
-                         net (fo=10, routed)          0.555    12.443    core/ebu.ebu/ebufsmarb/FinalBeatReg/LSUHTRANS[1]
-    SLICE_X22Y225        LUT6 (Prop_H6LUT_SLICEL_I0_O)
-                                                      0.153    12.596 r  core/ebu.ebu/ebufsmarb/FinalBeatReg/HTRANS_OBUF[0]_inst_i_1/O
-                         net (fo=1, routed)           1.716    14.312    HTRANS_OBUF[0]
+    SLICE_X27Y215        FDRE                         0.000     0.000 r  core/lsu/hptw.hptw/WalkerStateReg/q_reg[1]/C
+    SLICE_X27Y215        FDRE (Prop_BFF2_SLICEL_C_Q)
+                                                      0.115     0.115 f  core/lsu/hptw.hptw/WalkerStateReg/q_reg[1]/Q
+                         net (fo=43, routed)          0.514     0.629    core/lsu/hptw.hptw/WalkerStateReg/q_reg[1]_2
+    SLICE_X25Y217        LUT3 (Prop_C6LUT_SLICEM_I2_O)
+                                                      0.220     0.849 f  core/lsu/hptw.hptw/WalkerStateReg/q[3]_i_3__11/O
+                         net (fo=57, routed)          0.679     1.528    core/lsu/hptw.hptw/WalkerStateReg/q_reg[3]_2
+    SLICE_X29Y220        LUT2 (Prop_E6LUT_SLICEM_I0_O)
+                                                      0.083     1.611 r  core/lsu/hptw.hptw/WalkerStateReg/q[3]_i_1__16/O
+                         net (fo=65, routed)          1.331     2.942    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[6]/keyflop/IHAdrM[3]
+    SLICE_X38Y217        LUT3 (Prop_C6LUT_SLICEM_I1_O)
+                                                      0.149     3.091 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[6]/keyflop/q[6]_i_7__3/O
+                         net (fo=4, routed)           0.282     3.373    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[6]/keyflop/Match1__24
+    SLICE_X38Y218        LUT3 (Prop_H6LUT_SLICEM_I0_O)
+                                                      0.084     3.457 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[6]/keyflop/q[12]_i_70/O
+                         net (fo=1, routed)           0.327     3.784    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[7]/pagetypeflop/PageTypeRead[6]_136[0]
+    SLICE_X37Y214        LUT6 (Prop_G6LUT_SLICEM_I5_O)
+                                                      0.226     4.010 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[7]/pagetypeflop/q[12]_i_24/O
+                         net (fo=1, routed)           0.119     4.129    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/q[0]_i_25__1_1
+    SLICE_X36Y214        LUT4 (Prop_D6LUT_SLICEL_I3_O)
+                                                      0.221     4.350 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/q[12]_i_5__2/O
+                         net (fo=1, routed)           0.347     4.697    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/q_reg[1]_0
+    SLICE_X36Y207        LUT4 (Prop_B6LUT_SLICEL_I0_O)
+                                                      0.058     4.755 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/q[12]_i_2__2/O
+                         net (fo=4, routed)           1.300     6.055    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/PageNumberMask[0]
+    SLICE_X32Y215        LUT4 (Prop_F6LUT_SLICEM_I2_O)
+                                                      0.149     6.204 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_40/O
+                         net (fo=1, routed)           0.364     6.568    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/xlnx_opt_q_reg[1]_0_8
+    SLICE_X29Y219        LUT6 (Prop_C6LUT_SLICEM_I4_O)
+                                                      0.149     6.717 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_42/O
+                         net (fo=1, routed)           0.358     7.075    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/xlnx_opt_q_reg[1]_0_6
+    SLICE_X26Y220        LUT6 (Prop_G6LUT_SLICEL_I4_O)
+                                                      0.226     7.301 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_49/O
+                         net (fo=2, routed)           0.352     7.653    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/q_reg[5]
+    SLICE_X27Y216        LUT5 (Prop_B6LUT_SLICEL_I4_O)
+                                                      0.083     7.736 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/q[5]_i_2__3_LOPT_REMAP/O
+                         net (fo=8, routed)           0.117     7.853    core/ifu/InstrMReg/lopt
+    SLICE_X27Y215        LUT6 (Prop_H6LUT_SLICEL_I0_O)
+                                                      0.153     8.006 r  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP/O
+                         net (fo=1, routed)           0.186     8.192    core/ifu/InstrMReg/xlnx_opt_q_reg[17]_2_4
+    SLICE_X28Y215        LUT6 (Prop_B6LUT_SLICEM_I2_O)
+                                                      0.152     8.344 r  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP_4/O
+                         net (fo=1, routed)           0.051     8.395    core/ifu/InstrMReg/xlnx_opt_q_reg[17]_2
+    SLICE_X28Y215        LUT3 (Prop_F6LUT_SLICEM_I2_O)
+                                                      0.056     8.451 r  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP_5/O
+                         net (fo=81, routed)          0.373     8.824    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/FlushW
+    SLICE_X26Y215        LUT5 (Prop_G6LUT_SLICEL_I4_O)
+                                                      0.186     9.010 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/FSM_sequential_CurrState[1]_i_1/O
+                         net (fo=12, routed)          0.188     9.198    core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/IgnoreRequest
+    SLICE_X26Y212        LUT6 (Prop_H6LUT_SLICEL_I3_O)
+                                                      0.137     9.335 f  core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/HWRITE_OBUF_inst_i_8/O
+                         net (fo=2, routed)           0.067     9.402    core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/q_reg[68]_0
+    SLICE_X26Y212        LUT5 (Prop_B6LUT_SLICEL_I4_O)
+                                                      0.224     9.626 r  core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/HWRITE_OBUF_inst_i_3/O
+                         net (fo=10, routed)          0.309     9.935    core/ebu.ebu/ebufsmarb/FinalBeatReg/LSUHTRANS[0]
+    SLICE_X25Y209        LUT6 (Prop_D6LUT_SLICEM_I1_O)
+                                                      0.220    10.155 r  core/ebu.ebu/ebufsmarb/FinalBeatReg/HTRANS_OBUF[0]_inst_i_1/O
+                         net (fo=1, routed)           1.363    11.518    HTRANS_OBUF[0]
     A1                   OBUF (Prop_OUTBUF_HPIOB_S_I_O)
-                                                      0.928    15.240 r  HTRANS_OBUF[0]_inst/O
-                         net (fo=0)                   0.000    15.240    HTRANS[0]
+                                                      0.928    12.447 r  HTRANS_OBUF[0]_inst/O
+                         net (fo=0)                   0.000    12.447    HTRANS[0]
     A1                                                                r  HTRANS[0] (OUT)
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 core/lsu/AddressMReg/q_reg[4]/C
+  Source:                 core/lsu/hptw.hptw/WalkerStateReg/q_reg[1]/C
                             (rising edge-triggered cell FDRE)
-  Destination:            core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/q_reg[0]/CE
+  Destination:            HPROT[0]
+                            (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        15.214ns  (logic 4.074ns (26.779%)  route 11.140ns (73.221%))
-  Logic Levels:           24  (CARRY8=2 FDRE=1 LUT2=2 LUT3=3 LUT4=3 LUT5=4 LUT6=9)
+  Data Path Delay:        12.376ns  (logic 3.739ns (30.209%)  route 8.638ns (69.791%))
+  Logic Levels:           20  (FDRE=1 LUT2=1 LUT3=4 LUT4=4 LUT5=3 LUT6=6 OBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X22Y231        FDRE                         0.000     0.000 r  core/lsu/AddressMReg/q_reg[4]/C
-    SLICE_X22Y231        FDRE (Prop_EFF_SLICEL_C_Q)
-                                                      0.114     0.114 r  core/lsu/AddressMReg/q_reg[4]/Q
-                         net (fo=4, routed)           0.352     0.466    core/lsu/AddressMReg/Q[4]
-    SLICE_X21Y231        CARRY8 (Prop_CARRY8_SLICEM_S[2]_CO[7])
-                                                      0.229     0.695 r  core/lsu/AddressMReg/q_reg[6]_i_3__0/CO[7]
-                         net (fo=1, routed)           0.030     0.725    core/lsu/AddressMReg/q_reg[6]_i_3__0_n_0
-    SLICE_X21Y232        CARRY8 (Prop_CARRY8_SLICEM_CI_O[4])
-                                                      0.119     0.844 r  core/lsu/AddressMReg/q_reg[3]_i_5/O[4]
-                         net (fo=2, routed)           0.208     1.052    core/lsu/AddressMReg/ziccslm_align.align/IEUAdrIncrementM[14]
-    SLICE_X21Y230        LUT3 (Prop_B5LUT_SLICEM_I0_O)
-                                                      0.199     1.251 r  core/lsu/AddressMReg/q[2]_i_2__8/O
-                         net (fo=1, routed)           0.696     1.947    core/lsu/hptw.hptw/WalkerStateReg/ziccslm_align.IEUAdrSpillM[11]
-    SLICE_X21Y230        LUT2 (Prop_F6LUT_SLICEM_I1_O)
-                                                      0.186     2.133 r  core/lsu/hptw.hptw/WalkerStateReg/q[2]_i_1__14/O
-                         net (fo=65, routed)          1.917     4.050    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/lopt_3
-    SLICE_X30Y230        LUT6 (Prop_G6LUT_SLICEL_I3_O)
-                                                      0.151     4.201 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/q[16]_i_2__2_LOPT_REMAP/O
-                         net (fo=1, routed)           0.054     4.255    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/xlnx_opt_q_reg[0]_1
-    SLICE_X30Y230        LUT6 (Prop_F6LUT_SLICEL_I5_O)
-                                                      0.150     4.405 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/q[16]_i_2__2_LOPT_REMAP_1/O
-                         net (fo=5, routed)           0.322     4.727    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/q_reg[0]_1
-    SLICE_X32Y230        LUT6 (Prop_G6LUT_SLICEM_I1_O)
-                                                      0.226     4.953 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/q[12]_i_38/O
-                         net (fo=1, routed)           0.391     5.344    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[23]/pagetypeflop/q[0]_i_27__0_3
-    SLICE_X29Y231        LUT6 (Prop_H6LUT_SLICEM_I5_O)
-                                                      0.228     5.572 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[23]/pagetypeflop/q[12]_i_8__0/O
-                         net (fo=1, routed)           0.049     5.621    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/HitPageType[0]
-    SLICE_X29Y231        LUT4 (Prop_G6LUT_SLICEM_I3_O)
-                                                      0.082     5.703 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/q[12]_i_2__2/O
-                         net (fo=4, routed)           1.526     7.228    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/PageNumberMask[0]
-    SLICE_X23Y234        LUT4 (Prop_C6LUT_SLICEL_I2_O)
-                                                      0.187     7.415 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_38/O
-                         net (fo=1, routed)           0.936     8.351    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/xlnx_opt_q_reg[1]_0_10
-    SLICE_X20Y234        LUT6 (Prop_H6LUT_SLICEM_I2_O)
-                                                      0.228     8.579 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_42/O
-                         net (fo=1, routed)           0.310     8.889    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/xlnx_opt_q_reg[1]_0_6
-    SLICE_X22Y239        LUT6 (Prop_G6LUT_SLICEL_I4_O)
-                                                      0.186     9.075 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_49/O
-                         net (fo=2, routed)           0.818     9.894    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/q_reg[5]
-    SLICE_X24Y232        LUT4 (Prop_G6LUT_SLICEM_I3_O)
-                                                      0.137    10.031 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/q[5]_i_3__2_LOPT_REMAP/O
-                         net (fo=8, routed)           0.196    10.227    core/ifu/InstrMReg/lopt_6
-    SLICE_X23Y233        LUT5 (Prop_B6LUT_SLICEL_I4_O)
-                                                      0.224    10.451 f  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP_1/O
-                         net (fo=1, routed)           0.060    10.511    core/ifu/InstrMReg/xlnx_opt_q_reg[17]_3_3
-    SLICE_X23Y233        LUT6 (Prop_F6LUT_SLICEL_I3_O)
-                                                      0.187    10.698 r  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP_4/O
-                         net (fo=1, routed)           0.099    10.797    core/ifu/InstrMReg/xlnx_opt_q_reg[17]_3
-    SLICE_X23Y231        LUT3 (Prop_F6LUT_SLICEL_I2_O)
-                                                      0.136    10.933 r  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP_5/O
-                         net (fo=81, routed)          0.844    11.776    core/ieu/c/controlregM/FSM_sequential_CurrState_reg[0]
-    SLICE_X18Y228        LUT2 (Prop_G6LUT_SLICEM_I0_O)
-                                                      0.137    11.913 r  core/ieu/c/controlregM/FSM_sequential_CurrState_i_1__0/O
-                         net (fo=13, routed)          0.250    12.164    core/ifu/bus.icache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/FlushD
-    SLICE_X22Y228        LUT5 (Prop_G6LUT_SLICEL_I0_O)
-                                                      0.137    12.301 r  core/ifu/bus.icache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/sramIP_i_50/O
-                         net (fo=288, routed)         1.015    13.316    core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/StallW
-    SLICE_X24Y227        LUT5 (Prop_B6LUT_SLICEM_I2_O)
-                                                      0.225    13.541 f  core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/q[2]_i_6__8_LOPT_REMAP/O
-                         net (fo=1, routed)           0.173    13.714    core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/xlnx_opt_q[2]_i_6__8_n_0_1
-    SLICE_X24Y227        LUT6 (Prop_C6LUT_SLICEM_I5_O)
-                                                      0.220    13.934 f  core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/q[2]_i_6__8_LOPT_REMAP_1/O
-                         net (fo=1, routed)           0.207    14.141    core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/xlnx_opt_q[2]_i_6__8_n_0
-    SLICE_X23Y227        LUT3 (Prop_F6LUT_SLICEL_I2_O)
-                                                      0.150    14.291 r  core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/q[2]_i_6__8_LOPT_REMAP_2/O
-                         net (fo=2, routed)           0.113    14.404    core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/q[2]_i_6__8_n_0
-    SLICE_X24Y227        LUT6 (Prop_H6LUT_SLICEM_I2_O)
-                                                      0.084    14.488 r  core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/q[2]_i_2__13/O
-                         net (fo=4, routed)           0.314    14.802    core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/E[0]
-    SLICE_X24Y227        LUT5 (Prop_A6LUT_SLICEM_I4_O)
-                                                      0.152    14.954 r  core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/q_reg[0]_CE_cooolgate_en_gate_465_LOPT_REMAP/O
-                         net (fo=3, routed)           0.260    15.214    core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/q_reg[0]_CE_cooolgate_en_sig_196
-    SLICE_X23Y227        FDRE                                         r  core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/q_reg[0]/CE
+    SLICE_X27Y215        FDRE                         0.000     0.000 r  core/lsu/hptw.hptw/WalkerStateReg/q_reg[1]/C
+    SLICE_X27Y215        FDRE (Prop_BFF2_SLICEL_C_Q)
+                                                      0.115     0.115 f  core/lsu/hptw.hptw/WalkerStateReg/q_reg[1]/Q
+                         net (fo=43, routed)          0.514     0.629    core/lsu/hptw.hptw/WalkerStateReg/q_reg[1]_2
+    SLICE_X25Y217        LUT3 (Prop_C6LUT_SLICEM_I2_O)
+                                                      0.220     0.849 f  core/lsu/hptw.hptw/WalkerStateReg/q[3]_i_3__11/O
+                         net (fo=57, routed)          0.679     1.528    core/lsu/hptw.hptw/WalkerStateReg/q_reg[3]_2
+    SLICE_X29Y220        LUT2 (Prop_E6LUT_SLICEM_I0_O)
+                                                      0.083     1.611 r  core/lsu/hptw.hptw/WalkerStateReg/q[3]_i_1__16/O
+                         net (fo=65, routed)          1.331     2.942    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[6]/keyflop/IHAdrM[3]
+    SLICE_X38Y217        LUT3 (Prop_C6LUT_SLICEM_I1_O)
+                                                      0.149     3.091 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[6]/keyflop/q[6]_i_7__3/O
+                         net (fo=4, routed)           0.282     3.373    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[6]/keyflop/Match1__24
+    SLICE_X38Y218        LUT3 (Prop_H6LUT_SLICEM_I0_O)
+                                                      0.084     3.457 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[6]/keyflop/q[12]_i_70/O
+                         net (fo=1, routed)           0.327     3.784    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[7]/pagetypeflop/PageTypeRead[6]_136[0]
+    SLICE_X37Y214        LUT6 (Prop_G6LUT_SLICEM_I5_O)
+                                                      0.226     4.010 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[7]/pagetypeflop/q[12]_i_24/O
+                         net (fo=1, routed)           0.119     4.129    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/q[0]_i_25__1_1
+    SLICE_X36Y214        LUT4 (Prop_D6LUT_SLICEL_I3_O)
+                                                      0.221     4.350 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/q[12]_i_5__2/O
+                         net (fo=1, routed)           0.347     4.697    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/q_reg[1]_0
+    SLICE_X36Y207        LUT4 (Prop_B6LUT_SLICEL_I0_O)
+                                                      0.058     4.755 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/q[12]_i_2__2/O
+                         net (fo=4, routed)           1.300     6.055    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/PageNumberMask[0]
+    SLICE_X32Y215        LUT4 (Prop_F6LUT_SLICEM_I2_O)
+                                                      0.149     6.204 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_40/O
+                         net (fo=1, routed)           0.364     6.568    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/xlnx_opt_q_reg[1]_0_8
+    SLICE_X29Y219        LUT6 (Prop_C6LUT_SLICEM_I4_O)
+                                                      0.149     6.717 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_42/O
+                         net (fo=1, routed)           0.358     7.075    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/xlnx_opt_q_reg[1]_0_6
+    SLICE_X26Y220        LUT6 (Prop_G6LUT_SLICEL_I4_O)
+                                                      0.226     7.301 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_49/O
+                         net (fo=2, routed)           0.352     7.653    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/q_reg[5]
+    SLICE_X27Y216        LUT5 (Prop_B6LUT_SLICEL_I4_O)
+                                                      0.083     7.736 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/q[5]_i_2__3_LOPT_REMAP/O
+                         net (fo=8, routed)           0.117     7.853    core/ifu/InstrMReg/lopt
+    SLICE_X27Y215        LUT6 (Prop_H6LUT_SLICEL_I0_O)
+                                                      0.153     8.006 f  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP/O
+                         net (fo=1, routed)           0.186     8.192    core/ifu/InstrMReg/xlnx_opt_q_reg[17]_2_4
+    SLICE_X28Y215        LUT6 (Prop_B6LUT_SLICEM_I2_O)
+                                                      0.152     8.344 f  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP_4/O
+                         net (fo=1, routed)           0.051     8.395    core/ifu/InstrMReg/xlnx_opt_q_reg[17]_2
+    SLICE_X28Y215        LUT3 (Prop_F6LUT_SLICEM_I2_O)
+                                                      0.056     8.451 f  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP_5/O
+                         net (fo=81, routed)          0.373     8.824    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/FlushW
+    SLICE_X26Y215        LUT5 (Prop_G6LUT_SLICEL_I4_O)
+                                                      0.186     9.010 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/FSM_sequential_CurrState[1]_i_1/O
+                         net (fo=12, routed)          0.188     9.198    core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/IgnoreRequest
+    SLICE_X26Y212        LUT6 (Prop_H6LUT_SLICEL_I3_O)
+                                                      0.137     9.335 r  core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/HWRITE_OBUF_inst_i_8/O
+                         net (fo=2, routed)           0.067     9.402    core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/q_reg[68]_0
+    SLICE_X26Y212        LUT5 (Prop_B5LUT_SLICEL_I4_O)
+                                                      0.226     9.628 r  core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/HWRITE_OBUF_inst_i_4/O
+                         net (fo=10, routed)          0.433    10.062    core/ebu.ebu/ebufsmarb/busreg/LSUHTRANS[1]
+    SLICE_X25Y210        LUT4 (Prop_D5LUT_SLICEM_I3_O)
+                                                      0.154    10.216 r  core/ebu.ebu/ebufsmarb/busreg/HPROT_OBUF[0]_inst_i_1/O
+                         net (fo=1, routed)           1.249    11.465    HPROT_OBUF[0]
+    D7                   OBUF (Prop_OUTBUF_HPIOB_M_I_O)
+                                                      0.912    12.376 r  HPROT_OBUF[0]_inst/O
+                         net (fo=0)                   0.000    12.376    HPROT[0]
+    D7                                                                r  HPROT[0] (OUT)
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 core/lsu/AddressMReg/q_reg[4]/C
+  Source:                 core/lsu/hptw.hptw/WalkerStateReg/q_reg[1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            HSIZE[0]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        12.198ns  (logic 3.742ns (30.674%)  route 8.456ns (69.326%))
+  Logic Levels:           20  (FDRE=1 LUT2=1 LUT3=4 LUT4=3 LUT5=4 LUT6=6 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X27Y215        FDRE                         0.000     0.000 r  core/lsu/hptw.hptw/WalkerStateReg/q_reg[1]/C
+    SLICE_X27Y215        FDRE (Prop_BFF2_SLICEL_C_Q)
+                                                      0.115     0.115 f  core/lsu/hptw.hptw/WalkerStateReg/q_reg[1]/Q
+                         net (fo=43, routed)          0.514     0.629    core/lsu/hptw.hptw/WalkerStateReg/q_reg[1]_2
+    SLICE_X25Y217        LUT3 (Prop_C6LUT_SLICEM_I2_O)
+                                                      0.220     0.849 f  core/lsu/hptw.hptw/WalkerStateReg/q[3]_i_3__11/O
+                         net (fo=57, routed)          0.679     1.528    core/lsu/hptw.hptw/WalkerStateReg/q_reg[3]_2
+    SLICE_X29Y220        LUT2 (Prop_E6LUT_SLICEM_I0_O)
+                                                      0.083     1.611 r  core/lsu/hptw.hptw/WalkerStateReg/q[3]_i_1__16/O
+                         net (fo=65, routed)          1.331     2.942    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[6]/keyflop/IHAdrM[3]
+    SLICE_X38Y217        LUT3 (Prop_C6LUT_SLICEM_I1_O)
+                                                      0.149     3.091 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[6]/keyflop/q[6]_i_7__3/O
+                         net (fo=4, routed)           0.282     3.373    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[6]/keyflop/Match1__24
+    SLICE_X38Y218        LUT3 (Prop_H6LUT_SLICEM_I0_O)
+                                                      0.084     3.457 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[6]/keyflop/q[12]_i_70/O
+                         net (fo=1, routed)           0.327     3.784    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[7]/pagetypeflop/PageTypeRead[6]_136[0]
+    SLICE_X37Y214        LUT6 (Prop_G6LUT_SLICEM_I5_O)
+                                                      0.226     4.010 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[7]/pagetypeflop/q[12]_i_24/O
+                         net (fo=1, routed)           0.119     4.129    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/q[0]_i_25__1_1
+    SLICE_X36Y214        LUT4 (Prop_D6LUT_SLICEL_I3_O)
+                                                      0.221     4.350 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/q[12]_i_5__2/O
+                         net (fo=1, routed)           0.347     4.697    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/q_reg[1]_0
+    SLICE_X36Y207        LUT4 (Prop_B6LUT_SLICEL_I0_O)
+                                                      0.058     4.755 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/q[12]_i_2__2/O
+                         net (fo=4, routed)           1.300     6.055    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/PageNumberMask[0]
+    SLICE_X32Y215        LUT4 (Prop_F6LUT_SLICEM_I2_O)
+                                                      0.149     6.204 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_40/O
+                         net (fo=1, routed)           0.364     6.568    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/xlnx_opt_q_reg[1]_0_8
+    SLICE_X29Y219        LUT6 (Prop_C6LUT_SLICEM_I4_O)
+                                                      0.149     6.717 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_42/O
+                         net (fo=1, routed)           0.358     7.075    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/xlnx_opt_q_reg[1]_0_6
+    SLICE_X26Y220        LUT6 (Prop_G6LUT_SLICEL_I4_O)
+                                                      0.226     7.301 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_49/O
+                         net (fo=2, routed)           0.352     7.653    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/q_reg[5]
+    SLICE_X27Y216        LUT5 (Prop_B6LUT_SLICEL_I4_O)
+                                                      0.083     7.736 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/q[5]_i_2__3_LOPT_REMAP/O
+                         net (fo=8, routed)           0.117     7.853    core/ifu/InstrMReg/lopt
+    SLICE_X27Y215        LUT6 (Prop_H6LUT_SLICEL_I0_O)
+                                                      0.153     8.006 f  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP/O
+                         net (fo=1, routed)           0.186     8.192    core/ifu/InstrMReg/xlnx_opt_q_reg[17]_2_4
+    SLICE_X28Y215        LUT6 (Prop_B6LUT_SLICEM_I2_O)
+                                                      0.152     8.344 f  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP_4/O
+                         net (fo=1, routed)           0.051     8.395    core/ifu/InstrMReg/xlnx_opt_q_reg[17]_2
+    SLICE_X28Y215        LUT3 (Prop_F6LUT_SLICEM_I2_O)
+                                                      0.056     8.451 f  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP_5/O
+                         net (fo=81, routed)          0.373     8.824    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/FlushW
+    SLICE_X26Y215        LUT5 (Prop_G6LUT_SLICEL_I4_O)
+                                                      0.186     9.010 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/FSM_sequential_CurrState[1]_i_1/O
+                         net (fo=12, routed)          0.188     9.198    core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/IgnoreRequest
+    SLICE_X26Y212        LUT6 (Prop_H6LUT_SLICEL_I3_O)
+                                                      0.137     9.335 r  core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/HWRITE_OBUF_inst_i_8/O
+                         net (fo=2, routed)           0.067     9.402    core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/q_reg[68]_0
+    SLICE_X26Y212        LUT5 (Prop_B5LUT_SLICEL_I4_O)
+                                                      0.226     9.628 r  core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/HWRITE_OBUF_inst_i_4/O
+                         net (fo=10, routed)          0.229     9.857    core/ebu.ebu/ebufsmarb/busreg/LSUHTRANS[1]
+    SLICE_X25Y210        LUT5 (Prop_E6LUT_SLICEM_I4_O)
+                                                      0.152    10.009 r  core/ebu.ebu/ebufsmarb/busreg/HSIZE_OBUF[0]_inst_i_1/O
+                         net (fo=1, routed)           1.272    11.281    HSIZE_OBUF[0]
+    B3                   OBUF (Prop_OUTBUF_HPIOB_M_I_O)
+                                                      0.917    12.198 r  HSIZE_OBUF[0]_inst/O
+                         net (fo=0)                   0.000    12.198    HSIZE[0]
+    B3                                                                r  HSIZE[0] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 core/lsu/hptw.hptw/WalkerStateReg/q_reg[1]/C
                             (rising edge-triggered cell FDRE)
   Destination:            core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/q_reg[1]/CE
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        15.214ns  (logic 4.074ns (26.779%)  route 11.140ns (73.221%))
-  Logic Levels:           24  (CARRY8=2 FDRE=1 LUT2=2 LUT3=3 LUT4=3 LUT5=4 LUT6=9)
+  Data Path Delay:        11.929ns  (logic 3.510ns (29.423%)  route 8.419ns (70.577%))
+  Logic Levels:           24  (FDRE=1 LUT2=2 LUT3=5 LUT4=6 LUT5=5 LUT6=5)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X22Y231        FDRE                         0.000     0.000 r  core/lsu/AddressMReg/q_reg[4]/C
-    SLICE_X22Y231        FDRE (Prop_EFF_SLICEL_C_Q)
-                                                      0.114     0.114 r  core/lsu/AddressMReg/q_reg[4]/Q
-                         net (fo=4, routed)           0.352     0.466    core/lsu/AddressMReg/Q[4]
-    SLICE_X21Y231        CARRY8 (Prop_CARRY8_SLICEM_S[2]_CO[7])
-                                                      0.229     0.695 r  core/lsu/AddressMReg/q_reg[6]_i_3__0/CO[7]
-                         net (fo=1, routed)           0.030     0.725    core/lsu/AddressMReg/q_reg[6]_i_3__0_n_0
-    SLICE_X21Y232        CARRY8 (Prop_CARRY8_SLICEM_CI_O[4])
-                                                      0.119     0.844 r  core/lsu/AddressMReg/q_reg[3]_i_5/O[4]
-                         net (fo=2, routed)           0.208     1.052    core/lsu/AddressMReg/ziccslm_align.align/IEUAdrIncrementM[14]
-    SLICE_X21Y230        LUT3 (Prop_B5LUT_SLICEM_I0_O)
-                                                      0.199     1.251 r  core/lsu/AddressMReg/q[2]_i_2__8/O
-                         net (fo=1, routed)           0.696     1.947    core/lsu/hptw.hptw/WalkerStateReg/ziccslm_align.IEUAdrSpillM[11]
-    SLICE_X21Y230        LUT2 (Prop_F6LUT_SLICEM_I1_O)
-                                                      0.186     2.133 r  core/lsu/hptw.hptw/WalkerStateReg/q[2]_i_1__14/O
-                         net (fo=65, routed)          1.917     4.050    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/lopt_3
-    SLICE_X30Y230        LUT6 (Prop_G6LUT_SLICEL_I3_O)
-                                                      0.151     4.201 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/q[16]_i_2__2_LOPT_REMAP/O
-                         net (fo=1, routed)           0.054     4.255    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/xlnx_opt_q_reg[0]_1
-    SLICE_X30Y230        LUT6 (Prop_F6LUT_SLICEL_I5_O)
-                                                      0.150     4.405 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/q[16]_i_2__2_LOPT_REMAP_1/O
-                         net (fo=5, routed)           0.322     4.727    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/q_reg[0]_1
-    SLICE_X32Y230        LUT6 (Prop_G6LUT_SLICEM_I1_O)
-                                                      0.226     4.953 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/q[12]_i_38/O
-                         net (fo=1, routed)           0.391     5.344    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[23]/pagetypeflop/q[0]_i_27__0_3
-    SLICE_X29Y231        LUT6 (Prop_H6LUT_SLICEM_I5_O)
-                                                      0.228     5.572 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[23]/pagetypeflop/q[12]_i_8__0/O
-                         net (fo=1, routed)           0.049     5.621    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/HitPageType[0]
-    SLICE_X29Y231        LUT4 (Prop_G6LUT_SLICEM_I3_O)
-                                                      0.082     5.703 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/q[12]_i_2__2/O
-                         net (fo=4, routed)           1.526     7.228    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/PageNumberMask[0]
-    SLICE_X23Y234        LUT4 (Prop_C6LUT_SLICEL_I2_O)
-                                                      0.187     7.415 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_38/O
-                         net (fo=1, routed)           0.936     8.351    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/xlnx_opt_q_reg[1]_0_10
-    SLICE_X20Y234        LUT6 (Prop_H6LUT_SLICEM_I2_O)
-                                                      0.228     8.579 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_42/O
-                         net (fo=1, routed)           0.310     8.889    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/xlnx_opt_q_reg[1]_0_6
-    SLICE_X22Y239        LUT6 (Prop_G6LUT_SLICEL_I4_O)
-                                                      0.186     9.075 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_49/O
-                         net (fo=2, routed)           0.818     9.894    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/q_reg[5]
-    SLICE_X24Y232        LUT4 (Prop_G6LUT_SLICEM_I3_O)
-                                                      0.137    10.031 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/q[5]_i_3__2_LOPT_REMAP/O
-                         net (fo=8, routed)           0.196    10.227    core/ifu/InstrMReg/lopt_6
-    SLICE_X23Y233        LUT5 (Prop_B6LUT_SLICEL_I4_O)
-                                                      0.224    10.451 f  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP_1/O
-                         net (fo=1, routed)           0.060    10.511    core/ifu/InstrMReg/xlnx_opt_q_reg[17]_3_3
-    SLICE_X23Y233        LUT6 (Prop_F6LUT_SLICEL_I3_O)
-                                                      0.187    10.698 r  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP_4/O
-                         net (fo=1, routed)           0.099    10.797    core/ifu/InstrMReg/xlnx_opt_q_reg[17]_3
-    SLICE_X23Y231        LUT3 (Prop_F6LUT_SLICEL_I2_O)
-                                                      0.136    10.933 r  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP_5/O
-                         net (fo=81, routed)          0.844    11.776    core/ieu/c/controlregM/FSM_sequential_CurrState_reg[0]
-    SLICE_X18Y228        LUT2 (Prop_G6LUT_SLICEM_I0_O)
-                                                      0.137    11.913 r  core/ieu/c/controlregM/FSM_sequential_CurrState_i_1__0/O
-                         net (fo=13, routed)          0.250    12.164    core/ifu/bus.icache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/FlushD
-    SLICE_X22Y228        LUT5 (Prop_G6LUT_SLICEL_I0_O)
-                                                      0.137    12.301 r  core/ifu/bus.icache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/sramIP_i_50/O
-                         net (fo=288, routed)         1.015    13.316    core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/StallW
-    SLICE_X24Y227        LUT5 (Prop_B6LUT_SLICEM_I2_O)
-                                                      0.225    13.541 f  core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/q[2]_i_6__8_LOPT_REMAP/O
-                         net (fo=1, routed)           0.173    13.714    core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/xlnx_opt_q[2]_i_6__8_n_0_1
-    SLICE_X24Y227        LUT6 (Prop_C6LUT_SLICEM_I5_O)
-                                                      0.220    13.934 f  core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/q[2]_i_6__8_LOPT_REMAP_1/O
-                         net (fo=1, routed)           0.207    14.141    core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/xlnx_opt_q[2]_i_6__8_n_0
-    SLICE_X23Y227        LUT3 (Prop_F6LUT_SLICEL_I2_O)
-                                                      0.150    14.291 r  core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/q[2]_i_6__8_LOPT_REMAP_2/O
-                         net (fo=2, routed)           0.113    14.404    core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/q[2]_i_6__8_n_0
-    SLICE_X24Y227        LUT6 (Prop_H6LUT_SLICEM_I2_O)
-                                                      0.084    14.488 r  core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/q[2]_i_2__13/O
-                         net (fo=4, routed)           0.314    14.802    core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/E[0]
-    SLICE_X24Y227        LUT5 (Prop_A6LUT_SLICEM_I4_O)
-                                                      0.152    14.954 r  core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/q_reg[0]_CE_cooolgate_en_gate_465_LOPT_REMAP/O
-                         net (fo=3, routed)           0.260    15.214    core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/q_reg[0]_CE_cooolgate_en_sig_196
-    SLICE_X23Y227        FDRE                                         r  core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/q_reg[1]/CE
+    SLICE_X27Y215        FDRE                         0.000     0.000 r  core/lsu/hptw.hptw/WalkerStateReg/q_reg[1]/C
+    SLICE_X27Y215        FDRE (Prop_BFF2_SLICEL_C_Q)
+                                                      0.115     0.115 f  core/lsu/hptw.hptw/WalkerStateReg/q_reg[1]/Q
+                         net (fo=43, routed)          0.514     0.629    core/lsu/hptw.hptw/WalkerStateReg/q_reg[1]_2
+    SLICE_X25Y217        LUT3 (Prop_C6LUT_SLICEM_I2_O)
+                                                      0.220     0.849 f  core/lsu/hptw.hptw/WalkerStateReg/q[3]_i_3__11/O
+                         net (fo=57, routed)          0.679     1.528    core/lsu/hptw.hptw/WalkerStateReg/q_reg[3]_2
+    SLICE_X29Y220        LUT2 (Prop_E6LUT_SLICEM_I0_O)
+                                                      0.083     1.611 r  core/lsu/hptw.hptw/WalkerStateReg/q[3]_i_1__16/O
+                         net (fo=65, routed)          1.331     2.942    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[6]/keyflop/IHAdrM[3]
+    SLICE_X38Y217        LUT3 (Prop_C6LUT_SLICEM_I1_O)
+                                                      0.149     3.091 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[6]/keyflop/q[6]_i_7__3/O
+                         net (fo=4, routed)           0.282     3.373    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[6]/keyflop/Match1__24
+    SLICE_X38Y218        LUT3 (Prop_H6LUT_SLICEM_I0_O)
+                                                      0.084     3.457 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[6]/keyflop/q[12]_i_70/O
+                         net (fo=1, routed)           0.327     3.784    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[7]/pagetypeflop/PageTypeRead[6]_136[0]
+    SLICE_X37Y214        LUT6 (Prop_G6LUT_SLICEM_I5_O)
+                                                      0.226     4.010 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[7]/pagetypeflop/q[12]_i_24/O
+                         net (fo=1, routed)           0.119     4.129    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/q[0]_i_25__1_1
+    SLICE_X36Y214        LUT4 (Prop_D6LUT_SLICEL_I3_O)
+                                                      0.221     4.350 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/q[12]_i_5__2/O
+                         net (fo=1, routed)           0.347     4.697    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/q_reg[1]_0
+    SLICE_X36Y207        LUT4 (Prop_B6LUT_SLICEL_I0_O)
+                                                      0.058     4.755 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/q[12]_i_2__2/O
+                         net (fo=4, routed)           1.300     6.055    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/PageNumberMask[0]
+    SLICE_X32Y215        LUT4 (Prop_F6LUT_SLICEM_I2_O)
+                                                      0.149     6.204 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_40/O
+                         net (fo=1, routed)           0.364     6.568    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/xlnx_opt_q_reg[1]_0_8
+    SLICE_X29Y219        LUT6 (Prop_C6LUT_SLICEM_I4_O)
+                                                      0.149     6.717 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_42/O
+                         net (fo=1, routed)           0.358     7.075    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/xlnx_opt_q_reg[1]_0_6
+    SLICE_X26Y220        LUT6 (Prop_G6LUT_SLICEL_I4_O)
+                                                      0.226     7.301 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_49/O
+                         net (fo=2, routed)           0.362     7.663    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/q_reg[5]
+    SLICE_X27Y216        LUT4 (Prop_F6LUT_SLICEL_I3_O)
+                                                      0.187     7.850 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/q[5]_i_3__2_LOPT_REMAP/O
+                         net (fo=8, routed)           0.057     7.907    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/q_reg[4]
+    SLICE_X27Y216        LUT2 (Prop_H5LUT_SLICEL_I1_O)
+                                                      0.088     7.995 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/FSM_sequential_CurrState[1]_i_3__0/O
+                         net (fo=4, routed)           0.253     8.248    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/q_reg[61]_0
+    SLICE_X26Y215        LUT4 (Prop_D5LUT_SLICEL_I3_O)
+                                                      0.133     8.381 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/q[63]_i_8__1/O
+                         net (fo=1, routed)           0.188     8.569    core/lsu/bus.dcache.dcache/cachefsm/IgnoreRequestTLB
+    SLICE_X26Y214        LUT4 (Prop_G6LUT_SLICEL_I2_O)
+                                                      0.082     8.651 r  core/lsu/bus.dcache.dcache/cachefsm/q[63]_i_3__0/O
+                         net (fo=3, routed)           0.178     8.829    core/lsu/hptw.hptw/WalkerStateReg/p_0_in
+    SLICE_X26Y215        LUT5 (Prop_C6LUT_SLICEL_I0_O)
+                                                      0.081     8.910 r  core/lsu/hptw.hptw/WalkerStateReg/FSM_sequential_CurrState_i_3/O
+                         net (fo=3, routed)           0.299     9.209    core/ieu/c/controlregM/p_1_in
+    SLICE_X27Y217        LUT5 (Prop_H6LUT_SLICEL_I4_O)
+                                                      0.058     9.267 f  core/ieu/c/controlregM/FSM_sequential_CurrState_i_2__0_LOPT_REMAP/O
+                         net (fo=4, routed)           0.114     9.381    core/lsu/ziccslm_align.align/p_2_in
+    SLICE_X27Y216        LUT3 (Prop_C5LUT_SLICEL_I0_O)
+                                                      0.190     9.571 f  core/lsu/ziccslm_align.align/sramIP_i_82/O
+                         net (fo=1, routed)           0.140     9.711    core/ifu/bus.icache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/LSUStallM
+    SLICE_X27Y214        LUT5 (Prop_H6LUT_SLICEL_I2_O)
+                                                      0.137     9.848 r  core/ifu/bus.icache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/sramIP_i_50/O
+                         net (fo=288, routed)         0.311    10.159    core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/StallW
+    SLICE_X25Y214        LUT5 (Prop_F6LUT_SLICEM_I2_O)
+                                                      0.186    10.345 f  core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/q[2]_i_6__8_LOPT_REMAP/O
+                         net (fo=1, routed)           0.050    10.395    core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/xlnx_opt_q[2]_i_6__8_n_0_1
+    SLICE_X25Y214        LUT6 (Prop_G6LUT_SLICEM_I5_O)
+                                                      0.082    10.477 f  core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/q[2]_i_6__8_LOPT_REMAP_1/O
+                         net (fo=1, routed)           0.059    10.536    core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/xlnx_opt_q[2]_i_6__8_n_0
+    SLICE_X25Y214        LUT3 (Prop_E6LUT_SLICEM_I2_O)
+                                                      0.152    10.688 r  core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/q[2]_i_6__8_LOPT_REMAP_2/O
+                         net (fo=2, routed)           0.192    10.880    core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/q[2]_i_6__8_n_0
+    SLICE_X25Y213        LUT6 (Prop_H6LUT_SLICEM_I2_O)
+                                                      0.228    11.108 r  core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/q[2]_i_2__13/O
+                         net (fo=4, routed)           0.289    11.397    core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/E[0]
+    SLICE_X25Y212        LUT5 (Prop_G6LUT_SLICEM_I4_O)
+                                                      0.226    11.623 r  core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/q_reg[0]_CE_cooolgate_en_gate_465_LOPT_REMAP/O
+                         net (fo=3, routed)           0.306    11.929    core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/q_reg[0]_CE_cooolgate_en_sig_196
+    SLICE_X25Y212        FDRE                                         r  core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/q_reg[1]/CE
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 core/lsu/AddressMReg/q_reg[4]/C
+  Source:                 core/lsu/hptw.hptw/WalkerStateReg/q_reg[1]/C
                             (rising edge-triggered cell FDRE)
-  Destination:            core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/q_reg[2]/CE
+  Destination:            core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/q_reg[0]/CE
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        15.184ns  (logic 4.074ns (26.830%)  route 11.110ns (73.170%))
-  Logic Levels:           24  (CARRY8=2 FDRE=1 LUT2=2 LUT3=3 LUT4=3 LUT5=4 LUT6=9)
+  Data Path Delay:        11.928ns  (logic 3.510ns (29.425%)  route 8.418ns (70.575%))
+  Logic Levels:           24  (FDRE=1 LUT2=2 LUT3=5 LUT4=6 LUT5=5 LUT6=5)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X22Y231        FDRE                         0.000     0.000 r  core/lsu/AddressMReg/q_reg[4]/C
-    SLICE_X22Y231        FDRE (Prop_EFF_SLICEL_C_Q)
-                                                      0.114     0.114 r  core/lsu/AddressMReg/q_reg[4]/Q
-                         net (fo=4, routed)           0.352     0.466    core/lsu/AddressMReg/Q[4]
-    SLICE_X21Y231        CARRY8 (Prop_CARRY8_SLICEM_S[2]_CO[7])
-                                                      0.229     0.695 r  core/lsu/AddressMReg/q_reg[6]_i_3__0/CO[7]
-                         net (fo=1, routed)           0.030     0.725    core/lsu/AddressMReg/q_reg[6]_i_3__0_n_0
-    SLICE_X21Y232        CARRY8 (Prop_CARRY8_SLICEM_CI_O[4])
-                                                      0.119     0.844 r  core/lsu/AddressMReg/q_reg[3]_i_5/O[4]
-                         net (fo=2, routed)           0.208     1.052    core/lsu/AddressMReg/ziccslm_align.align/IEUAdrIncrementM[14]
-    SLICE_X21Y230        LUT3 (Prop_B5LUT_SLICEM_I0_O)
-                                                      0.199     1.251 r  core/lsu/AddressMReg/q[2]_i_2__8/O
-                         net (fo=1, routed)           0.696     1.947    core/lsu/hptw.hptw/WalkerStateReg/ziccslm_align.IEUAdrSpillM[11]
-    SLICE_X21Y230        LUT2 (Prop_F6LUT_SLICEM_I1_O)
-                                                      0.186     2.133 r  core/lsu/hptw.hptw/WalkerStateReg/q[2]_i_1__14/O
-                         net (fo=65, routed)          1.917     4.050    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/lopt_3
-    SLICE_X30Y230        LUT6 (Prop_G6LUT_SLICEL_I3_O)
-                                                      0.151     4.201 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/q[16]_i_2__2_LOPT_REMAP/O
-                         net (fo=1, routed)           0.054     4.255    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/xlnx_opt_q_reg[0]_1
-    SLICE_X30Y230        LUT6 (Prop_F6LUT_SLICEL_I5_O)
-                                                      0.150     4.405 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/q[16]_i_2__2_LOPT_REMAP_1/O
-                         net (fo=5, routed)           0.322     4.727    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/q_reg[0]_1
-    SLICE_X32Y230        LUT6 (Prop_G6LUT_SLICEM_I1_O)
-                                                      0.226     4.953 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[16]/pagetypeflop/q[12]_i_38/O
-                         net (fo=1, routed)           0.391     5.344    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[23]/pagetypeflop/q[0]_i_27__0_3
-    SLICE_X29Y231        LUT6 (Prop_H6LUT_SLICEM_I5_O)
-                                                      0.228     5.572 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[23]/pagetypeflop/q[12]_i_8__0/O
-                         net (fo=1, routed)           0.049     5.621    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/HitPageType[0]
-    SLICE_X29Y231        LUT4 (Prop_G6LUT_SLICEM_I3_O)
-                                                      0.082     5.703 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/q[12]_i_2__2/O
-                         net (fo=4, routed)           1.526     7.228    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/PageNumberMask[0]
-    SLICE_X23Y234        LUT4 (Prop_C6LUT_SLICEL_I2_O)
-                                                      0.187     7.415 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_38/O
-                         net (fo=1, routed)           0.936     8.351    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/xlnx_opt_q_reg[1]_0_10
-    SLICE_X20Y234        LUT6 (Prop_H6LUT_SLICEM_I2_O)
-                                                      0.228     8.579 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_42/O
-                         net (fo=1, routed)           0.310     8.889    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/xlnx_opt_q_reg[1]_0_6
-    SLICE_X22Y239        LUT6 (Prop_G6LUT_SLICEL_I4_O)
-                                                      0.186     9.075 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_49/O
-                         net (fo=2, routed)           0.818     9.894    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/q_reg[5]
-    SLICE_X24Y232        LUT4 (Prop_G6LUT_SLICEM_I3_O)
-                                                      0.137    10.031 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/q[5]_i_3__2_LOPT_REMAP/O
-                         net (fo=8, routed)           0.196    10.227    core/ifu/InstrMReg/lopt_6
-    SLICE_X23Y233        LUT5 (Prop_B6LUT_SLICEL_I4_O)
-                                                      0.224    10.451 f  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP_1/O
-                         net (fo=1, routed)           0.060    10.511    core/ifu/InstrMReg/xlnx_opt_q_reg[17]_3_3
-    SLICE_X23Y233        LUT6 (Prop_F6LUT_SLICEL_I3_O)
-                                                      0.187    10.698 r  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP_4/O
-                         net (fo=1, routed)           0.099    10.797    core/ifu/InstrMReg/xlnx_opt_q_reg[17]_3
-    SLICE_X23Y231        LUT3 (Prop_F6LUT_SLICEL_I2_O)
-                                                      0.136    10.933 r  core/ifu/InstrMReg/FSM_sequential_CurrState_i_3__0_LOPT_REMAP_5/O
-                         net (fo=81, routed)          0.844    11.776    core/ieu/c/controlregM/FSM_sequential_CurrState_reg[0]
-    SLICE_X18Y228        LUT2 (Prop_G6LUT_SLICEM_I0_O)
-                                                      0.137    11.913 r  core/ieu/c/controlregM/FSM_sequential_CurrState_i_1__0/O
-                         net (fo=13, routed)          0.250    12.164    core/ifu/bus.icache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/FlushD
-    SLICE_X22Y228        LUT5 (Prop_G6LUT_SLICEL_I0_O)
-                                                      0.137    12.301 r  core/ifu/bus.icache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/sramIP_i_50/O
-                         net (fo=288, routed)         1.015    13.316    core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/StallW
-    SLICE_X24Y227        LUT5 (Prop_B6LUT_SLICEM_I2_O)
-                                                      0.225    13.541 f  core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/q[2]_i_6__8_LOPT_REMAP/O
-                         net (fo=1, routed)           0.173    13.714    core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/xlnx_opt_q[2]_i_6__8_n_0_1
-    SLICE_X24Y227        LUT6 (Prop_C6LUT_SLICEM_I5_O)
-                                                      0.220    13.934 f  core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/q[2]_i_6__8_LOPT_REMAP_1/O
-                         net (fo=1, routed)           0.207    14.141    core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/xlnx_opt_q[2]_i_6__8_n_0
-    SLICE_X23Y227        LUT3 (Prop_F6LUT_SLICEL_I2_O)
-                                                      0.150    14.291 r  core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/q[2]_i_6__8_LOPT_REMAP_2/O
-                         net (fo=2, routed)           0.113    14.404    core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/q[2]_i_6__8_n_0
-    SLICE_X24Y227        LUT6 (Prop_H6LUT_SLICEM_I2_O)
-                                                      0.084    14.488 r  core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/q[2]_i_2__13/O
-                         net (fo=4, routed)           0.314    14.802    core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/E[0]
-    SLICE_X24Y227        LUT5 (Prop_A6LUT_SLICEM_I4_O)
-                                                      0.152    14.954 r  core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/q_reg[0]_CE_cooolgate_en_gate_465_LOPT_REMAP/O
-                         net (fo=3, routed)           0.230    15.184    core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/q_reg[0]_CE_cooolgate_en_sig_196
-    SLICE_X23Y227        FDRE                                         r  core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/q_reg[2]/CE
+    SLICE_X27Y215        FDRE                         0.000     0.000 r  core/lsu/hptw.hptw/WalkerStateReg/q_reg[1]/C
+    SLICE_X27Y215        FDRE (Prop_BFF2_SLICEL_C_Q)
+                                                      0.115     0.115 f  core/lsu/hptw.hptw/WalkerStateReg/q_reg[1]/Q
+                         net (fo=43, routed)          0.514     0.629    core/lsu/hptw.hptw/WalkerStateReg/q_reg[1]_2
+    SLICE_X25Y217        LUT3 (Prop_C6LUT_SLICEM_I2_O)
+                                                      0.220     0.849 f  core/lsu/hptw.hptw/WalkerStateReg/q[3]_i_3__11/O
+                         net (fo=57, routed)          0.679     1.528    core/lsu/hptw.hptw/WalkerStateReg/q_reg[3]_2
+    SLICE_X29Y220        LUT2 (Prop_E6LUT_SLICEM_I0_O)
+                                                      0.083     1.611 r  core/lsu/hptw.hptw/WalkerStateReg/q[3]_i_1__16/O
+                         net (fo=65, routed)          1.331     2.942    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[6]/keyflop/IHAdrM[3]
+    SLICE_X38Y217        LUT3 (Prop_C6LUT_SLICEM_I1_O)
+                                                      0.149     3.091 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[6]/keyflop/q[6]_i_7__3/O
+                         net (fo=4, routed)           0.282     3.373    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[6]/keyflop/Match1__24
+    SLICE_X38Y218        LUT3 (Prop_H6LUT_SLICEM_I0_O)
+                                                      0.084     3.457 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[6]/keyflop/q[12]_i_70/O
+                         net (fo=1, routed)           0.327     3.784    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[7]/pagetypeflop/PageTypeRead[6]_136[0]
+    SLICE_X37Y214        LUT6 (Prop_G6LUT_SLICEM_I5_O)
+                                                      0.226     4.010 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[7]/pagetypeflop/q[12]_i_24/O
+                         net (fo=1, routed)           0.119     4.129    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/q[0]_i_25__1_1
+    SLICE_X36Y214        LUT4 (Prop_D6LUT_SLICEL_I3_O)
+                                                      0.221     4.350 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/q[12]_i_5__2/O
+                         net (fo=1, routed)           0.347     4.697    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/q_reg[1]_0
+    SLICE_X36Y207        LUT4 (Prop_B6LUT_SLICEL_I0_O)
+                                                      0.058     4.755 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[11]/pagetypeflop/q[12]_i_2__2/O
+                         net (fo=4, routed)           1.300     6.055    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/PageNumberMask[0]
+    SLICE_X32Y215        LUT4 (Prop_F6LUT_SLICEM_I2_O)
+                                                      0.149     6.204 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_40/O
+                         net (fo=1, routed)           0.364     6.568    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/xlnx_opt_q_reg[1]_0_8
+    SLICE_X29Y219        LUT6 (Prop_C6LUT_SLICEM_I4_O)
+                                                      0.149     6.717 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_42/O
+                         net (fo=1, routed)           0.358     7.075    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/xlnx_opt_q_reg[1]_0_6
+    SLICE_X26Y220        LUT6 (Prop_G6LUT_SLICEL_I4_O)
+                                                      0.226     7.301 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[10]/pagetypeflop/q[5]_i_5__3_LOPT_REMAP_49/O
+                         net (fo=2, routed)           0.362     7.663    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/q_reg[5]
+    SLICE_X27Y216        LUT4 (Prop_F6LUT_SLICEL_I3_O)
+                                                      0.187     7.850 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/q[5]_i_3__2_LOPT_REMAP/O
+                         net (fo=8, routed)           0.057     7.907    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/q_reg[4]
+    SLICE_X27Y216        LUT2 (Prop_H5LUT_SLICEL_I1_O)
+                                                      0.088     7.995 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/FSM_sequential_CurrState[1]_i_3__0/O
+                         net (fo=4, routed)           0.253     8.248    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/q_reg[61]_0
+    SLICE_X26Y215        LUT4 (Prop_D5LUT_SLICEL_I3_O)
+                                                      0.133     8.381 f  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[21]/pagetypeflop/q[63]_i_8__1/O
+                         net (fo=1, routed)           0.188     8.569    core/lsu/bus.dcache.dcache/cachefsm/IgnoreRequestTLB
+    SLICE_X26Y214        LUT4 (Prop_G6LUT_SLICEL_I2_O)
+                                                      0.082     8.651 r  core/lsu/bus.dcache.dcache/cachefsm/q[63]_i_3__0/O
+                         net (fo=3, routed)           0.178     8.829    core/lsu/hptw.hptw/WalkerStateReg/p_0_in
+    SLICE_X26Y215        LUT5 (Prop_C6LUT_SLICEL_I0_O)
+                                                      0.081     8.910 r  core/lsu/hptw.hptw/WalkerStateReg/FSM_sequential_CurrState_i_3/O
+                         net (fo=3, routed)           0.299     9.209    core/ieu/c/controlregM/p_1_in
+    SLICE_X27Y217        LUT5 (Prop_H6LUT_SLICEL_I4_O)
+                                                      0.058     9.267 f  core/ieu/c/controlregM/FSM_sequential_CurrState_i_2__0_LOPT_REMAP/O
+                         net (fo=4, routed)           0.114     9.381    core/lsu/ziccslm_align.align/p_2_in
+    SLICE_X27Y216        LUT3 (Prop_C5LUT_SLICEL_I0_O)
+                                                      0.190     9.571 f  core/lsu/ziccslm_align.align/sramIP_i_82/O
+                         net (fo=1, routed)           0.140     9.711    core/ifu/bus.icache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/LSUStallM
+    SLICE_X27Y214        LUT5 (Prop_H6LUT_SLICEL_I2_O)
+                                                      0.137     9.848 r  core/ifu/bus.icache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/sramIP_i_50/O
+                         net (fo=288, routed)         0.311    10.159    core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/StallW
+    SLICE_X25Y214        LUT5 (Prop_F6LUT_SLICEM_I2_O)
+                                                      0.186    10.345 f  core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/q[2]_i_6__8_LOPT_REMAP/O
+                         net (fo=1, routed)           0.050    10.395    core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/xlnx_opt_q[2]_i_6__8_n_0_1
+    SLICE_X25Y214        LUT6 (Prop_G6LUT_SLICEM_I5_O)
+                                                      0.082    10.477 f  core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/q[2]_i_6__8_LOPT_REMAP_1/O
+                         net (fo=1, routed)           0.059    10.536    core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/xlnx_opt_q[2]_i_6__8_n_0
+    SLICE_X25Y214        LUT3 (Prop_E6LUT_SLICEM_I2_O)
+                                                      0.152    10.688 r  core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/q[2]_i_6__8_LOPT_REMAP_2/O
+                         net (fo=2, routed)           0.192    10.880    core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/q[2]_i_6__8_n_0
+    SLICE_X25Y213        LUT6 (Prop_H6LUT_SLICEM_I2_O)
+                                                      0.228    11.108 r  core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountDelayedReg/q[2]_i_2__13/O
+                         net (fo=4, routed)           0.289    11.397    core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/E[0]
+    SLICE_X25Y212        LUT5 (Prop_G6LUT_SLICEM_I4_O)
+                                                      0.226    11.623 r  core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/q_reg[0]_CE_cooolgate_en_gate_465_LOPT_REMAP/O
+                         net (fo=3, routed)           0.305    11.928    core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/q_reg[0]_CE_cooolgate_en_sig_196
+    SLICE_X25Y212        FDRE                                         r  core/lsu/bus.dcache.ahbcacheinterface/AHBBuscachefsm/BeatCountReg/q_reg[0]/CE
   -------------------------------------------------------------------    -------------------
 
 
@@ -1075,162 +1022,159 @@ Slack:                    inf
 Min Delay Paths
 --------------------------------------------------------------------------------------
 Slack:                    inf
-  Source:                 core/ifu/pcreg/q_reg[36]/C
+  Source:                 core/ifu/pcreg/q_reg[2]/C
                             (rising edge-triggered cell FDRE)
-  Destination:            core/ifu/Spill.spill/pcplus2reg/q_reg[36]/D
+  Destination:            core/ifu/PCDReg/q_reg[2]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.142ns  (logic 0.107ns (75.546%)  route 0.035ns (24.454%))
-  Logic Levels:           2  (FDRE=1 LUT3=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X16Y236        FDRE                         0.000     0.000 r  core/ifu/pcreg/q_reg[36]/C
-    SLICE_X16Y236        FDRE (Prop_DFF_SLICEL_C_Q)
-                                                      0.084     0.084 r  core/ifu/pcreg/q_reg[36]/Q
-                         net (fo=5, routed)           0.027     0.111    core/ifu/pcreg/q_reg[63]_0[35]
-    SLICE_X16Y236        LUT3 (Prop_B5LUT_SLICEL_I2_O)
-                                                      0.023     0.134 r  core/ifu/pcreg/q[36]_i_1/O
-                         net (fo=1, routed)           0.008     0.142    core/ifu/Spill.spill/pcplus2reg/d[24]
-    SLICE_X16Y236        FDRE                                         r  core/ifu/Spill.spill/pcplus2reg/q_reg[36]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 core/ifu/pcreg/q_reg[22]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            core/ifu/PCDReg/q_reg[22]/D
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.143ns  (logic 0.084ns (58.834%)  route 0.059ns (41.166%))
+  Data Path Delay:        0.128ns  (logic 0.083ns (64.958%)  route 0.045ns (35.042%))
   Logic Levels:           1  (FDRE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X15Y231        FDRE                         0.000     0.000 r  core/ifu/pcreg/q_reg[22]/C
-    SLICE_X15Y231        FDRE (Prop_HFF_SLICEL_C_Q)
-                                                      0.084     0.084 r  core/ifu/pcreg/q_reg[22]/Q
-                         net (fo=5, routed)           0.059     0.143    core/ifu/PCDReg/q_reg[63]_1[21]
-    SLICE_X14Y231        FDRE                                         r  core/ifu/PCDReg/q_reg[22]/D
+    SLICE_X35Y221        FDRE                         0.000     0.000 r  core/ifu/pcreg/q_reg[2]/C
+    SLICE_X35Y221        FDRE (Prop_CFF_SLICEM_C_Q)
+                                                      0.083     0.083 r  core/ifu/pcreg/q_reg[2]/Q
+                         net (fo=3, routed)           0.045     0.128    core/ifu/PCDReg/q_reg[63]_1[1]
+    SLICE_X35Y220        FDRE                                         r  core/ifu/PCDReg/q_reg[2]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 core/ifu/pcreg/q_reg[21]/C
+  Source:                 core/ifu/PCDReg/q_reg[22]/C
                             (rising edge-triggered cell FDRE)
-  Destination:            core/ifu/Spill.spill/pcplus2reg/q_reg[21]/D
+  Destination:            core/ifu/PCEReg/q_reg[22]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.144ns  (logic 0.107ns (74.499%)  route 0.037ns (25.501%))
-  Logic Levels:           2  (FDRE=1 LUT3=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X15Y231        FDRE                         0.000     0.000 r  core/ifu/pcreg/q_reg[21]/C
-    SLICE_X15Y231        FDRE (Prop_DFF_SLICEL_C_Q)
-                                                      0.084     0.084 r  core/ifu/pcreg/q_reg[21]/Q
-                         net (fo=5, routed)           0.029     0.113    core/ifu/pcreg/q_reg[63]_0[20]
-    SLICE_X15Y231        LUT3 (Prop_B5LUT_SLICEL_I2_O)
-                                                      0.023     0.136 r  core/ifu/pcreg/q[21]_i_1__0/O
-                         net (fo=1, routed)           0.008     0.144    core/ifu/Spill.spill/pcplus2reg/d[9]
-    SLICE_X15Y231        FDRE                                         r  core/ifu/Spill.spill/pcplus2reg/q_reg[21]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 core/ifu/pcreg/q_reg[43]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            core/ifu/Spill.spill/pcplus2reg/q_reg[43]/D
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.145ns  (logic 0.107ns (73.655%)  route 0.038ns (26.345%))
-  Logic Levels:           2  (FDRE=1 LUT3=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X14Y238        FDRE                         0.000     0.000 r  core/ifu/pcreg/q_reg[43]/C
-    SLICE_X14Y238        FDRE (Prop_DFF_SLICEL_C_Q)
-                                                      0.084     0.084 r  core/ifu/pcreg/q_reg[43]/Q
-                         net (fo=5, routed)           0.030     0.114    core/ifu/pcreg/q_reg[63]_0[42]
-    SLICE_X14Y238        LUT3 (Prop_B5LUT_SLICEL_I2_O)
-                                                      0.023     0.137 r  core/ifu/pcreg/q[43]_i_1/O
-                         net (fo=1, routed)           0.008     0.145    core/ifu/Spill.spill/pcplus2reg/d[31]
-    SLICE_X14Y238        FDRE                                         r  core/ifu/Spill.spill/pcplus2reg/q_reg[43]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 core/ifu/pcreg/q_reg[15]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            core/ifu/Spill.spill/pcplus2reg/q_reg[15]/D
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.147ns  (logic 0.107ns (72.659%)  route 0.040ns (27.341%))
-  Logic Levels:           2  (FDRE=1 LUT3=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X15Y230        FDRE                         0.000     0.000 r  core/ifu/pcreg/q_reg[15]/C
-    SLICE_X15Y230        FDRE (Prop_DFF_SLICEL_C_Q)
-                                                      0.084     0.084 r  core/ifu/pcreg/q_reg[15]/Q
-                         net (fo=5, routed)           0.032     0.116    core/ifu/pcreg/q_reg[63]_0[14]
-    SLICE_X15Y230        LUT3 (Prop_B5LUT_SLICEL_I2_O)
-                                                      0.023     0.139 r  core/ifu/pcreg/q[15]_i_1__0/O
-                         net (fo=1, routed)           0.008     0.147    core/ifu/Spill.spill/pcplus2reg/d[3]
-    SLICE_X15Y230        FDRE                                         r  core/ifu/Spill.spill/pcplus2reg/q_reg[15]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[29]/validbitflop/q_reg[0]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[29]/validbitflop/q_reg[0]/D
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.151ns  (logic 0.105ns (69.704%)  route 0.046ns (30.296%))
-  Logic Levels:           2  (FDRE=1 LUT5=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X27Y234        FDRE                         0.000     0.000 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[29]/validbitflop/q_reg[0]/C
-    SLICE_X27Y234        FDRE (Prop_HFF_SLICEL_C_Q)
-                                                      0.084     0.084 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[29]/validbitflop/q_reg[0]/Q
-                         net (fo=4, routed)           0.027     0.111    core/lsu/dmmu.dmmu/tlb.tlb/lru/lrustate/Valid_15
-    SLICE_X27Y234        LUT5 (Prop_H6LUT_SLICEL_I4_O)
-                                                      0.021     0.132 r  core/lsu/dmmu.dmmu/tlb.tlb/lru/lrustate/q[0]_i_1__66/O
-                         net (fo=1, routed)           0.019     0.151    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[29]/validbitflop/q_reg[0]_1
-    SLICE_X27Y234        FDRE                                         r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[29]/validbitflop/q_reg[0]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 core/priv.priv/ppr/faultregD/q_reg[2]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            core/priv.priv/ppr/faultregE/q_reg[2]/D
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.152ns  (logic 0.086ns (56.579%)  route 0.066ns (43.421%))
+  Data Path Delay:        0.147ns  (logic 0.083ns (56.463%)  route 0.064ns (43.537%))
   Logic Levels:           1  (FDRE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X24Y232        FDRE                         0.000     0.000 r  core/priv.priv/ppr/faultregD/q_reg[2]/C
-    SLICE_X24Y232        FDRE (Prop_DFF2_SLICEM_C_Q)
-                                                      0.086     0.086 r  core/priv.priv/ppr/faultregD/q_reg[2]/Q
-                         net (fo=1, routed)           0.066     0.152    core/priv.priv/ppr/faultregE/D[2]
-    SLICE_X24Y231        FDRE                                         r  core/priv.priv/ppr/faultregE/q_reg[2]/D
+    SLICE_X35Y220        FDRE                         0.000     0.000 r  core/ifu/PCDReg/q_reg[22]/C
+    SLICE_X35Y220        FDRE (Prop_HFF_SLICEM_C_Q)
+                                                      0.083     0.083 r  core/ifu/PCDReg/q_reg[22]/Q
+                         net (fo=2, routed)           0.064     0.147    core/ifu/PCEReg/q_reg[63]_2[21]
+    SLICE_X37Y220        FDRE                                         r  core/ifu/PCEReg/q_reg[22]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 core/ifu/pcreg/q_reg[34]/C
+  Source:                 core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[5]/validbitflop/q_reg[0]/C
                             (rising edge-triggered cell FDRE)
-  Destination:            core/ifu/PCDReg/q_reg[34]/D
+  Destination:            core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[5]/validbitflop/q_reg[0]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.152ns  (logic 0.084ns (55.243%)  route 0.068ns (44.757%))
+  Data Path Delay:        0.148ns  (logic 0.107ns (72.238%)  route 0.041ns (27.762%))
+  Logic Levels:           2  (FDRE=1 LUT4=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X37Y214        FDRE                         0.000     0.000 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[5]/validbitflop/q_reg[0]/C
+    SLICE_X37Y214        FDRE (Prop_HFF_SLICEM_C_Q)
+                                                      0.083     0.083 r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[5]/validbitflop/q_reg[0]/Q
+                         net (fo=4, routed)           0.033     0.116    core/lsu/dmmu.dmmu/tlb.tlb/lru/lrustate/Valid_27
+    SLICE_X37Y214        LUT4 (Prop_H5LUT_SLICEM_I3_O)
+                                                      0.024     0.140 r  core/lsu/dmmu.dmmu/tlb.tlb/lru/lrustate/q[0]_i_1__78/O
+                         net (fo=1, routed)           0.008     0.148    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[5]/validbitflop/q_reg[0]_1
+    SLICE_X37Y214        FDRE                                         r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[5]/validbitflop/q_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 core/priv.priv/privmode/privmode.privmodereg/q_reg[0]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            core/priv.priv/privmode/privmode.privmodereg/q_reg[0]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.150ns  (logic 0.105ns (70.170%)  route 0.045ns (29.830%))
+  Logic Levels:           2  (FDRE=1 LUT2=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X30Y215        FDRE                         0.000     0.000 r  core/priv.priv/privmode/privmode.privmodereg/q_reg[0]/C
+    SLICE_X30Y215        FDRE (Prop_DFF_SLICEL_C_Q)
+                                                      0.084     0.084 r  core/priv.priv/privmode/privmode.privmodereg/q_reg[0]/Q
+                         net (fo=8, routed)           0.027     0.111    core/priv.priv/csr/csrsr/Q[0]
+    SLICE_X30Y215        LUT2 (Prop_D6LUT_SLICEL_I0_O)
+                                                      0.021     0.132 r  core/priv.priv/csr/csrsr/q[0]_i_1__103/O
+                         net (fo=1, routed)           0.018     0.150    core/priv.priv/privmode/privmode.privmodereg/D[0]
+    SLICE_X30Y215        FDRE                                         r  core/priv.priv/privmode/privmode.privmodereg/q_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 core/ifu/pcreg/q_reg[55]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            core/ifu/PCDReg/q_reg[55]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.151ns  (logic 0.083ns (55.111%)  route 0.068ns (44.889%))
   Logic Levels:           1  (FDRE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X16Y234        FDRE                         0.000     0.000 r  core/ifu/pcreg/q_reg[34]/C
-    SLICE_X16Y234        FDRE (Prop_HFF_SLICEL_C_Q)
-                                                      0.084     0.084 r  core/ifu/pcreg/q_reg[34]/Q
-                         net (fo=5, routed)           0.068     0.152    core/ifu/PCDReg/q_reg[63]_1[33]
-    SLICE_X14Y234        FDRE                                         r  core/ifu/PCDReg/q_reg[34]/D
+    SLICE_X37Y225        FDRE                         0.000     0.000 r  core/ifu/pcreg/q_reg[55]/C
+    SLICE_X37Y225        FDRE (Prop_DFF_SLICEM_C_Q)
+                                                      0.083     0.083 r  core/ifu/pcreg/q_reg[55]/Q
+                         net (fo=3, routed)           0.068     0.151    core/ifu/PCDReg/q_reg[63]_1[54]
+    SLICE_X36Y225        FDRE                                         r  core/ifu/PCDReg/q_reg[55]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 core/lsu/bus.dcache.dcache/flushlogic.FlushWayReg/q_reg[2]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            core/lsu/bus.dcache.dcache/flushlogic.FlushWayReg/q_reg[3]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.151ns  (logic 0.121ns (80.132%)  route 0.030ns (19.868%))
+  Logic Levels:           2  (FDRE=1 LUT2=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X23Y213        FDRE                         0.000     0.000 r  core/lsu/bus.dcache.dcache/flushlogic.FlushWayReg/q_reg[2]/C
+    SLICE_X23Y213        FDRE (Prop_DFF_SLICEL_C_Q)
+                                                      0.084     0.084 r  core/lsu/bus.dcache.dcache/flushlogic.FlushWayReg/q_reg[2]/Q
+                         net (fo=1, routed)           0.023     0.107    core/lsu/bus.dcache.dcache/cachefsm/q_reg[3][2]
+    SLICE_X23Y213        LUT2 (Prop_D5LUT_SLICEL_I1_O)
+                                                      0.037     0.144 r  core/lsu/bus.dcache.dcache/cachefsm/q[3]_i_2__14/O
+                         net (fo=1, routed)           0.007     0.151    core/lsu/bus.dcache.dcache/flushlogic.FlushWayReg/D[2]
+    SLICE_X23Y213        FDRE                                         r  core/lsu/bus.dcache.dcache/flushlogic.FlushWayReg/q_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 core/lsu/dmmu.dmmu/tlb.tlb/lru/lrustate/q_reg[0]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[0]/validbitflop/q_reg[0]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.152ns  (logic 0.107ns (70.277%)  route 0.045ns (29.723%))
+  Logic Levels:           2  (FDRE=1 LUT3=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X34Y210        FDRE                         0.000     0.000 r  core/lsu/dmmu.dmmu/tlb.tlb/lru/lrustate/q_reg[0]/C
+    SLICE_X34Y210        FDRE (Prop_HFF_SLICEM_C_Q)
+                                                      0.083     0.083 f  core/lsu/dmmu.dmmu/tlb.tlb/lru/lrustate/q_reg[0]/Q
+                         net (fo=27, routed)          0.038     0.121    core/lsu/dmmu.dmmu/tlb.tlb/lru/lrustate/q_reg[0]_7
+    SLICE_X34Y210        LUT3 (Prop_H5LUT_SLICEM_I0_O)
+                                                      0.024     0.145 r  core/lsu/dmmu.dmmu/tlb.tlb/lru/lrustate/q[0]_i_1__60/O
+                         net (fo=1, routed)           0.007     0.152    core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[0]/validbitflop/q_reg[0]_0
+    SLICE_X34Y210        FDRE                                         r  core/lsu/dmmu.dmmu/tlb.tlb/tlbcam/camlines[0]/validbitflop/q_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 core/ifu/pcreg/q_reg[63]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            core/ifu/PCDReg/q_reg[63]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.153ns  (logic 0.083ns (54.381%)  route 0.070ns (45.619%))
+  Logic Levels:           1  (FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X35Y226        FDRE                         0.000     0.000 r  core/ifu/pcreg/q_reg[63]/C
+    SLICE_X35Y226        FDRE (Prop_DFF_SLICEM_C_Q)
+                                                      0.083     0.083 r  core/ifu/pcreg/q_reg[63]/Q
+                         net (fo=3, routed)           0.070     0.153    core/ifu/PCDReg/q_reg[63]_1[62]
+    SLICE_X35Y225        FDRE                                         r  core/ifu/PCDReg/q_reg[63]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
@@ -1239,37 +1183,40 @@ Slack:                    inf
   Destination:            core/lsu/bus.dcache.dcache/cachefsm/FSM_sequential_CurrState_reg[0]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.153ns  (logic 0.105ns (68.640%)  route 0.048ns (31.360%))
+  Data Path Delay:        0.153ns  (logic 0.105ns (68.573%)  route 0.048ns (31.427%))
   Logic Levels:           2  (FDRE=1 LUT5=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X23Y228        FDRE                         0.000     0.000 r  core/lsu/bus.dcache.dcache/cachefsm/FSM_sequential_CurrState_reg[1]/C
-    SLICE_X23Y228        FDRE (Prop_CFF_SLICEL_C_Q)
+    SLICE_X26Y214        FDRE                         0.000     0.000 r  core/lsu/bus.dcache.dcache/cachefsm/FSM_sequential_CurrState_reg[1]/C
+    SLICE_X26Y214        FDRE (Prop_CFF_SLICEL_C_Q)
                                                       0.084     0.084 r  core/lsu/bus.dcache.dcache/cachefsm/FSM_sequential_CurrState_reg[1]/Q
-                         net (fo=5, routed)           0.030     0.114    core/lsu/bus.dcache.dcache/cachefsm/FSM_sequential_CurrState_reg[1]_0[1]
-    SLICE_X23Y228        LUT5 (Prop_D6LUT_SLICEL_I4_O)
+                         net (fo=5, routed)           0.030     0.114    core/lsu/bus.dcache.dcache/cachefsm/Q[1]
+    SLICE_X26Y214        LUT5 (Prop_D6LUT_SLICEL_I4_O)
                                                       0.021     0.135 r  core/lsu/bus.dcache.dcache/cachefsm/FSM_sequential_CurrState[0]_i_1/O
                          net (fo=1, routed)           0.018     0.153    core/lsu/bus.dcache.dcache/cachefsm/FSM_sequential_CurrState[0]_i_1_n_0
-    SLICE_X23Y228        FDRE                                         r  core/lsu/bus.dcache.dcache/cachefsm/FSM_sequential_CurrState_reg[0]/D
+    SLICE_X26Y214        FDRE                                         r  core/lsu/bus.dcache.dcache/cachefsm/FSM_sequential_CurrState_reg[0]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 core/ifu/pcreg/q_reg[58]/C
+  Source:                 core/lsu/bus.dcache.dcache/cachefsm/FSM_sequential_CurrState_reg[1]/C
                             (rising edge-triggered cell FDRE)
-  Destination:            core/ifu/PCDReg/q_reg[58]/D
+  Destination:            core/lsu/bus.dcache.dcache/cachefsm/FSM_sequential_CurrState_reg[1]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.154ns  (logic 0.084ns (54.675%)  route 0.070ns (45.325%))
-  Logic Levels:           1  (FDRE=1)
+  Data Path Delay:        0.154ns  (logic 0.105ns (68.128%)  route 0.049ns (31.872%))
+  Logic Levels:           2  (FDRE=1 LUT4=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X14Y236        FDRE                         0.000     0.000 r  core/ifu/pcreg/q_reg[58]/C
-    SLICE_X14Y236        FDRE (Prop_CFF_SLICEL_C_Q)
-                                                      0.084     0.084 r  core/ifu/pcreg/q_reg[58]/Q
-                         net (fo=3, routed)           0.070     0.154    core/ifu/PCDReg/q_reg[63]_1[57]
-    SLICE_X14Y236        FDRE                                         r  core/ifu/PCDReg/q_reg[58]/D
+    SLICE_X26Y214        FDRE                         0.000     0.000 r  core/lsu/bus.dcache.dcache/cachefsm/FSM_sequential_CurrState_reg[1]/C
+    SLICE_X26Y214        FDRE (Prop_CFF_SLICEL_C_Q)
+                                                      0.084     0.084 r  core/lsu/bus.dcache.dcache/cachefsm/FSM_sequential_CurrState_reg[1]/Q
+                         net (fo=5, routed)           0.030     0.114    core/lsu/bus.dcache.dcache/cachefsm/Q[1]
+    SLICE_X26Y214        LUT4 (Prop_C6LUT_SLICEL_I3_O)
+                                                      0.021     0.135 r  core/lsu/bus.dcache.dcache/cachefsm/FSM_sequential_CurrState[1]_i_2/O
+                         net (fo=1, routed)           0.019     0.154    core/lsu/bus.dcache.dcache/cachefsm/FSM_sequential_CurrState[1]_i_2_n_0
+    SLICE_X26Y214        FDRE                                         r  core/lsu/bus.dcache.dcache/cachefsm/FSM_sequential_CurrState_reg[1]/D
   -------------------------------------------------------------------    -------------------
 
 

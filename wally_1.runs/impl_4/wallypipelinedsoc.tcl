@@ -106,6 +106,8 @@ set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
   set_param chipscope.maxJobs 5
+  set_param general.usePosixSpawnForFork 1
+  set_param xicom.use_bs_reader 1
   set_param runs.launchOptions { -jobs 15  }
   open_checkpoint wallypipelinedsoc_postroute_physopt.dcp
   set_property webtalk.parent_dir /home/ishfisav/wally_1/wally_1.cache/wt [current_project]
@@ -116,7 +118,7 @@ OPTRACE "read constraints: write_bitstream" END { }
   catch { write_mem_info -force -no_partial_mmi wallypipelinedsoc.mmi }
 OPTRACE "write_bitstream setup" END { }
 OPTRACE "write_bitstream" START { }
-  write_bitstream -force wallypipelinedsoc.bit -raw_bitfile -mask_file -no_binary_bitfile -bin_file -readback_file -logic_location_file -verbose
+  write_bitstream -force wallypipelinedsoc.bit -raw_bitfile -mask_file -bin_file -readback_file -logic_location_file -verbose
 OPTRACE "write_bitstream" END { }
 OPTRACE "write_bitstream misc" START { }
 OPTRACE "read constraints: write_bitstream_post" START { }

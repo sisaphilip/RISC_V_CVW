@@ -1,21 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_4" LaunchPart="xck26-sfvc784-2LV-c" LaunchTime="1748202035">
+<GenRun Id="impl_4" LaunchPart="xck26-sfvc784-2LV-c" LaunchTime="1750954367">
+  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-RQS" Name="wallypipelinedsoc_postroute_physopted.rqs"/>
   <File Type="ROUTE-RQS" Name="wallypipelinedsoc_routed.rqs"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="RDI-RDI" Name="wallypipelinedsoc.vdi"/>
+  <File Type="BG-DRC" Name="wallypipelinedsoc.drc"/>
   <File Type="BG-BGN" Name="wallypipelinedsoc.bgn"/>
   <File Type="BITSTR-SYSDEF" Name="wallypipelinedsoc.sysdef"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
   <File Type="BITSTR-LTX" Name="wallypipelinedsoc.ltx"/>
+  <File Type="PL-LTX-FILE" Name="wallypipelinedsoc_pld.ltx"/>
+  <File Type="BOOT-LTX-FILE" Name="wallypipelinedsoc_boot.ltx"/>
+  <File Type="LTX-FILE" Name="wallypipelinedsoc.ltx"/>
+  <File Type="PL-BIF-FILE" Name="wallypipelinedsoc_pld.bif"/>
+  <File Type="BOOT-BIF-FILE" Name="wallypipelinedsoc_boot.bif"/>
+  <File Type="BIF-FILE" Name="wallypipelinedsoc.bif"/>
+  <File Type="MMI-FILE" Name="wallypipelinedsoc.mmi"/>
   <File Type="RBD_FILE" Name="wallypipelinedsoc.rbd"/>
   <File Type="NPI_FILE" Name="wallypipelinedsoc.npi"/>
+  <File Type="PL_UNMASK_RCDO_FILE" Name="wallypipelinedsoc_pld_unmask.rcdo"/>
+  <File Type="PL_UNMASK_MARKER_RCDO_FILE" Name="wallypipelinedsoc_pld_unmask_markers.rcdo"/>
+  <File Type="PL_MASK_RCDO_FILE" Name="wallypipelinedsoc_pld_mask.rcdo"/>
+  <File Type="PL_MARKER_RCDO_FILE" Name="wallypipelinedsoc_pld_markers.rcdo"/>
+  <File Type="PL-CLEAR-RCDO-FILE" Name="wallypipelinedsoc_pld_clear.rcdo"/>
+  <File Type="PL-RCDO-FILE" Name="wallypipelinedsoc_pld.rcdo"/>
+  <File Type="PL_UNMASK_RNPI_FILE" Name="wallypipelinedsoc_pld_unmask.rnpi"/>
+  <File Type="PL_SHUTDOWN_RNPI_FILE" Name="wallypipelinedsoc_pld_shutdown.rnpi"/>
+  <File Type="PL_MASK_RNPI_FILE" Name="wallypipelinedsoc_pld_mask.rnpi"/>
+  <File Type="PL_MARKER_RNPI_FILE" Name="wallypipelinedsoc_pld_markers.rnpi"/>
+  <File Type="PL_RNPI_FILE" Name="wallypipelinedsoc_pld.rnpi"/>
+  <File Type="BOOT_MARKER_RNPI_FILE" Name="wallypipelinedsoc_boot_markers.rnpi"/>
+  <File Type="BOOT_RNPI_FILE" Name="wallypipelinedsoc_boot.rnpi"/>
+  <File Type="MARKER-RCDO-FILE" Name="wallypipelinedsoc_markers.rcdo"/>
+  <File Type="MARKER-RNPI-FILE" Name="wallypipelinedsoc_markers.rnpi"/>
+  <File Type="RCDO-FILE" Name="wallypipelinedsoc.rcdo"/>
   <File Type="RNPI_FILE" Name="wallypipelinedsoc.rnpi"/>
   <File Type="CFI_FILE" Name="wallypipelinedsoc.cfi"/>
   <File Type="RCFI_FILE" Name="wallypipelinedsoc.rcfi"/>
   <File Type="PL-PDI-FILE" Name="wallypipelinedsoc_pld.pdi"/>
   <File Type="BOOT-PDI-FILE" Name="wallypipelinedsoc_boot.pdi"/>
-  <File Type="RDI-RDI" Name="wallypipelinedsoc.vdi"/>
   <File Type="PDI-FILE" Name="wallypipelinedsoc.pdi"/>
   <File Type="BITSTR-MMI" Name="wallypipelinedsoc.mmi"/>
   <File Type="BITSTR-BMM" Name="wallypipelinedsoc_bd.bmm"/>
@@ -23,7 +48,6 @@
   <File Type="BITSTR-RBT" Name="wallypipelinedsoc.rbt"/>
   <File Type="BITSTR-MSK" Name="wallypipelinedsoc.msk"/>
   <File Type="BG-BIN" Name="wallypipelinedsoc.bin"/>
-  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
   <File Type="BG-BIT" Name="wallypipelinedsoc.bit"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="wallypipelinedsoc_bus_skew_postroute_physopted.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="wallypipelinedsoc_bus_skew_postroute_physopted.pb"/>
@@ -33,57 +57,60 @@
   <File Type="POSTROUTE-PHYSOPT-TIMING" Name="wallypipelinedsoc_timing_summary_postroute_physopted.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="wallypipelinedsoc_postroute_physopt_bb.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="wallypipelinedsoc_postroute_physopt.dcp"/>
-  <File Type="BG-DRC" Name="wallypipelinedsoc.drc"/>
   <File Type="ROUTE-RQS-PB" Name="wallypipelinedsoc_rqs_routed.pb"/>
   <File Type="ROUTE-BUS-SKEW-RPX" Name="wallypipelinedsoc_bus_skew_routed.rpx"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="wallypipelinedsoc_bus_skew_routed.pb"/>
   <File Type="ROUTE-BUS-SKEW" Name="wallypipelinedsoc_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="wallypipelinedsoc_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="wallypipelinedsoc_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="wallypipelinedsoc_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-TIMING-PB" Name="wallypipelinedsoc_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="wallypipelinedsoc_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="wallypipelinedsoc_route_status.pb"/>
+  <File Type="ROUTE-STATUS" Name="wallypipelinedsoc_route_status.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="wallypipelinedsoc_power_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="wallypipelinedsoc_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="wallypipelinedsoc_power_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="wallypipelinedsoc_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="wallypipelinedsoc_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="wallypipelinedsoc_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="wallypipelinedsoc_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-PB" Name="wallypipelinedsoc_drc_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="wallypipelinedsoc_drc_routed.rpt"/>
+  <File Type="ROUTE-UTIL-PB" Name="wallypipelinedsoc_utilization_routed.pb"/>
+  <File Type="ROUTE-UTIL" Name="wallypipelinedsoc_utilization_routed.rpt"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="wallypipelinedsoc_routed_bb.dcp"/>
+  <File Type="ROUTE-DCP" Name="wallypipelinedsoc_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="wallypipelinedsoc_routed_error.dcp"/>
+  <File Type="PHYSOPT-TIMING" Name="wallypipelinedsoc_timing_summary_physopted.rpt"/>
+  <File Type="PHYSOPT-DRC" Name="wallypipelinedsoc_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="wallypipelinedsoc_physopt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="wallypipelinedsoc_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="wallypipelinedsoc_postplace_pwropt.dcp"/>
+  <File Type="PLACE-RQA-PB" Name="wallypipelinedsoc_rqa_placed.pb"/>
+  <File Type="PLACE-TIMING" Name="wallypipelinedsoc_timing_summary_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="wallypipelinedsoc_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="wallypipelinedsoc_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="wallypipelinedsoc_control_sets_placed.rpt"/>
   <File Type="PLACE-UTIL-PB" Name="wallypipelinedsoc_utilization_placed.pb"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="wallypipelinedsoc_methodology_drc_opted.rpt"/>
   <File Type="PLACE-UTIL" Name="wallypipelinedsoc_utilization_placed.rpt"/>
   <File Type="PLACE-CLK" Name="wallypipelinedsoc_clock_utilization_placed.rpt"/>
   <File Type="PLACE-IO" Name="wallypipelinedsoc_io_placed.rpt"/>
-  <File Type="PHYSOPT-TIMING" Name="wallypipelinedsoc_timing_summary_physopted.rpt"/>
-  <File Type="PWROPT-DRC" Name="wallypipelinedsoc_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="wallypipelinedsoc_timing_summary_pwropted.rpt"/>
-  <File Type="OPT-DRC" Name="wallypipelinedsoc_drc_opted.rpt"/>
-  <File Type="PLACE-TIMING" Name="wallypipelinedsoc_timing_summary_placed.rpt"/>
-  <File Type="INIT-TIMING" Name="wallypipelinedsoc_timing_summary_init.rpt"/>
-  <File Type="PA-TCL" Name="wallypipelinedsoc.tcl"/>
-  <File Type="PLACE-CTRL" Name="wallypipelinedsoc_control_sets_placed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="wallypipelinedsoc_methodology_drc_routed.rpt"/>
-  <File Type="OPT-DCP" Name="wallypipelinedsoc_opt.dcp"/>
-  <File Type="OPT-RQA-PB" Name="wallypipelinedsoc_rqa_opted.pb"/>
-  <File Type="OPT-HWDEF" Name="wallypipelinedsoc.hwdef"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="wallypipelinedsoc_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="REPORTS-TCL" Name="wallypipelinedsoc_reports.tcl"/>
-  <File Type="OPT-TIMING" Name="wallypipelinedsoc_timing_summary_opted.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="wallypipelinedsoc_incremental_reuse_placed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="wallypipelinedsoc_methodology_drc_routed.pb"/>
   <File Type="PLACE-DCP" Name="wallypipelinedsoc_placed.dcp"/>
-  <File Type="PLACE-RQA-PB" Name="wallypipelinedsoc_rqa_placed.pb"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="wallypipelinedsoc_incremental_reuse_pre_placed.rpt"/>
-  <File Type="ROUTE-DRC-RPX" Name="wallypipelinedsoc_drc_routed.rpx"/>
+  <File Type="PWROPT-TIMING" Name="wallypipelinedsoc_timing_summary_pwropted.rpt"/>
+  <File Type="PWROPT-DRC" Name="wallypipelinedsoc_drc_pwropted.rpt"/>
   <File Type="PWROPT-DCP" Name="wallypipelinedsoc_pwropt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="wallypipelinedsoc_postplace_pwropt.dcp"/>
-  <File Type="PHYSOPT-DCP" Name="wallypipelinedsoc_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="wallypipelinedsoc_drc_physopted.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="wallypipelinedsoc_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="wallypipelinedsoc_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="wallypipelinedsoc_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC" Name="wallypipelinedsoc_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="wallypipelinedsoc_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-DRC-PB" Name="wallypipelinedsoc_drc_routed.pb"/>
-  <File Type="ROUTE-PWR" Name="wallypipelinedsoc_power_routed.rpt"/>
-  <File Type="ROUTE-PWR-SUM" Name="wallypipelinedsoc_power_summary_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="wallypipelinedsoc_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="wallypipelinedsoc_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="wallypipelinedsoc_route_status.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="wallypipelinedsoc_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-TIMING-PB" Name="wallypipelinedsoc_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="wallypipelinedsoc_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="wallypipelinedsoc_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="wallypipelinedsoc_clock_utilization_routed.rpt"/>
+  <File Type="OPT-RQA-PB" Name="wallypipelinedsoc_rqa_opted.pb"/>
+  <File Type="OPT-TIMING" Name="wallypipelinedsoc_timing_summary_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="wallypipelinedsoc.hwdef"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="wallypipelinedsoc_methodology_drc_opted.rpt"/>
+  <File Type="OPT-UTIL-PB" Name="wallypipelinedsoc_utilization_opted.pb"/>
+  <File Type="OPT-UTIL" Name="wallypipelinedsoc_utilization_opted.rpt"/>
+  <File Type="OPT-DRC" Name="wallypipelinedsoc_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="wallypipelinedsoc_opt.dcp"/>
+  <File Type="INIT-TIMING" Name="wallypipelinedsoc_timing_summary_init.rpt"/>
+  <File Type="REPORTS-TCL" Name="wallypipelinedsoc_reports.tcl"/>
+  <File Type="PA-TCL" Name="wallypipelinedsoc.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/cvw/config/shared/BranchPredictorType.vh">
@@ -2262,7 +2289,6 @@
       <Option Id="BinFile">1</Option>
       <Option Id="LogicLocationFileBool">1</Option>
       <Option Id="MaskFileBool">1</Option>
-      <Option Id="NoBinaryBitfileBool">1</Option>
       <Option Id="RawbitFileBool">1</Option>
       <Option Id="ReadbackFileBool">1</Option>
       <Option Id="VerboseBool">1</Option>

@@ -47,14 +47,14 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:ip:ahblite_axi_bridge:3.0
--- IP Revision: 28
+-- IP Revision: 29
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 
-LIBRARY ahblite_axi_bridge_v3_0_28;
-USE ahblite_axi_bridge_v3_0_28.ahblite_axi_bridge;
+LIBRARY ahblite_axi_bridge_v3_0_29;
+USE ahblite_axi_bridge_v3_0_29.ahblite_axi_bridge;
 
 ENTITY baremetal_block_ahblite_axi_bridge_0_0 IS
   PORT (
@@ -180,11 +180,11 @@ ARCHITECTURE baremetal_block_ahblite_axi_bridge_0_0_arch OF baremetal_block_ahbl
     );
   END COMPONENT ahblite_axi_bridge;
   ATTRIBUTE X_CORE_INFO : STRING;
-  ATTRIBUTE X_CORE_INFO OF baremetal_block_ahblite_axi_bridge_0_0_arch: ARCHITECTURE IS "ahblite_axi_bridge,Vivado 2024.2";
+  ATTRIBUTE X_CORE_INFO OF baremetal_block_ahblite_axi_bridge_0_0_arch: ARCHITECTURE IS "ahblite_axi_bridge,Vivado 2025.1";
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF baremetal_block_ahblite_axi_bridge_0_0_arch : ARCHITECTURE IS "baremetal_block_ahblite_axi_bridge_0_0,ahblite_axi_bridge,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF baremetal_block_ahblite_axi_bridge_0_0_arch: ARCHITECTURE IS "baremetal_block_ahblite_axi_bridge_0_0,ahblite_axi_bridge,{x_ipProduct=Vivado 2024.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=ahblite_axi_bridge,x_ipVersion=3.0,x_ipCoreRevision=28,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=zynquplus,C_INSTANCE=baremetal_block_ahblite_axi_bridge_0_0,C_M_AXI_SUPPORTS_NARROW_BURST=0,C_M_AXI_NON_SECURE=1,C_S_AHB_ADDR_WIDTH=32,C_M_AXI_ADDR_WIDTH=32,C_S_AHB_DATA_WIDTH=64,C_M_AXI_DATA_WIDTH=64,C_M_AXI_PROTOCOL=AXI4,C_M_AXI_THREAD_ID_WIDTH=4,C_AHB_AXI_TIM" & 
+  ATTRIBUTE CORE_GENERATION_INFO OF baremetal_block_ahblite_axi_bridge_0_0_arch: ARCHITECTURE IS "baremetal_block_ahblite_axi_bridge_0_0,ahblite_axi_bridge,{x_ipProduct=Vivado 2025.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=ahblite_axi_bridge,x_ipVersion=3.0,x_ipCoreRevision=29,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=zynquplus,C_INSTANCE=baremetal_block_ahblite_axi_bridge_0_0,C_M_AXI_SUPPORTS_NARROW_BURST=0,C_M_AXI_NON_SECURE=1,C_S_AHB_ADDR_WIDTH=32,C_M_AXI_ADDR_WIDTH=32,C_S_AHB_DATA_WIDTH=64,C_M_AXI_DATA_WIDTH=64,C_M_AXI_PROTOCOL=AXI4,C_M_AXI_THREAD_ID_WIDTH=4,C_AHB_AXI_TIM" & 
 "EOUT=0}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_MODE : STRING;

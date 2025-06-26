@@ -1,7 +1,7 @@
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-| Date         : Sun May 25 17:15:25 2025
+| Tool Version : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
+| Date         : Thu Jun 26 18:47:24 2025
 | Host         : thinkpad-p1-gen-5 running 64-bit Ubuntu 25.04
 | Command      : report_utilization -file design_1_utilization_synth.rpt -pb design_1_utilization_synth.pb
 | Design       : design_1
@@ -95,11 +95,23 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 4. I/O
 ------
 
-+------------+------+-------+------------+-----------+-------+
-|  Site Type | Used | Fixed | Prohibited | Available | Util% |
-+------------+------+-------+------------+-----------+-------+
-| Bonded IOB |    0 |     0 |          0 |       189 |  0.00 |
-+------------+------+-------+------------+-----------+-------+
++------------------+------+-------+------------+-----------+-------+
+|     Site Type    | Used | Fixed | Prohibited | Available | Util% |
++------------------+------+-------+------------+-----------+-------+
+| Bonded IOB       |    0 |     0 |          0 |       189 |  0.00 |
+|   HPIOB_M        |    0 |     0 |          0 |        58 |  0.00 |
+|   HPIOB_S        |    0 |     0 |          0 |        58 |  0.00 |
+|   HDIOB_M        |    0 |     0 |          0 |        35 |  0.00 |
+|   HDIOB_S        |    0 |     0 |          0 |        35 |  0.00 |
+|   HPIOB_SNGL     |    0 |     0 |          0 |         3 |  0.00 |
+| HPIOBDIFFINBUF   |    0 |     0 |          0 |        82 |  0.00 |
+| HPIOBDIFFOUTBUF  |    0 |     0 |          0 |        82 |  0.00 |
+| HDIOBDIFFINBUF   |    0 |     0 |          0 |        35 |  0.00 |
+| BITSLICE_CONTROL |    0 |     0 |          0 |        32 |  0.00 |
+| BITSLICE_RX_TX   |    0 |     0 |          0 |      1248 |  0.00 |
+| BITSLICE_TX      |    0 |     0 |          0 |        32 |  0.00 |
+| RIU_OR           |    0 |     0 |          0 |        16 |  0.00 |
++------------------+------+-------+------------+-----------+-------+
 
 
 5. CLOCK
