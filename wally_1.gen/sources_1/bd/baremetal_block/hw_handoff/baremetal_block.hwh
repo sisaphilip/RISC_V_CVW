@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Jun 26 18:46:07 2025" VIVADOVERSION="2025.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Jun 28 23:40:50 2025" VIVADOVERSION="2025.1">
 
-  <SYSTEMINFO ARCH="zynquplus" BOARD="xilinx.com:kv260_som_som240_1_connector_kv260_carrier_som240_1_connector:part0:1.4" DEVICE="xck26" NAME="baremetal_block" PACKAGE="sfvc784" SPEEDGRADE="-2LV"/>
+  <SYSTEMINFO ARCH="zynquplus" BOARD="xilinx.com:k26c_som240_1_connector_kv260_carrier_som240_1_connector_som240_2_connector_kv260_carrier_som240_1_connector:part0:1.4" DEVICE="xck26" NAME="baremetal_block" PACKAGE="sfvc784" SPEEDGRADE="-2LV"/>
 
   <EXTERNALPORTS>
     <PORT DIR="I" LEFT="31" NAME="s_ahb_haddr" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_s_ahb_haddr">

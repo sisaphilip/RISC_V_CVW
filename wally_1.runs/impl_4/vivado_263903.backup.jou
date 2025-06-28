@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Sat Jun 28 23:46:25 2025
+# Process ID         : 263903
+# Current directory  : /home/ishfisav/wally_1/wally_1.runs/impl_4
+# Command line       : vivado -log wallypipelinedsoc.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source wallypipelinedsoc.tcl -notrace
+# Log file           : /home/ishfisav/wally_1/wally_1.runs/impl_4/wallypipelinedsoc.vdi
+# Journal file       : /home/ishfisav/wally_1/wally_1.runs/impl_4/vivado.jou
+# Running On         : thinkpad-p1-gen-5
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 25.04
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i7-12800H
+# CPU Frequency      : 933.645 MHz
+# CPU Physical cores : 14
+# CPU Logical cores  : 20
+# Host memory        : 32764 MB
+# Swap memory        : 103079 MB
+# Total Virtual      : 135843 MB
+# Available Virtual  : 125585 MB
+#-----------------------------------------------------------
+source wallypipelinedsoc.tcl -notrace

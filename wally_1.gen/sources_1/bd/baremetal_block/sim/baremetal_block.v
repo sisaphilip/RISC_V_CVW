@@ -2,7 +2,7 @@
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-//Date        : Thu Jun 26 18:46:07 2025
+//Date        : Sat Jun 28 23:40:50 2025
 //Host        : thinkpad-p1-gen-5 running 64-bit Ubuntu 25.04
 //Command     : generate_target baremetal_block.bd
 //Design      : baremetal_block

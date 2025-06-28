@@ -3,8 +3,8 @@
 # SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
 # IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
 # SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Thu Jun 26 19:01:25 2025
-# Process ID         : 44468
+# Start of session at: Sat Jun 28 23:50:42 2025
+# Process ID         : 289593
 # Current directory  : /home/ishfisav/wally_1/wally_1.runs/synth_1_copy_6
 # Command line       : vivado -log wallypipelinedsoc.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source wallypipelinedsoc.tcl
 # Log file           : /home/ishfisav/wally_1/wally_1.runs/synth_1_copy_6/wallypipelinedsoc.vds
@@ -13,12 +13,12 @@
 # Platform           : Ubuntu
 # Operating System   : Ubuntu 25.04
 # Processor Detail   : 12th Gen Intel(R) Core(TM) i7-12800H
-# CPU Frequency      : 400.000 MHz
+# CPU Frequency      : 1558.989 MHz
 # CPU Physical cores : 14
 # CPU Logical cores  : 20
 # Host memory        : 32764 MB
 # Swap memory        : 103079 MB
 # Total Virtual      : 135843 MB
-# Available Virtual  : 126970 MB
+# Available Virtual  : 124194 MB
 #-----------------------------------------------------------
 source wallypipelinedsoc.tcl -notrace
