@@ -145,6 +145,9 @@
         "inst_hier_path": "blk_mem_gen_0",
         "has_run_ip_tcl": "true",
         "parameters": {
+          "EN_SAFETY_CKT": {
+            "value": "false"
+          },
           "Enable_32bit_Address": {
             "value": "true"
           },

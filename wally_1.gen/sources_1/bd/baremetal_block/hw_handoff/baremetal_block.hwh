@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Jun 28 23:40:50 2025" VIVADOVERSION="2025.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jun 30 17:29:42 2025" VIVADOVERSION="2025.1">
 
   <SYSTEMINFO ARCH="zynquplus" BOARD="xilinx.com:k26c_som240_1_connector_kv260_carrier_som240_1_connector_som240_2_connector_kv260_carrier_som240_1_connector:part0:1.4" DEVICE="xck26" NAME="baremetal_block" PACKAGE="sfvc784" SPEEDGRADE="-2LV"/>
 
@@ -815,7 +815,7 @@
         <PARAMETER NAME="C_EN_ECC_PIPE" VALUE="0"/>
         <PARAMETER NAME="C_EN_RDADDRA_CHG" VALUE="0"/>
         <PARAMETER NAME="C_EN_RDADDRB_CHG" VALUE="0"/>
-        <PARAMETER NAME="C_EN_SAFETY_CKT" VALUE="1"/>
+        <PARAMETER NAME="C_EN_SAFETY_CKT" VALUE="0"/>
         <PARAMETER NAME="C_EN_SHUTDOWN_PIN" VALUE="0"/>
         <PARAMETER NAME="C_EN_SLEEP_PIN" VALUE="0"/>
         <PARAMETER NAME="C_EST_POWER_SUMMARY" VALUE="Estimated Power for IP     :     3.303437 mW"/>
@@ -886,7 +886,7 @@
         <PARAMETER NAME="ECC" VALUE="false"/>
         <PARAMETER NAME="EN_DEEPSLEEP_PIN" VALUE="false"/>
         <PARAMETER NAME="EN_ECC_PIPE" VALUE="false"/>
-        <PARAMETER NAME="EN_SAFETY_CKT" VALUE="true"/>
+        <PARAMETER NAME="EN_SAFETY_CKT" VALUE="false"/>
         <PARAMETER NAME="EN_SHUTDOWN_PIN" VALUE="false"/>
         <PARAMETER NAME="EN_SLEEP_PIN" VALUE="false"/>
         <PARAMETER NAME="Enable_32bit_Address" VALUE="true"/>
@@ -975,7 +975,6 @@
             <CONNECTION INSTANCE="axi_bram_ctrl_0" PORT="bram_rst_a"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="rsta_busy" SIGIS="undef"/>
         <PORT DIR="I" LEFT="7" NAME="wea" RIGHT="0" SIGIS="undef" SIGNAME="axi_bram_ctrl_0_bram_we_a">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_bram_ctrl_0" PORT="bram_we_a"/>

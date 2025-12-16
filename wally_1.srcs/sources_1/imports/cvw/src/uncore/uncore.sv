@@ -123,7 +123,13 @@ module uncore import cvw::*;  #(parameter cvw_t P)(
   end else assign {HREADRam, HRESPRam, HREADYRam} = '0;
 */
 
-  // BY SISA
+
+
+
+
+ //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> BY SISA<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
   // IP block instance >>(ahbtoaxibridge, smartaxi connector, BRAM controller, Memory gen)
   
   
@@ -135,7 +141,7 @@ module uncore import cvw::*;  #(parameter cvw_t P)(
     .s_ahb_hrdata(HRDATA),
     .s_ahb_hready_in(HREADY),
     .s_ahb_hready_out(1'b1),               // to be changed later
-    .s_ahb_hresetn(HRESETN),
+    .s_ahb_hresetn  (   HRESETN),
     .s_ahb_hresp(HRESP),
     .s_ahb_hsel(1'b1),
     .s_ahb_hsize(HSIZE),

@@ -105,12 +105,8 @@ start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
-  set_param power.BramSDPPropagationFix 1
   set_param chipscope.maxJobs 5
   set_param general.usePosixSpawnForFork 1
-  set_param power.enableUnconnectedCarry8PinPower 1
-  set_param power.enableCarry8RouteBelPower 1
-  set_param power.enableLutRouteBelPower 1
   set_param runs.launchOptions { -jobs 15  }
   open_checkpoint wallypipelinedsoc_postroute_physopt.dcp
   set_property webtalk.parent_dir /home/ishfisav/wally_1/wally_1.cache/wt [current_project]
