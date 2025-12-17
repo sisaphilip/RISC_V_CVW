@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # 
 # Vivado(TM)
@@ -8,9 +8,9 @@
 # 
 
 if [ -z "$PATH" ]; then
-  PATH=/home/ishfisav/Desktop/amd2025.1/2025.1/Vitis/bin:/home/ishfisav/Desktop/amd2025.1/2025.1/Vivado/ids_lite/ISE/bin/lin64:/home/ishfisav/Desktop/amd2025.1/2025.1/Vivado/bin
+  PATH=/home/ishfisav/Desktop/amd2025.2/2025.2/Vitis/bin:/home/ishfisav/Desktop/amd2025.2/2025.2/Vivado/bin
 else
-  PATH=/home/ishfisav/Desktop/amd2025.1/2025.1/Vitis/bin:/home/ishfisav/Desktop/amd2025.1/2025.1/Vivado/ids_lite/ISE/bin/lin64:/home/ishfisav/Desktop/amd2025.1/2025.1/Vivado/bin:$PATH
+  PATH=/home/ishfisav/Desktop/amd2025.2/2025.2/Vitis/bin:/home/ishfisav/Desktop/amd2025.2/2025.2/Vivado/bin:$PATH
 fi
 export PATH
 
@@ -38,7 +38,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .write_bitstream.begin.rst
+/bin/touch .init_design.begin.rst
 EAStep vivado -log wallypipelinedsoc.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source wallypipelinedsoc.tcl -notrace
 
 

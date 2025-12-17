@@ -1,6 +1,6 @@
 -------------------------------------
-| Tool Version : Vivado v.2025.1
-| Date         : Mon Jun 30 17:34:21 2025
+| Tool Version : Vivado v.2025.2
+| Date         : Tue Dec 16 14:53:12 2025
 | Host         : thinkpad-p1-gen-5
 | Design       : design_1
 | Device       : xck26-sfvc784-2LV-C-
@@ -22,9 +22,9 @@ Number of global clocks: 1
 	Running suboptimal placement checker for 1 clocks (and their loads) which do not have the CLOCK_LOW_FANOUT property but have a fanout less than 2000...
 Pre-CRP Checker took 0 secs
 
-********************************
-Clock Net Route Info (CRP Input)
-********************************
+**************************************
+Clock Nets/Source Overview (CRP Input)
+**************************************
 Clock 1: HCLK_OBUF_BUFG
 	Clock source type: BUFGCE
 	Clock source region: X1Y3
@@ -33,9 +33,9 @@ Clock 1: HCLK_OBUF_BUFG
 
 
 
-*****************
-User Constraints:
-*****************
-No user constraints found
+*****************************
+Clocks With User Constraints:
+*****************************
+No clocks with user constraints found
 
 

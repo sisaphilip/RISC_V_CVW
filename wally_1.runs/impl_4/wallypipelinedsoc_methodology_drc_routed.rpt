@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-| Date         : Mon Jun 30 17:35:38 2025
-| Host         : thinkpad-p1-gen-5 running 64-bit Ubuntu 25.04
+| Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+| Date         : Tue Dec 16 14:53:46 2025
+| Host         : thinkpad-p1-gen-5 running 64-bit Ubuntu 25.10
 | Command      : report_methodology -file wallypipelinedsoc_methodology_drc_routed.rpt -pb wallypipelinedsoc_methodology_drc_routed.pb -rpx wallypipelinedsoc_methodology_drc_routed.rpx
 | Design       : wallypipelinedsoc
 | Device       : xck26-sfvc784-2LV-c

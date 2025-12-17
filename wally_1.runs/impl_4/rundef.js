@@ -13,9 +13,9 @@ var WshShell = new ActiveXObject( "WScript.Shell" );
 var ProcEnv = WshShell.Environment( "Process" );
 var PathVal = ProcEnv("PATH");
 if ( PathVal.length == 0 ) {
-  PathVal = "/home/ishfisav/Desktop/amd2025.1/2025.1/Vitis/bin:/home/ishfisav/Desktop/amd2025.1/2025.1/Vivado/ids_lite/ISE/bin/lin64;/home/ishfisav/Desktop/amd2025.1/2025.1/Vivado/bin;";
+  PathVal = "/home/ishfisav/Desktop/amd2025.2/2025.2/Vitis/bin;/home/ishfisav/Desktop/amd2025.2/2025.2/Vivado/bin;";
 } else {
-  PathVal = "/home/ishfisav/Desktop/amd2025.1/2025.1/Vitis/bin:/home/ishfisav/Desktop/amd2025.1/2025.1/Vivado/ids_lite/ISE/bin/lin64;/home/ishfisav/Desktop/amd2025.1/2025.1/Vivado/bin;" + PathVal;
+  PathVal = "/home/ishfisav/Desktop/amd2025.2/2025.2/Vitis/bin;/home/ishfisav/Desktop/amd2025.2/2025.2/Vivado/bin;" + PathVal;
 }
 
 ProcEnv("PATH") = PathVal;
@@ -28,7 +28,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 // pre-commands:
-ISETouchFile( "write_bitstream", "begin" );
+ISETouchFile( "init_design", "begin" );
 ISEStep( "vivado",
          "-log wallypipelinedsoc.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source wallypipelinedsoc.tcl -notrace" );
 

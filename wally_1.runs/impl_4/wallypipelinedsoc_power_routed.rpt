@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version     : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-| Date             : Mon Jun 30 17:35:45 2025
-| Host             : thinkpad-p1-gen-5 running 64-bit Ubuntu 25.04
+| Tool Version     : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+| Date             : Tue Dec 16 14:53:51 2025
+| Host             : thinkpad-p1-gen-5 running 64-bit Ubuntu 25.10
 | Command          : report_power -file wallypipelinedsoc_power_routed.rpt -pb wallypipelinedsoc_power_summary_routed.pb -rpx wallypipelinedsoc_power_routed.rpx
 | Design           : wallypipelinedsoc
 | Device           : xck26-sfvc784-2LV-c
@@ -33,7 +33,7 @@ Table of Contents
 | Total On-Chip Power (W)  | 0.342        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.053        |
+| Dynamic (W)              | 0.054        |
 | Device Static (W)        | 0.289        |
 | Effective TJA (C/W)      | 2.3          |
 | Max Ambient (C)          | 84.2         |
@@ -53,14 +53,14 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.000 |        3 |       --- |             --- |
-| CLB Logic      |     0.003 |     2582 |       --- |             --- |
-|   LUT as Logic |     0.003 |     1181 |    117120 |            1.01 |
+| CLB Logic      |     0.003 |     2583 |       --- |             --- |
+|   LUT as Logic |     0.003 |     1180 |    117120 |            1.01 |
 |   CARRY8       |    <0.001 |       36 |     14640 |            0.25 |
 |   Register     |    <0.001 |      900 |    234240 |            0.38 |
 |   BUFG         |    <0.001 |        1 |        32 |            3.13 |
-|   Others       |     0.000 |      240 |       --- |             --- |
+|   Others       |     0.000 |      241 |       --- |             --- |
 |   F7/F8 Muxes  |     0.000 |        1 |    117120 |           <0.01 |
-| Signals        |     0.003 |     2338 |       --- |             --- |
+| Signals        |     0.004 |     2340 |       --- |             --- |
 | I/O            |     0.047 |       41 |       189 |           21.69 |
 | Static Power   |     0.289 |          |           |                 |
 | Total          |     0.342 |          |           |                 |
@@ -73,7 +73,7 @@ Table of Contents
 +------------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source           | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +------------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint           |       0.720 |     0.077 |       0.009 |      0.068 |       NA    | Unspecified | NA         |
+| Vccint           |       0.720 |     0.077 |       0.010 |      0.068 |       NA    | Unspecified | NA         |
 | Vccint_io        |       0.850 |     0.037 |       0.001 |      0.035 |       NA    | Unspecified | NA         |
 | Vccbram          |       0.850 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
 | Vccaux           |       1.800 |     0.077 |       0.000 |      0.077 |       NA    | Unspecified | NA         |
@@ -160,10 +160,11 @@ Table of Contents
 +-------------------+-----------+
 | Name              | Power (W) |
 +-------------------+-----------+
-| wallypipelinedsoc |     0.053 |
-|   core            |     0.006 |
+| wallypipelinedsoc |     0.054 |
+|   core            |     0.007 |
 |     ifu           |     0.004 |
 |       InstrMReg   |     0.001 |
+|       pcreg       |     0.001 |
 |     lsu           |     0.002 |
 |       dmmu.dmmu   |     0.001 |
 +-------------------+-----------+

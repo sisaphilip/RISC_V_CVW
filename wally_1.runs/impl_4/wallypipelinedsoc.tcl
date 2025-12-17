@@ -99,18 +99,289 @@ OPTRACE "impl_4" END { }
 
 
 OPTRACE "impl_4" START { ROLLUP_1 }
+OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
+start_step init_design
+set ACTIVE_STEP init_design
+set rc [catch {
+  create_msg_db init_design.pb
+  set_param chipscope.maxJobs 5
+  set_param general.usePosixSpawnForFork 1
+  set_param runs.launchOptions { -jobs 15  }
+OPTRACE "create in-memory project" START { }
+  create_project -in_memory -part xck26-sfvc784-2LV-c
+  set_property board_part xilinx.com:k26c:part0:1.4 [current_project]
+  set_property board_connections {som240_1_connector xilinx.com:kv260_carrier:som240_1_connector:1.3 som240_2_connector xilinx.com:kv260_carrier:som240_1_connector:1.3} [current_project]
+  set_property design_mode GateLvl [current_fileset]
+  set_param project.singleFileAddWarning.threshold 0
+OPTRACE "create in-memory project" END { }
+OPTRACE "set parameters" START { }
+  set_property webtalk.parent_dir /home/ishfisav/wally_1/wally_1.cache/wt [current_project]
+  set_property parent.project_path /home/ishfisav/wally_1/wally_1.xpr [current_project]
+  set_property ip_output_repo /home/ishfisav/wally_1/wally_1.cache/ip [current_project]
+  set_property ip_cache_permissions {read write} [current_project]
+  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+OPTRACE "set parameters" END { }
+OPTRACE "add files" START { }
+  add_files -quiet /home/ishfisav/wally_1/wally_1.runs/synth_1_copy_6/wallypipelinedsoc.dcp
+  set_msg_config -source 4 -id {BD 41-1661} -limit 0
+  set_param project.isImplRun true
+  add_files /home/ishfisav/wally_1/wally_1.srcs/sources_1/bd/baremetal_block/baremetal_block.bd
+  add_files /home/ishfisav/wally_1/wally_1.srcs/sources_1/bd/design_1/design_1.bd
+  add_files /home/ishfisav/wally_1/wally_1.srcs/sources_1/bd/design_2/design_2.bd
+  set_param project.isImplRun false
+OPTRACE "read constraints: implementation" START { }
+  read_xdc /home/ishfisav/wally_1/wally_1.srcs/constrs_1/imports/constraints/pins_wally.xdc
+OPTRACE "read constraints: implementation" END { }
+OPTRACE "read constraints: implementation_pre" START { }
+OPTRACE "read constraints: implementation_pre" END { }
+OPTRACE "add files" END { }
+OPTRACE "link_design" START { }
+  set_param project.isImplRun true
+  link_design -top wallypipelinedsoc -part xck26-sfvc784-2LV-c 
+OPTRACE "link_design" END { }
+  set_param project.isImplRun false
+OPTRACE "gray box cells" START { }
+OPTRACE "gray box cells" END { }
+OPTRACE "init_design_reports" START { REPORT }
+OPTRACE "init_design_reports" END { }
+OPTRACE "init_design_write_hwdef" START { }
+OPTRACE "init_design_write_hwdef" END { }
+  close_msg_db -file init_design.pb
+} RESULT]
+if {$rc} {
+  step_failed init_design
+  return -code error $RESULT
+} else {
+  end_step init_design
+  unset ACTIVE_STEP 
+}
+
+OPTRACE "Phase: Init Design" END { }
+OPTRACE "Phase: Opt Design" START { ROLLUP_AUTO }
+start_step opt_design
+set ACTIVE_STEP opt_design
+set rc [catch {
+  create_msg_db opt_design.pb
+OPTRACE "read constraints: opt_design" START { }
+OPTRACE "read constraints: opt_design" END { }
+OPTRACE "opt_design" START { }
+  opt_design 
+OPTRACE "opt_design" END { }
+OPTRACE "read constraints: opt_design_post" START { }
+OPTRACE "read constraints: opt_design_post" END { }
+OPTRACE "opt_design reports" START { REPORT }
+  set_param project.isImplRun true
+  generate_parallel_reports -reports { "report_drc -file wallypipelinedsoc_drc_opted.rpt -pb wallypipelinedsoc_drc_opted.pb -rpx wallypipelinedsoc_drc_opted.rpx"  }
+  set_param project.isImplRun false
+OPTRACE "opt_design reports" END { }
+OPTRACE "Opt Design: write_checkpoint" START { CHECKPOINT }
+  write_checkpoint -force wallypipelinedsoc_opt.dcp
+OPTRACE "Opt Design: write_checkpoint" END { }
+  close_msg_db -file opt_design.pb
+} RESULT]
+if {$rc} {
+  step_failed opt_design
+  return -code error $RESULT
+} else {
+  end_step opt_design
+  unset ACTIVE_STEP 
+}
+
+OPTRACE "Phase: Opt Design" END { }
+OPTRACE "Phase: Power Opt Design" START { ROLLUP_AUTO }
+start_step power_opt_design
+set ACTIVE_STEP power_opt_design
+set rc [catch {
+  create_msg_db power_opt_design.pb
+OPTRACE "read constraints: power_opt_design" START { }
+OPTRACE "read constraints: power_opt_design" END { }
+OPTRACE "pwr_opt_design" START { }
+  power_opt_design 
+OPTRACE "pwr_opt_design" END { }
+OPTRACE "read constraints: power_opt_design_post" START { }
+OPTRACE "read constraints: power_opt_design_post" END { }
+OPTRACE "pwr_opt_design reports" START { REPORT }
+OPTRACE "pwr_opt_design reports" END { }
+OPTRACE "Power Opt Design: write_checkpoint" START { CHECKPOINT }
+  write_checkpoint -force wallypipelinedsoc_pwropt.dcp
+OPTRACE "Power Opt Design: write_checkpoint" END { }
+  close_msg_db -file power_opt_design.pb
+} RESULT]
+if {$rc} {
+  step_failed power_opt_design
+  return -code error $RESULT
+} else {
+  end_step power_opt_design
+  unset ACTIVE_STEP 
+}
+
+OPTRACE "Phase: Power Opt Design" END { }
+OPTRACE "Phase: Place Design" START { ROLLUP_AUTO }
+start_step place_design
+set ACTIVE_STEP place_design
+set rc [catch {
+  create_msg_db place_design.pb
+OPTRACE "read constraints: place_design" START { }
+OPTRACE "read constraints: place_design" END { }
+  if { [llength [get_debug_cores -quiet] ] > 0 }  { 
+OPTRACE "implement_debug_core" START { }
+    implement_debug_core 
+OPTRACE "implement_debug_core" END { }
+  } 
+OPTRACE "place_design" START { }
+  set_param project.isImplRun true
+  place_design 
+  set_param project.isImplRun false
+OPTRACE "place_design" END { }
+OPTRACE "read constraints: place_design_post" START { }
+OPTRACE "read constraints: place_design_post" END { }
+OPTRACE "place_design reports" START { REPORT }
+  set_param project.isImplRun true
+  generate_parallel_reports -reports { "report_io -file wallypipelinedsoc_io_placed.rpt" "report_utilization -file wallypipelinedsoc_utilization_placed.rpt -pb wallypipelinedsoc_utilization_placed.pb" "report_control_sets -verbose -file wallypipelinedsoc_control_sets_placed.rpt"  }
+  set_param project.isImplRun false
+OPTRACE "place_design reports" END { }
+OPTRACE "Place Design: write_checkpoint" START { CHECKPOINT }
+  write_checkpoint -force wallypipelinedsoc_placed.dcp
+OPTRACE "Place Design: write_checkpoint" END { }
+  close_msg_db -file place_design.pb
+} RESULT]
+if {$rc} {
+  step_failed place_design
+  return -code error $RESULT
+} else {
+  end_step place_design
+  unset ACTIVE_STEP 
+}
+
+OPTRACE "Phase: Place Design" END { }
+OPTRACE "Phase: Power Opt Design" START { ROLLUP_AUTO }
+start_step post_place_power_opt_design
+set ACTIVE_STEP post_place_power_opt_design
+set rc [catch {
+  create_msg_db post_place_power_opt_design.pb
+OPTRACE "power_opt_design" START { }
+  power_opt_design 
+OPTRACE "power_opt_design" END { }
+OPTRACE "power_opt_design reports" START { REPORT }
+OPTRACE "power_opt_design reports" END { }
+OPTRACE "Post-Place Power Opt Design: write_checkpoint" START { CHECKPOINT }
+  write_checkpoint -force wallypipelinedsoc_postplace_pwropt.dcp
+OPTRACE "Post-Place Power Opt Design: write_checkpoint" END { }
+  close_msg_db -file post_place_power_opt_design.pb
+} RESULT]
+if {$rc} {
+  step_failed post_place_power_opt_design
+  return -code error $RESULT
+} else {
+  end_step post_place_power_opt_design
+  unset ACTIVE_STEP 
+}
+
+OPTRACE "Phase: Power Opt Design" END { }
+OPTRACE "Phase: Physical Opt Design" START { ROLLUP_AUTO }
+start_step phys_opt_design
+set ACTIVE_STEP phys_opt_design
+set rc [catch {
+  create_msg_db phys_opt_design.pb
+OPTRACE "read constraints: phys_opt_design" START { }
+OPTRACE "read constraints: phys_opt_design" END { }
+OPTRACE "phys_opt_design" START { }
+  phys_opt_design 
+OPTRACE "phys_opt_design" END { }
+OPTRACE "read constraints: phys_opt_design_post" START { }
+OPTRACE "read constraints: phys_opt_design_post" END { }
+OPTRACE "phys_opt_design report" START { REPORT }
+OPTRACE "phys_opt_design report" END { }
+OPTRACE "Post-Place Phys Opt Design: write_checkpoint" START { CHECKPOINT }
+  write_checkpoint -force wallypipelinedsoc_physopt.dcp
+OPTRACE "Post-Place Phys Opt Design: write_checkpoint" END { }
+  close_msg_db -file phys_opt_design.pb
+} RESULT]
+if {$rc} {
+  step_failed phys_opt_design
+  return -code error $RESULT
+} else {
+  end_step phys_opt_design
+  unset ACTIVE_STEP 
+}
+
+OPTRACE "Phase: Physical Opt Design" END { }
+OPTRACE "Phase: Route Design" START { ROLLUP_AUTO }
+  set_msg_config -source 4 -id {Route 35-39} -severity "critical warning" -new_severity warning
+start_step route_design
+set ACTIVE_STEP route_design
+set rc [catch {
+  create_msg_db route_design.pb
+OPTRACE "read constraints: route_design" START { }
+OPTRACE "read constraints: route_design" END { }
+OPTRACE "route_design" START { }
+  route_design 
+OPTRACE "route_design" END { }
+OPTRACE "read constraints: route_design_post" START { }
+OPTRACE "read constraints: route_design_post" END { }
+OPTRACE "route_design reports" START { REPORT }
+  set_param project.isImplRun true
+  generate_parallel_reports -reports { "report_drc -file wallypipelinedsoc_drc_routed.rpt -pb wallypipelinedsoc_drc_routed.pb -rpx wallypipelinedsoc_drc_routed.rpx" "report_methodology -file wallypipelinedsoc_methodology_drc_routed.rpt -pb wallypipelinedsoc_methodology_drc_routed.pb -rpx wallypipelinedsoc_methodology_drc_routed.rpx" "report_power -file wallypipelinedsoc_power_routed.rpt -pb wallypipelinedsoc_power_summary_routed.pb -rpx wallypipelinedsoc_power_routed.rpx" "report_route_status -file wallypipelinedsoc_route_status.rpt -pb wallypipelinedsoc_route_status.pb" "report_timing_summary -max_paths 10 -report_unconstrained -file wallypipelinedsoc_timing_summary_routed.rpt -pb wallypipelinedsoc_timing_summary_routed.pb -rpx wallypipelinedsoc_timing_summary_routed.rpx" "report_incremental_reuse -file wallypipelinedsoc_incremental_reuse_routed.rpt" "report_clock_utilization -file wallypipelinedsoc_clock_utilization_routed.rpt" "report_bus_skew -warn_on_violation -file wallypipelinedsoc_bus_skew_routed.rpt -pb wallypipelinedsoc_bus_skew_routed.pb -rpx wallypipelinedsoc_bus_skew_routed.rpx"  }
+  set_param project.isImplRun false
+OPTRACE "route_design reports" END { }
+OPTRACE "Route Design: write_checkpoint" START { CHECKPOINT }
+  write_checkpoint -force wallypipelinedsoc_routed.dcp
+OPTRACE "Route Design: write_checkpoint" END { }
+OPTRACE "route_design misc" START { }
+  close_msg_db -file route_design.pb
+} RESULT]
+if {$rc} {
+OPTRACE "route_design write_checkpoint" START { CHECKPOINT }
+OPTRACE "route_design write_checkpoint" END { }
+  write_checkpoint -force wallypipelinedsoc_routed_error.dcp
+  step_failed route_design
+  return -code error $RESULT
+} else {
+  end_step route_design
+  unset ACTIVE_STEP 
+}
+
+OPTRACE "route_design misc" END { }
+OPTRACE "Phase: Route Design" END { }
+OPTRACE "Phase: Phys-Opt Design" START { ROLLUP_AUTO }
+start_step post_route_phys_opt_design
+set ACTIVE_STEP post_route_phys_opt_design
+set rc [catch {
+  set tool_flow [get_property -quiet TOOL_FLOW [current_project -quiet]]
+  if {$tool_flow eq {SDx}} {send_msg_id {101-1} {status} {Starting optional post-route physical design optimization.} }
+  create_msg_db post_route_phys_opt_design.pb
+OPTRACE "phys_opt_design" START { }
+  phys_opt_design 
+OPTRACE "phys_opt_design" END { }
+OPTRACE "phys_opt_design reports" START { REPORT }
+  set_param project.isImplRun true
+  generate_parallel_reports -reports { "report_timing_summary -max_paths 10 -report_unconstrained -warn_on_violation -file wallypipelinedsoc_timing_summary_postroute_physopted.rpt -pb wallypipelinedsoc_timing_summary_postroute_physopted.pb -rpx wallypipelinedsoc_timing_summary_postroute_physopted.rpx" "report_bus_skew -warn_on_violation -file wallypipelinedsoc_bus_skew_postroute_physopted.rpt -pb wallypipelinedsoc_bus_skew_postroute_physopted.pb -rpx wallypipelinedsoc_bus_skew_postroute_physopted.rpx"  }
+  set_param project.isImplRun false
+OPTRACE "phys_opt_design reports" END { }
+OPTRACE "Post-Route Phys Opt Design: write_checkpoint" START { CHECKPOINT }
+  write_checkpoint -force wallypipelinedsoc_postroute_physopt.dcp
+OPTRACE "Post-Route Phys Opt Design: write_checkpoint" END { }
+OPTRACE "phys_opt_design misc" START { }
+  close_msg_db -file post_route_phys_opt_design.pb
+  set tool_flow [get_property TOOL_FLOW [current_project]]
+  if {$tool_flow eq {SDx}} {send_msg_id {101-1} {status} {Finished optional post-route physical design optimization.} }
+} RESULT]
+if {$rc} {
+  step_failed post_route_phys_opt_design
+  return -code error $RESULT
+} else {
+  end_step post_route_phys_opt_design
+  unset ACTIVE_STEP 
+}
+
+OPTRACE "phys_opt_design misc" END { }
+OPTRACE "Phase: Phys-Opt Design" END { }
 OPTRACE "Phase: Write Bitstream" START { ROLLUP_AUTO }
 OPTRACE "write_bitstream setup" START { }
 start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
-  set_param chipscope.maxJobs 5
-  set_param general.usePosixSpawnForFork 1
-  set_param runs.launchOptions { -jobs 15  }
-  open_checkpoint wallypipelinedsoc_postroute_physopt.dcp
-  set_property webtalk.parent_dir /home/ishfisav/wally_1/wally_1.cache/wt [current_project]
-set_property TOP wallypipelinedsoc [current_fileset]
 OPTRACE "read constraints: write_bitstream" START { }
 OPTRACE "read constraints: write_bitstream" END { }
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
